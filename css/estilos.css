@@ -53,6 +53,10 @@ body {
   border-top-right-radius: 0;
 }
 
+textarea{
+  resize:none;
+}
+
 #img_inicio {
   margin: 0px auto;
   display: block;

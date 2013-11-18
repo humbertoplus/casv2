@@ -36,7 +36,7 @@
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
 					<a href="asiento-general.php" class="list-group-item">&#0171; Generales</a>
-					<a href="#" class="list-group-item">&#0171; Simples</a>
+					<a href="asiento-simple.php" class="list-group-item">&#0171; Simples</a>
 					<a href="#" class="list-group-item">&#0171; Facturas Recibidas</a>
 					<a href="#" class="list-group-item">&#0171; Facturas Emitidas</a>
 					<a href="#" class="list-group-item">&#0171; Diario</a>
