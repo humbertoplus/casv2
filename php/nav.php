@@ -15,7 +15,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Asientos <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="asiento-general.php">Generales</a></li>
-						<li><a href="#">Simples</a></li>
+						<li><a href="asiento-simple.php">Simples</a></li>
 						<li><a href="#">Facturas Recibidas</a></li>
 						<li><a href="#">Facturas Emitidas</a></li>
 						<li><a href="#">Diario</a></li>

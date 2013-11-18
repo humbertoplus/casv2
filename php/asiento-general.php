@@ -77,14 +77,14 @@
         							</div>
         							
         							<div class="row">
-        								<div class="col-lg-6">
+        								<div class="col-lg-12">
         									<label for="justificante" class="control-label">Justificante</label>
         									<input type="file" class="form-control" id="justificante" name="justificante_fls">
         								</div>
         							</div>
 
         							<div class="row">
-        								<div class="col-lg-9">
+        								<div class="col-lg-12">
         									<label for="exp" class="control-label">Explicación</label>
         									<textarea name="exp_txa" id="exp" cols="30" rows="5" class="form-control" title="Proporcione una descripción o explicación del asiento a registrar" required></textarea>
         								</div>

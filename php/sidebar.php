@@ -104,20 +104,17 @@
 			</div>
 		</div>
 
-		
-		<!-- <div class="panel panel-primary">
+		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title text-center">Administrar Usuarios</h3>
+				<h3 class="panel-title text-center">Configuración</h3>
 			</div>
 
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
-					<a href="usuarios.php" class="list-group-item">&#0171; Listado de usuarios</a>
-					<a href="crear-usuario.php" class="list-group-item">&#0171; Crear un nuevo usuario</a>
-					<a href="eliminar-usuario.php" class="list-group-item">&#0171; Eliminar usuario</a>
+					<a href="iva.php" class="list-group-item">&#0171; IVA</a>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </div>
 <!-- </div> -->
