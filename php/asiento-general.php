@@ -86,7 +86,7 @@
         							<div class="row">
         								<div class="col-lg-9">
         									<label for="exp" class="control-label">Explicación</label>
-        									<textarea name="exp_txa" id="exp" cols="30" rows="5" class="form-control" title="Escriba una explicación o indicación sobre el asiento" required></textarea>
+        									<textarea name="exp_txa" id="exp" cols="30" rows="5" class="form-control" title="Proporcione una descripción o explicación del asiento a registrar" required></textarea>
         								</div>
         							</div>
         							<br>

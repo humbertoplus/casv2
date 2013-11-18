@@ -34,17 +34,17 @@
         							<div class="row">
         								<div class="col-md-3">
         									<label for="asiento" class="control-label">N° de asiento</label>
-        									<input type="text" id="asiento" class="form-control" name="asiento_txt" placeholder="Asiento N°"/>
+        									<input type="text" id="asiento" class="form-control" name="asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento" required/>
         								</div>
         								<div class="col-md-4">
         									<label for="fecha" class="control-label">Fecha</label>
-        									<input type="date" id="fecha" name="fecha_txt" class="form-control">
+        									<input type="date" id="fecha" name="fecha_txt" class="form-control" title="Ingrese la fecha del asiento" required/>
         								</div>
         							</div>
         							<div class="row">
         								<div class="col-md-3">
         									<label for="c_debe" class="control-label">Cuenta al debe</label>
-        									<input type="text" id="c_debe" name="c_debe_txt" class="form-control" placeholder="N° Cuenta">
+        									<input type="text" id="c_debe" name="c_debe_txt" class="form-control" placeholder="N° Cuenta" title="Escriba el número de la cuenta al debe" required/>
         								</div>
         								<div class="col-md-9">
         									<label for="cuentas" class="control-label">Seleccione cuenta</label>
@@ -56,7 +56,7 @@
         							<div class="row">
         								<div class="col-md-3">
         									<label for="c_haber" class="control-label">Cuenta al haber</label>
-        									<input type="text" id="c_haber" name="c_haber_txt" class="form-control" placeholder="N° Cuenta">
+        									<input type="text" id="c_haber" name="c_haber_txt" class="form-control" placeholder="N° Cuenta" title="Escriba el número de la cuenta al haber" required/>
         								</div>
         								<div class="col-md-9">
         									<label for="cuentas2" class="control-label">Seleccione cuenta</label>
@@ -68,14 +68,14 @@
         							<div class="row">
         								<div class="col-md-6">
         									<label for="concepto" class="control-label">Concepto</label>
-        									<input type="text" id="concepto" name="concepto_txt" class="form-control" placeholder="Escriba el concepto del asiento">
+        									<input type="text" id="concepto" name="concepto_txt" class="form-control" placeholder="Escriba el concepto del asiento" title="Escriba el concepto del asiento" required/>
         								</div>
         							</div>
         							<br>
         							<div class="row">
         								<div class="col-lg-3 input-group">
         									<span class="input-group-addon">$</span>
-        									<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe">
+        									<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe" title="Escriba el importe del asiento" required/>
         								</div>
         							</div>
         							<div class="row">
@@ -88,7 +88,7 @@
         							<div class="row">
         								<div class="col-lg-9">
         									<label for="exp" class="control-label">Explicación</label>
-        									<textarea name="exp_txa" id="exp" cols="30" rows="5" class="form-control"></textarea>
+        									<textarea name="exp_txa" id="exp" cols="30" rows="5" class="form-control" title="Proporcione una descripción o explicación del asiento a registrar" required></textarea>
         								</div>
         							</div>
         							<br>
