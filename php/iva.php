@@ -12,7 +12,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | </title>
+	<title>C.A.S | IVA</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Título de la página</h3>
+        			<h3>Configuración del Impuesto de Valor Agregado (IVA)</h3>
         		</div>
         		<div class="row">
         			<div class="col-md-12">
@@ -34,7 +34,7 @@
 							$ejecutar_consulta = $conexion->query($consulta);
 							while ($registro=$ejecutar_consulta->fetch_assoc()) {
 								echo "<div class='alert alert-info'>";
-								echo "El valor de IVA actual es: ";
+								echo "El valor del IVA actual es: ";
 								echo "<strong>".$registro["iva"].".</strong>";
 								echo " Si desea cambiar este valor establezcalo en el espacio de abajo.";
 								echo "</div>";
@@ -50,7 +50,7 @@
         						<legend>Cambiar IVA</legend>
 
         						<div class="col-md-6">
-        							<input type="text" class="form-control" id="n_iva" name="n_iva_txt" placeholder="Escriba el nuevo valor para el IVA" required/>
+        							<input type="money" class="form-control" id="n_iva" name="n_iva_txt" size="4" maxlength="4" placeholder="Escriba el nuevo valor para el IVA" required/>
         						</div>
         						<div class="col-md-4">
         							<button type="submit" class="btn btn-info">Cambiar IVA</button>

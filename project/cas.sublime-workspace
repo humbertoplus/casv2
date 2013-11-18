@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"consulta"
+			],
+			[
+				"con",
+				"conexion"
+			],
+			[
+				"nuevo",
+				"nuevo_iva"
+			],
+			[
+				"n_iva",
+				"n_iva_txt"
+			],
+			[
 				"el",
 				"eliminar-usuario"
 			],
@@ -38,10 +54,6 @@
 			[
 				"e",
 				"ejecutar_consulta"
-			],
-			[
-				"con",
-				"conexion"
 			],
 			[
 				"q",
@@ -321,6 +333,7 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/catwin/iva.php",
 		"/C/Users/Alex Contreras/Desktop/CREATE TABLE Persona.sql",
 		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/consultas lab 4.sql",
 		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/123.sql",
@@ -447,8 +460,7 @@
 		"/D/Alex Contreras/Downloads/mongoose/default.css",
 		"/D/Alex Contreras/Downloads/mongoose/index.html",
 		"/D/Alex Contreras/Documents/GitHub/html/multitut/boton/index.html",
-		"/D/Alex Contreras/Documents/GitHub/html/multitut/boton/estilo.css",
-		"/C/Users/Alex Contreras/AppData/Roaming/Sublime Text 2/Packages/ColorPicker/README.md"
+		"/D/Alex Contreras/Documents/GitHub/html/multitut/boton/estilo.css"
 	],
 	"find":
 	{
@@ -467,6 +479,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
 			".form",
 			".table-",
 			"css",
@@ -542,11 +555,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -581,6 +601,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 210.0,
+	"side_bar_width": 184.0,
 	"status_bar_visible": true
 }
