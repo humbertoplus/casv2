@@ -6,6 +6,12 @@
 	* 	En este archivo se controla la capa de presentación para el manejo del inicio de sesión del usuario.		   *
 	*******************************************************************************************************************/
 ?>
+<?php 
+	error_reporting(E_ALL ^ E_NOTICE);
+	if($_COOKIE["sesion"]){
+	    header("Location: php/home.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,6 +51,9 @@
 			<h2 class="form-signin-heading">Por favor, inicie sesión</h2>
 			<input type="text" class="form-control" id="user" name="user_txt" placeholder="Usuario" required />
 			<input type="password" class="form-control" id="password" name="password_txt" placeholder="Contraseña" required />
+			<!-- <label class="checkbox">
+          		<input type="checkbox" value="remember-me" id="remember" name="remember_cbx"> Mantenerme conectado
+        	</label> -->
 			<button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Iniciar sesión</button>
 		</form>
 	</div>
