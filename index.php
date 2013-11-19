@@ -41,13 +41,13 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="jumbotron text-center">
-				<h1>Bienvenido a C.A.S</h1>
-				<p>
-					Para utilizar todas las funciones del sistema, usted deberá iniciar sesión previamente. Ingrese sus datos de inicio de sesión y luego pulse el botón "Iniciar sesión" para acceder al sistema.
-				</p>
+			<div>
+				<img class="fading img-responsive img-rounded col-lg-12" src="img/inicio.png"/>
 			</div>
 		</div>
+		
+		<br>
+		
 		<?php
 			error_reporting(E_ALL ^ E_NOTICE);
 			if ($_GET["error"]=="si")
@@ -58,18 +58,20 @@
 				echo "</div>";
 			}
 		?>
-		<div class="col-lg-6 pull-left">
-			<img class="fading" src="img/logo.png"/>
+
+		<div class="jumbotron text-center">
+			<h1>Bienvenido a C.A.S</h1>
+			<p>
+				Para utilizar todas las funciones del sistema, usted deberá iniciar sesión previamente. Ingrese sus datos de inicio de sesión y luego pulse el botón "Iniciar sesión" para acceder al sistema.
+			</p>
 		</div>
-		<div class="col-lg-5  pull-right">
-			<form class="form-signin" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form">
+		
+		<form class="form-signin col-lg-12 text-center" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form">
 			<h2 class="form-signin-heading">Por favor, inicie sesión</h2>
 			<input type="text" class="form-control" id="user" name="user_txt" placeholder="Usuario" required />
 			<input type="password" class="form-control" id="password" name="password_txt" placeholder="Contraseña" required />
 			<button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Iniciar sesión</button>
-		</form>
-		</div>
-		
+		</form>	
 	</div>
 	
 	<div class="navbar navbar-inverse navbar-fixed-bottom">

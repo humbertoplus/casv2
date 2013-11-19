@@ -21,6 +21,9 @@
 ?>
 <?php 
 	include("sesion.php");
+    if(!$_COOKIE["sesion"]){
+        header("Location: salir.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -27,7 +27,7 @@
 				</div>
 
 				<div class="modal-body">
-					<p>
+					<p align="justify">
 						C.A.S son las siglas de <em>"Computerized Accountancy System"</em> que traducido al español significa <em>"Sistema Contable Computarizado"</em>. Este sistema está diseñado en ambiente web, escrito en PHP y programado por los alumnos de la cátedra de Sistemas Contables de la Facultad de Ingeniería y Arquitectura de la Universidad de El Salvador. Este sistema es fácil de usar, tiene una interfaz amigable con el usuario y además es seguro, debido a que posee un nivel de seguridad orientado a usuarios, los cuales tienen su nombre de usuario y contraseña. Si una persona no está logueada en el sistema, no podrá acceder a ninguna de las funciones del mismo, ni podrá consultar ningún tipo de información contenida dentro del sistema.
 					</p>
 

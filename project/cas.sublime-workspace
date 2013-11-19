@@ -277,6 +277,146 @@
 			]
 		]
 	},
+	"buffers":
+	[
+		{
+			"file": "/C/wamp/www/casv1/index.php",
+			"settings":
+			{
+				"buffer_size": 4032,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/asiento-general.php",
+			"settings":
+			{
+				"buffer_size": 6901,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+			"settings":
+			{
+				"buffer_size": 6759,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/ayuda.php",
+			"settings":
+			{
+				"buffer_size": 2876,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/cambio-pw.php",
+			"settings":
+			{
+				"buffer_size": 5650,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/compatibilidad.php",
+			"settings":
+			{
+				"buffer_size": 4205,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/crear-usuario.php",
+			"settings":
+			{
+				"buffer_size": 6217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/eliminar-usuario.php",
+			"settings":
+			{
+				"buffer_size": 5533,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/info.php",
+			"settings":
+			{
+				"buffer_size": 4392,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/iva.php",
+			"settings":
+			{
+				"buffer_size": 4620,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/plantilla-maestra.php",
+			"settings":
+			{
+				"buffer_size": 2695,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/usuarios.php",
+			"settings":
+			{
+				"buffer_size": 4220,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/modal.php",
+			"settings":
+			{
+				"buffer_size": 3464,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/conexion.php",
+			"settings":
+			{
+				"buffer_size": 1599,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/error/403.html",
+			"settings":
+			{
+				"buffer_size": 1382,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Para la contabilidad de Costos:\nManejan costeo Directo por procesos lo cual indica q solo se necesita:\n-Determinacion de Costos de Mano de Obra(494)\n- Determinacion de Costo de Materia Prima(495)\n-Determinacion de Costos Indirectos de Fabricacion pero por medio de cuentas T\n\nAlex Contreras revisando lo q debe llevar el sistema solo encontre esto:\n-Facturas para ventas(pag 469)\n-Control de existencias(parecido al KARDEX. pag474)\n-Manejo de compra y venta(cuentas T especiales revisalas porq incluye cuando la transaccion incluya 3 cuentas pag 472 473)\n- libro diario(formato pag 480)\n-libro mayor(formato pag 481 son las mismas cuentas T)\n-el IVA se manejara como en cuentas T como se nos enseño en clase no como esta en la tesis porq esta raro\n-Balance general(p 485)\n-Estado de perdidas y ganacias (487)\n\n",
+			"settings":
+			{
+				"buffer_size": 810,
+				"line_ending": "Windows",
+				"name": "Para la contabilidad de Costos:"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/error/404.html",
+			"settings":
+			{
+				"buffer_size": 1446,
+				"line_ending": "Windows"
+			}
+		}
+	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -333,25 +473,30 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/casv1/php/plantilla-maestra.php",
+		"/C/wamp/www/casv1/php/eliminar-usuario.php",
+		"/C/wamp/www/casv1/php/home.php",
 		"/C/wamp/www/casv1/php/footer.php",
+		"/C/wamp/www/casv1/php/crear-usuario.php",
+		"/C/wamp/www/casv1/index.php",
+		"/C/wamp/www/casv1/php/ayuda.php",
+		"/C/wamp/www/casv1/php/agregar-usuario.php",
+		"/C/wamp/www/casv1/php/borrar-usuario.php",
+		"/C/wamp/www/casv1/php/cambiar-pw.php",
+		"/C/wamp/www/casv1/php/cambio-pw.php",
+		"/C/wamp/www/casv1/php/conexion.php",
+		"/C/wamp/www/casv1/php/control.php",
+		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/casv1/php/asiento-simple.php",
+		"/C/wamp/www/curso-php/06EnvioCorreo/class.smtp.php",
+		"/C/wamp/www/curso-php/06EnvioCorreo/class.pop3.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/class.phpmailer.php",
 		"/C/wamp/www/casv1/error/403.html",
 		"/C/wamp/www/casv1/error/404.html",
-		"/C/wamp/www/casv1/php/home.php",
-		"/C/wamp/www/casv1/php/plantilla-maestra.php",
-		"/C/wamp/www/casv1/php/asiento-general.php",
-		"/C/wamp/www/casv1/php/asiento-simple.php",
-		"/C/wamp/www/casv1/php/ayuda.php",
-		"/C/wamp/www/casv1/php/cambio-pw.php",
-		"/C/wamp/www/casv1/php/crear-usuario.php",
-		"/C/wamp/www/casv1/php/eliminar-usuario.php",
 		"/C/wamp/www/casv1/php/info.php",
 		"/C/wamp/www/casv1/php/iva.php",
 		"/C/wamp/www/casv1/php/prueba-nav.php",
 		"/C/wamp/www/casv1/php/usuarios.php",
-		"/C/wamp/www/casv1/php/conexion.php",
-		"/C/wamp/www/casv1/php/control.php",
-		"/C/wamp/www/casv1/index.php",
 		"/C/wamp/www/casv1/php/verificar-sesion.php",
 		"/C/wamp/www/casv1/php/sesion.php",
 		"/C/wamp/www/casv1/php/salir.php",
@@ -369,7 +514,6 @@
 		"/C/wamp/www/casv1/.htaccess",
 		"/E/Placeholders.js-master/Placeholders.js-master/lib/main.js",
 		"/E/Placeholders.js-master/Placeholders.js-master/Gruntfile.js",
-		"/C/wamp/www/casv1/php/agregar-usuario.php",
 		"/C/wamp/www/catwin/iva.php",
 		"/C/Users/Alex Contreras/Desktop/CREATE TABLE Persona.sql",
 		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/consultas lab 4.sql",
@@ -456,11 +600,7 @@
 		"/C/wamp/www/mantenimiento/php/registro.php",
 		"/C/wamp/www/mantenimiento/php/consultas.php",
 		"/C/wamp/www/mantenimiento/css/estilos.css",
-		"/C/wamp/www/mantenimiento/css/modern.css",
-		"/C/wamp/www/curso-php/mis-contactos/css/mis-contactos.css",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/less/forms.less",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/css/modern-responsive.css",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/public/css/modern.css"
+		"/C/wamp/www/mantenimiento/css/modern.css"
 	],
 	"find":
 	{
@@ -479,6 +619,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"container",
+			"body",
+			"col-lg-12",
 			">\n",
 			".form",
 			".table-",
@@ -538,6 +681,474 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"selected": 16,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/wamp/www/casv1/index.php",
+					"settings":
+					{
+						"buffer_size": 4032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3627,
+								3627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1125.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp/www/casv1/php/asiento-general.php",
+					"settings":
+					{
+						"buffer_size": 6901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1474,
+								1474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+					"settings":
+					{
+						"buffer_size": 6759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1473,
+								1473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp/www/casv1/php/ayuda.php",
+					"settings":
+					{
+						"buffer_size": 2876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1452,
+								1452
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp/www/casv1/php/cambio-pw.php",
+					"settings":
+					{
+						"buffer_size": 5650,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1456,
+								1456
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/wamp/www/casv1/php/compatibilidad.php",
+					"settings":
+					{
+						"buffer_size": 4205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1473,
+								1473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/wamp/www/casv1/php/crear-usuario.php",
+					"settings":
+					{
+						"buffer_size": 6217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1472,
+								1472
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/wamp/www/casv1/php/eliminar-usuario.php",
+					"settings":
+					{
+						"buffer_size": 5533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1475,
+								1475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/wamp/www/casv1/php/info.php",
+					"settings":
+					{
+						"buffer_size": 4392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3872,
+								3872
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/wamp/www/casv1/php/iva.php",
+					"settings":
+					{
+						"buffer_size": 4620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1462,
+								1462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/wamp/www/casv1/php/plantilla-maestra.php",
+					"settings":
+					{
+						"buffer_size": 2695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1464,
+								1464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/wamp/www/casv1/php/usuarios.php",
+					"settings":
+					{
+						"buffer_size": 4220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1455,
+								1455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/wamp/www/casv1/php/modal.php",
+					"settings":
+					{
+						"buffer_size": 3464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1595,
+								1595
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/wamp/www/casv1/php/conexion.php",
+					"settings":
+					{
+						"buffer_size": 1599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1458,
+								1458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/C/wamp/www/casv1/error/403.html",
+					"settings":
+					{
+						"buffer_size": 1382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								895,
+								920
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"settings":
+					{
+						"buffer_size": 810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								810,
+								810
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Para la contabilidad de Costos:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/wamp/www/casv1/error/404.html",
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 0.0

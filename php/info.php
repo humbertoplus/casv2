@@ -21,6 +21,9 @@
 ?>
 <?php 
 	include("sesion.php");
+	if(!$_COOKIE["sesion"]){
+		header("Location: salir.php");
+	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -53,13 +56,13 @@
         					<strong>Aviso importante:</strong> <br>Este sistema ha sido diseñado para ser visualizado en los navegadores Google Chrome, Mozilla Firefox, Opera, Safari y Maxthon. Recomendamos encarecidamente no usar Microsoft Internet Explorer. <a href="compatibilidad.php">Detalles.</a>
         				</div>
         				<p align="justify">
-        					Computerized Accountancy System es un sistema contable para ser usado en ambiente web, lo que le da la portabilidad para ser ejecutado en cualquier equipo con una conexión a internet, o de forma local en el caso de no contar con una ella. El sistema está programado en su totalidad en lenguaje PHP, apoyado con la base de datos MySQL.
+        					Computerized Accountancy System es un sistema contable para ser usado en ambiente web, lo que le da la portabilidad para ser ejecutado en cualquier equipo con una conexión a internet, o de forma local en el caso de no contar con ella. El sistema está programado en su totalidad en lenguaje PHP, apoyado con la base de datos MySQL.
         				</p>
         				<p align="justify">
         					Para el estilo visual, se ha utilizado un toolkit denominado Bootstrap 3, que es el archivo que contiene todas las reglas CSS para darle la apariencia al sistema. Además el diseño de la aplicación es completamente responsivo, es decir, que se adapta automáticamente a cualquier dispositivo en el cual esté siendo visualizado, por ejemplo dispositivos móviles como celulares inteligentes y tabletas. Se ha utilizado jQuery para algunos efectos gráficos, todo con el objetivo de tener una aplicación con una interfaz amigable para el usuario.
         				</p>
         				<p align="justify">
-        					El sistema gestor de base de datos que se ha utilizado es MySQL, debido a su versatilidad y compatibilidad en ambientes web y PHP.
+        					El sistema gestor de base de datos que se ha utilizado es MySQL, debido a su versatilidad y compatibilidad en ambientes web con PHP.
         					Se han utilizado los últimos estándares en diseño web para mejorar el desempeño en los nuevos navegadores.
         				</p>			
         			</div>
