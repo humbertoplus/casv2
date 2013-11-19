@@ -333,6 +333,14 @@
 	},
 	"file_history":
 	[
+		"/E/Placeholders.js-master/Placeholders.js-master/lib/main.js",
+		"/E/Placeholders.js-master/Placeholders.js-master/Gruntfile.js",
+		"/C/wamp/www/casv1/php/ayuda.php",
+		"/C/wamp/www/casv1/php/cambio-pw.php",
+		"/C/wamp/www/casv1/php/asiento-simple.php",
+		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/casv1/php/iva.php",
+		"/C/wamp/www/casv1/php/agregar-usuario.php",
 		"/C/wamp/www/catwin/iva.php",
 		"/C/Users/Alex Contreras/Desktop/CREATE TABLE Persona.sql",
 		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/consultas lab 4.sql",
@@ -359,7 +367,6 @@
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/theme/index.html",
 		"/C/wamp/www/casv1/php/prueba-bd.php",
 		"/C/wamp/www/sic/conex.php",
-		"/C/wamp/www/casv1/php/cambio-pw.php",
 		"/C/wamp/www/bootstrap-php/index.php",
 		"/C/wamp/www/bootstrap-php/php/acerca.php",
 		"/C/wamp/www/CAS/index.php",
@@ -453,14 +460,7 @@
 		"/C/wamp/www/curso-php/mis-contactos/php/mensajes.php",
 		"/D/Alex Contreras/Downloads/calc_planilla.sql",
 		"/D/Alex Contreras/Downloads/baseDeDatosLab3.sql",
-		"/C/wamp/www/ci/application/config/config.php",
-		"/D/Alex Contreras/Dropbox/Cursos OnLine/Diseño Web/html5/SitioWEB/css/estilos.css",
-		"/D/Alex Contreras/Documents/GitHub/html/multitut/youtube-layout/index.html",
-		"/D/Alex Contreras/Downloads/mongoose/fonts.css",
-		"/D/Alex Contreras/Downloads/mongoose/default.css",
-		"/D/Alex Contreras/Downloads/mongoose/index.html",
-		"/D/Alex Contreras/Documents/GitHub/html/multitut/boton/index.html",
-		"/D/Alex Contreras/Documents/GitHub/html/multitut/boton/estilo.css"
+		"/C/wamp/www/ci/application/config/config.php"
 	],
 	"find":
 	{
@@ -555,18 +555,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":

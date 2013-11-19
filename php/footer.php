@@ -4,7 +4,8 @@
 					Computerized Accountancy System | Todos los derechos reservados &copy; 2013.
 				</p>
 				<p class="navbar-text pull-right">
-					<a href="#">Volver arriba</a>
+					Logueado como <em><strong style="text-transform:capitalize"><?php echo $_SESSION["usuario"]; ?></strong></em>&nbsp;&nbsp;
+					<a href="#" class="navbar-link" title="Volver arriba"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
 				</p>
 			</div>
 	</div>

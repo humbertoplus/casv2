@@ -1,0 +1,2 @@
+ErrorDocument 403 /casv1/error/403.html
+ErrorDocument 404 /casv1/error/404.html

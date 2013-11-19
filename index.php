@@ -6,7 +6,6 @@
 	* 	En este archivo se controla la capa de presentación para el manejo del inicio de sesión del usuario.		   *
 	*******************************************************************************************************************/
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
