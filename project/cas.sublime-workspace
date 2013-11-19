@@ -277,6 +277,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -333,13 +336,42 @@
 	},
 	"file_history":
 	[
-		"/E/Placeholders.js-master/Placeholders.js-master/lib/main.js",
-		"/E/Placeholders.js-master/Placeholders.js-master/Gruntfile.js",
+		"/C/wamp/www/casv1/php/footer.php",
+		"/C/wamp/www/curso-php/06EnvioCorreo/class.phpmailer.php",
+		"/C/wamp/www/casv1/error/403.html",
+		"/C/wamp/www/casv1/error/404.html",
+		"/C/wamp/www/casv1/php/home.php",
+		"/C/wamp/www/casv1/php/plantilla-maestra.php",
+		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/casv1/php/asiento-simple.php",
 		"/C/wamp/www/casv1/php/ayuda.php",
 		"/C/wamp/www/casv1/php/cambio-pw.php",
-		"/C/wamp/www/casv1/php/asiento-simple.php",
-		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/casv1/php/crear-usuario.php",
+		"/C/wamp/www/casv1/php/eliminar-usuario.php",
+		"/C/wamp/www/casv1/php/info.php",
 		"/C/wamp/www/casv1/php/iva.php",
+		"/C/wamp/www/casv1/php/prueba-nav.php",
+		"/C/wamp/www/casv1/php/usuarios.php",
+		"/C/wamp/www/casv1/php/conexion.php",
+		"/C/wamp/www/casv1/php/control.php",
+		"/C/wamp/www/casv1/index.php",
+		"/C/wamp/www/casv1/php/verificar-sesion.php",
+		"/C/wamp/www/casv1/php/sesion.php",
+		"/C/wamp/www/casv1/php/salir.php",
+		"/C/wamp/www/curso-php/04Cookies/borrar-cookie.php",
+		"/C/wamp/www/curso-php/04Cookies/espaniol.php",
+		"/C/wamp/www/curso-php/04Cookies/grabar-cookie.php",
+		"/C/wamp/www/curso-php/04Cookies/ingles.php",
+		"/C/wamp/www/curso-php/04Cookies/usar-cookie.php",
+		"/C/wamp/www/curso-php/04Cookies/pedir-idioma.php",
+		"/D/Alex Contreras/Dropbox/Mis Asignaturas/SIC115/Sistemas contables/SISTEMA_CONTABLE_2009/SISTEMA CONTABLE 2009/catalogo/Catalogo.asp",
+		"/C/wamp/www/html5/SitioWEB/index.html",
+		"/C/wamp/www/casv1/php/nav.php",
+		"/C/wamp/www/casv1/php/.htaccess",
+		"/C/wamp/www/casv1/css/.htaccess",
+		"/C/wamp/www/casv1/.htaccess",
+		"/E/Placeholders.js-master/Placeholders.js-master/lib/main.js",
+		"/E/Placeholders.js-master/Placeholders.js-master/Gruntfile.js",
 		"/C/wamp/www/casv1/php/agregar-usuario.php",
 		"/C/wamp/www/catwin/iva.php",
 		"/C/Users/Alex Contreras/Desktop/CREATE TABLE Persona.sql",
@@ -357,7 +389,6 @@
 		"/C/Users/Alex Contreras/Desktop/css.html",
 		"/C/wamp/www/casv1/php/select-tipo.php",
 		"/C/wamp/www/mantenimiento/php/registrar.php",
-		"/C/wamp/www/casv1/php/usuarios.php",
 		"/C/wamp/www/casv1/php/example.php",
 		"/C/wamp/www/bootstrap-tutorial/extras2.html",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/navbar/index.html",
@@ -372,7 +403,6 @@
 		"/C/wamp/www/CAS/index.php",
 		"/C/wamp/www/curso-php/mis-contactos/php/prueba-bd.php",
 		"/C/wamp/www/curso-php/mis-contactos/php/consultas-contacto.php",
-		"/C/wamp/www/casv1/php/conexion.php",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/signin/signin.css",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/signin/index.html",
 		"/C/wamp/www/mantenimiento/index.php",
@@ -421,7 +451,6 @@
 		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/public/menus.php",
 		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/public/header.php",
 		"/C/wamp/www/english/scripts/dropdown.js",
-		"/C/wamp/www/html5/SitioWEB/index.html",
 		"/C/wamp/www/english/css/modern.css",
 		"/C/wamp/www/test-metro/buttons.php",
 		"/C/wamp/www/brushed/_include/css/main.css",
@@ -434,33 +463,7 @@
 		"/C/wamp/www/curso-php/mis-contactos/css/mis-contactos.css",
 		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/less/forms.less",
 		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/css/modern-responsive.css",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/public/css/modern.css",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/css/theme-dark.css",
-		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/css/modern.css",
-		"/C/wamp/www/test-metro/.htaccess",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/HDP115/Ciclo I - 2013/Otros/hdp.backup",
-		"/C/Users/Alex Contreras/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/D/Alex Contreras/Dropbox/Cursos OnLine/Diseño Web/html5/responsive-design/css/estilos.css",
-		"/D/Alex Contreras/Dropbox/Cursos OnLine/Diseño Web/html5/responsive-design/index.html",
-		"/C/Users/Vladimir Contreras/Desktop/order.cpp",
-		"/C/Users/Alex Contreras/Desktop/SQL/LABORATORIO 3 EVALUADO - TPI115/calc_planilla.sql",
-		"/D/Alex Contreras/Downloads/CalculaEDAD.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/tablas-sp-clientes/tablas-sp-clientes.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/cmspa_clientes.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/direcciones/direcciones.sql",
-		"/D/Alex Contreras/Documents/Privacy/lnks.txt",
-		"/C/Users/Alex Contreras/Documents/Visual Studio 2012/Projects/MiSitioWeb/MiSitioWeb/app/Default.aspx",
-		"/D/Alex Contreras/Downloads/calc_planilla (3).sql",
-		"/C/Users/Alex Contreras/Desktop/calc_planilla.sql",
-		"/C/wamp/www/ci/application/config/database.php",
-		"/C/wamp/www/ci/system/database/DB_driver.php",
-		"/C/wamp/www/holamundo.php",
-		"/C/wamp/www/curso-php/mis-contactos/php/select-pais.php",
-		"/C/wamp/www/curso-php/mis-contactos/php/alta-contacto.php",
-		"/C/wamp/www/curso-php/mis-contactos/php/mensajes.php",
-		"/D/Alex Contreras/Downloads/calc_planilla.sql",
-		"/D/Alex Contreras/Downloads/baseDeDatosLab3.sql",
-		"/C/wamp/www/ci/application/config/config.php"
+		"/D/Alex Contreras/Downloads/Metro-UI-CSS-master/Metro-UI-CSS-master/public/css/modern.css"
 	],
 	"find":
 	{
@@ -538,6 +541,14 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 0.0
