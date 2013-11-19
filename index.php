@@ -1,10 +1,23 @@
 <?php
-
-	/*******************************************************************************************************************
-	*	Archivo 'index.php'. Este archivo es parte del sistema contable C.A.S para la cátedra de Sistemas Contables.   *
-	* 	Tiene permiso para usar este archivo bajo la licencia GPL v3. Todos los derechos reservados (C) 2013.		   *
-	* 	En este archivo se controla la capa de presentación para el manejo del inicio de sesión del usuario.		   *
-	*******************************************************************************************************************/
+/*~ Archivo index.php
+.---------------------------------------------------------------------------.
+|    Software: CAS - Computerized Accountancy System                        |
+|     Versión: 1.0                                                          |
+|   Lenguajes: PHP, HTML, CSS3 y Javascript                                 |
+| ------------------------------------------------------------------------- |
+|   Autores: Ricardo Vigil (alexcontreras@outlook.com)                      |
+|          : Vanessa Campos                                                 |
+|          : Ingrid Aguilar                                                 |
+|          : Jhosseline Rodriguez                                           |
+| Copyright (C) 2013, FIA-UES. Todos los derechos reservados.               |
+| ------------------------------------------------------------------------- |
+|                                                                           |
+| Este archivo es parte del sistema de contabilidad C.A.S para la cátedra   |
+| de Sistemas Contables de la Facultad de Ingeniería y Arquitectura de la   |
+| Universidad de El Salvador.                                               |
+|                                                                           |
+'---------------------------------------------------------------------------'
+*/
 ?>
 <?php 
 	error_reporting(E_ALL ^ E_NOTICE);
@@ -28,7 +41,6 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<br><br><br>
 			<div class="jumbotron text-center">
 				<h1>Bienvenido a C.A.S</h1>
 				<p>
@@ -46,13 +58,18 @@
 				echo "</div>";
 			}
 		?>
-		<a href="index.php"><img id="img_inicio" src="img/cas.png"/></a>
-		<form class="form-signin" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form">
+		<div class="col-lg-6 pull-left">
+			<img class="fading" src="img/logo.png"/>
+		</div>
+		<div class="col-lg-5  pull-right">
+			<form class="form-signin" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form">
 			<h2 class="form-signin-heading">Por favor, inicie sesión</h2>
 			<input type="text" class="form-control" id="user" name="user_txt" placeholder="Usuario" required />
 			<input type="password" class="form-control" id="password" name="password_txt" placeholder="Contraseña" required />
 			<button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> &nbsp;Iniciar sesión</button>
 		</form>
+		</div>
+		
 	</div>
 	
 	<div class="navbar navbar-inverse navbar-fixed-bottom">

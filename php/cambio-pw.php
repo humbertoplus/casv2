@@ -1,13 +1,23 @@
 <?php
-
-	/************************************************************************************************************************
-	*	Archivo 'cambio-pw.php'. Este archivo es parte del sistema contable C.A.S para la cátedra de Sistemas Contables.    *
-	* 	Tiene permiso para usar este archivo bajo la licencia GPL v3. Todos los derechos reservados (C) 2013.		        *
-	* 	Este archivo conforma la capa de presentación para el cambio de la contraseña del usuario que actualmente está      *
-	*	logueado en el sistema.																							    *
-	*	La página consiste en un formulario de cambio de contraseña, en donde se solicita la contraseña actual, y la nueva. *
-	*	Si todos los datos son ingresados correctamente, el cambio se realiza con éxito.                            		*
-	************************************************************************************************************************/
+/*~ Archivo cambio-pw.php
+.---------------------------------------------------------------------------.
+|    Software: CAS - Computerized Accountancy System                        |
+|     Versión: 1.0                                                          |
+|   Lenguajes: PHP, HTML, CSS3 y Javascript                                 |
+| ------------------------------------------------------------------------- |
+|   Autores: Ricardo Vigil (alexcontreras@outlook.com)                      |
+|          : Vanessa Campos                                                 |
+|          : Ingrid Aguilar                                                 |
+|          : Jhosseline Rodriguez                                           |
+| Copyright (C) 2013, FIA-UES. Todos los derechos reservados.               |
+| ------------------------------------------------------------------------- |
+|                                                                           |
+| Este archivo es parte del sistema de contabilidad C.A.S para la cátedra   |
+| de Sistemas Contables de la Facultad de Ingeniería y Arquitectura de la   |
+| Universidad de El Salvador.                                               |
+|                                                                           |
+'---------------------------------------------------------------------------'
+*/
 ?>
 <?php 
 	include("sesion.php");

@@ -57,9 +57,26 @@ textarea {
   resize:none;
 }
 
-#img_inicio {
-  margin: 0px auto;
-  display: block;
+.fading
+{
+  opacity: 1;
+  filter: alpha(opacity=10);
+    -ms-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.fading:hover
+{
+  opacity: 0.7;
+  filter: alpha(opacity=7);
+    -ms-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #contenido{
@@ -79,4 +96,20 @@ textarea {
 
 #usuarios{
   background: #FFF;
+}
+
+a{
+  -ms-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+a:hover{
+  -ms-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
