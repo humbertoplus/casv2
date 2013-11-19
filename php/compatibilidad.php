@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo info.php
+/*~ Archivo compatibilidad.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -33,7 +33,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | Acerca de</title>
+	<title>C.A.S | Compatibilidad con navegadores</title>
 </head>
 
 <body>
@@ -45,27 +45,34 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Acerca de C.A.S</h3>
+        			<h3>Compatibilidad con navegadores</h3>
         		</div>
         		<div class="row">
-        			<div class="col-md-12 well">
-        				<div class="alert alert-danger text-center">
-        					<strong>Aviso importante:</strong> <br>Este sistema ha sido diseñado para ser visualizado en los navegadores Google Chrome, Mozilla Firefox, Opera, Safari y Maxthon. Recomendamos encarecidamente no usar Microsoft Internet Explorer. <a href="compatibilidad.php">Detalles.</a>
+        			<div class="col-lg-12 well">
+        				<p align="justify">
+        					En la actualidad existen muchos navegadores para visualizar páginas web, pero no todos pueden visualizar correctamente algunos sitios. En el caso de nuestro sistema C.A.S, debe ser visualizado en los siguientes navegadores:
+        					<ul>
+        						<li>Google Chrome</li>
+        						<li>Opera</li>
+        						<li>Mozilla Firefox</li>
+        						<li>Maxthon</li>
+        						<li>Safari</li>
+        					</ul>
+        				</p>
+        				<h3>¿Por qué excluímos Microsoft Internet Explorer?</h3>
+        				<p align="justify">
+        					Microsoft Internet Explorer es uno de los navegadores en el mercado que actualmente no cumplen los estándares recientes en cuanto al renderizado de sitios web, por lo tanto, no puede mostrar los sitios web con todas sus funcionalidades. Por esta razón, es uno de los navegadores con las puntuaciones más bajas en los rankings de compatibilidad.
+        				</p>
+        				<p align="justify">
+        					Si usted es usuario de Microsoft Internet Explorer, le recomendamos que cambie de navegador por otro que cumpla con los últimos estándares (de visualización y seguridad) para que pueda sacarle el mayor provecho a las últimas tecnologías web. 
+        				</p>
+        				<div class="alert alert-info">
+        					Advertimos que el funcionamiento de C.A.S en Internet Explorer no está del todo asegurado.
         				</div>
-        				<p align="justify">
-        					Computerized Accountancy System es un sistema contable para ser usado en ambiente web, lo que le da la portabilidad para ser ejecutado en cualquier equipo con una conexión a internet, o de forma local en el caso de no contar con una ella. El sistema está programado en su totalidad en lenguaje PHP, apoyado con la base de datos MySQL.
-        				</p>
-        				<p align="justify">
-        					Para el estilo visual, se ha utilizado un toolkit denominado Bootstrap 3, que es el archivo que contiene todas las reglas CSS para darle la apariencia al sistema. Además el diseño de la aplicación es completamente responsivo, es decir, que se adapta automáticamente a cualquier dispositivo en el cual esté siendo visualizado, por ejemplo dispositivos móviles como celulares inteligentes y tabletas. Se ha utilizado jQuery para algunos efectos gráficos, todo con el objetivo de tener una aplicación con una interfaz amigable para el usuario.
-        				</p>
-        				<p align="justify">
-        					El sistema gestor de base de datos que se ha utilizado es MySQL, debido a su versatilidad y compatibilidad en ambientes web y PHP.
-        					Se han utilizado los últimos estándares en diseño web para mejorar el desempeño en los nuevos navegadores.
-        				</p>			
         			</div>
         		</div>
         	</div><!--/span-->
-			
+
 			<!-- Barra lateral o sidebar -->
         	<?php include("sidebar.php"); ?>
         	

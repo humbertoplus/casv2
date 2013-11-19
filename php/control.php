@@ -37,8 +37,6 @@
 		$_SESSION["autentificado"]=true;
 		$_SESSION["usuario"]=$_POST["user_txt"];
 		setcookie("sesion",$_SESSION["autentificado"],time()+1440,"/");
-
-
 		header("Location: home.php");
 	}
 
