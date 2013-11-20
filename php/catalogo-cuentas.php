@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo plantilla-maestra.php
+/*~ Archivo catalogo-cuentas.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
