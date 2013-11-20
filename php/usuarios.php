@@ -25,7 +25,7 @@
 		header("Location: salir.php");
 	}
 	if($_SESSION["tipo"]=="estandar"){
-		header("Location: home.php");
+		header("Location: home.php?error=acceso-denegado");
 	}
 ?>
 <!DOCTYPE html>

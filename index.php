@@ -37,6 +37,12 @@
 	<script>
 	    !window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
 	</script>
+	<script>
+		var nav = navigator.appName;
+		if(nav=="Microsoft Internet Explorer"){
+			alert("Está usando "+nav+". El sistema no funcionará correctamente.");
+		};
+	</script>
 	<title>C.A.S | SIC115</title>
 </head>
 <body>
@@ -48,7 +54,6 @@
 		</div>
 		
 		<br>
-		
 		<?php
 			error_reporting(E_ALL ^ E_NOTICE);
 			if ($_GET["error"]=="si")

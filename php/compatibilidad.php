@@ -53,7 +53,7 @@
         		<div class="row">
         			<div class="col-lg-12 well">
         				<p align="justify">
-        					En la actualidad existen muchos navegadores para visualizar páginas web, pero no todos pueden visualizar correctamente algunos sitios. En el caso de nuestro sistema C.A.S, debe ser visualizado en los siguientes navegadores:
+        					En la actualidad existen muchos navegadores para visualizar páginas web, pero no todos pueden mostrar o interpretar correctamente algunos sitios. En el caso de nuestro sistema C.A.S, este debe ser visualizado en alguno de los siguientes navegadores:
         					<ul>
         						<li>Google Chrome</li>
         						<li>Opera</li>
@@ -70,7 +70,7 @@
         					Si usted es usuario de Microsoft Internet Explorer, le recomendamos que cambie de navegador por otro que cumpla con los últimos estándares (de visualización y seguridad) para que pueda sacarle el mayor provecho a las últimas tecnologías web. 
         				</p>
         				<div class="alert alert-info">
-        					Advertimos que el funcionamiento de C.A.S en Internet Explorer no está del todo asegurado.
+        					<strong>Nota:</strong> Advertimos que el funcionamiento de C.A.S en Internet Explorer no está del todo asegurado.
         				</div>
         			</div>
         		</div>
