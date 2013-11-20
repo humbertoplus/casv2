@@ -43,7 +43,7 @@
 	<div class="container">
 		<div class="row">
 			<div>
-				<img class="fading img-responsive img-rounded col-lg-12" src="img/inicio.png"/>
+				<img class="fading img-responsive img-rounded col-lg-12" src="img/logo1.png"/>
 			</div>
 		</div>
 		
