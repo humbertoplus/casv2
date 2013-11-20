@@ -52,9 +52,10 @@
 						<li><a href="#">Extracto de Subcuenta</a></li>
 						<li><a href="#">Extracto de Cuenta</a></li>
 						<li><a href="#">Extracto de Subgrupo</a></li>
+						<li class="divider"></li>
 						<li><a href="listar-subcuentas.php">Listado de Subcuentas</a></li>
-						<li><a href="#">Listado de Cuentas</a></li>
-						<li><a href="#">Listado de Subgrupos</a></li>
+						<li><a href="listar-cuentas.php">Listado de Cuentas</a></li>
+						<li><a href="listar-subgrupos.php">Listado de Subgrupos</a></li>
 						<li><a href="#">Editar</a></li>
 						<li><a href="#">Borrar cuenta</a></li>
 					</ul>

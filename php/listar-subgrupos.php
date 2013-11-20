@@ -106,18 +106,15 @@
                         <?php 
                             $consulta = "SELECT 
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
-                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
-                                        CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
+                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
                                         clasificaciones a, 
                                         catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        catalogo_subgrupos c
                                         WHERE
-                                        d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND
-                                        a.`codigo_clasificacion`=2";
+                                        a.`codigo_clasificacion`=3";
 
                             $ejecutar_consulta = $conexion->query($consulta);
 
@@ -127,7 +124,6 @@
                                     echo "<tr>";
                                     echo "<th class='text-center'>Grupo</th>";
                                     echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
                                     echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -136,7 +132,6 @@
                                         echo "<tr>";
                                         echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                         echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
                                         echo "</tr>";
                                     }
                                     
@@ -156,15 +151,12 @@
                         <?php 
                             $consulta = "SELECT 
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
-                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
-                                        CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
+                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
                                         clasificaciones a, 
                                         catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        catalogo_subgrupos c
                                         WHERE
-                                        d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND
                                         a.`codigo_clasificacion`=3";
@@ -177,7 +169,6 @@
                                     echo "<tr>";
                                     echo "<th class='text-center'>Grupo</th>";
                                     echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
                                     echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -186,7 +177,6 @@
                                         echo "<tr>";
                                         echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                         echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
                                         echo "</tr>";
                                     }
                                     
@@ -206,15 +196,12 @@
                         <?php 
                             $consulta = "SELECT 
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
-                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
-                                        CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
+                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
                                         clasificaciones a, 
                                         catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        catalogo_subgrupos c 
                                         WHERE
-                                        d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND
                                         a.`codigo_clasificacion`=4";
@@ -227,7 +214,6 @@
                                     echo "<tr>";
                                     echo "<th class='text-center'>Grupo</th>";
                                     echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
                                     echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -236,7 +222,6 @@
                                         echo "<tr>";
                                         echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                         echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
                                         echo "</tr>";
                                     }
                                     

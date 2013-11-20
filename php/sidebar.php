@@ -80,7 +80,7 @@
 					<a href="#" class="list-group-item">&#0171; Extracto de Subgrupo</a>
 					<a href="listar-subcuentas.php" class="list-group-item">&#0171; Listado de Subcuentas</a>
 					<a href="listar-cuentas.php" class="list-group-item">&#0171; Listado de Cuentas</a>
-					<a href="#" class="list-group-item">&#0171; Listado de Subgrupos</a>
+					<a href="listar-subgrupos.php" class="list-group-item">&#0171; Listado de Subgrupos</a>
 					<a href="#" class="list-group-item">&#0171; Editar</a>
 					<a href="#" class="list-group-item">&#0171; Borrar cuenta</a>				            
 				</div>
