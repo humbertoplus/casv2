@@ -52,7 +52,7 @@
 						<li><a href="#">Extracto de Subcuenta</a></li>
 						<li><a href="#">Extracto de Cuenta</a></li>
 						<li><a href="#">Extracto de Subgrupo</a></li>
-						<li><a href="#">Listado de Subcuentas</a></li>
+						<li><a href="listar-subcuentas.php">Listado de Subcuentas</a></li>
 						<li><a href="#">Listado de Cuentas</a></li>
 						<li><a href="#">Listado de Subgrupos</a></li>
 						<li><a href="#">Editar</a></li>

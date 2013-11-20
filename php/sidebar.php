@@ -78,7 +78,7 @@
 					<a href="#" class="list-group-item">&#0171; Extracto de Subcuenta</a>
 					<a href="#" class="list-group-item">&#0171; Extracto de Cuenta</a>
 					<a href="#" class="list-group-item">&#0171; Extracto de Subgrupo</a>
-					<a href="#" class="list-group-item">&#0171; Listado de Subcuentas</a>
+					<a href="listar-subcuentas.php" class="list-group-item">&#0171; Listado de Subcuentas</a>
 					<a href="#" class="list-group-item">&#0171; Listado de Cuentas</a>
 					<a href="#" class="list-group-item">&#0171; Listado de Subgrupos</a>
 					<a href="#" class="list-group-item">&#0171; Editar</a>

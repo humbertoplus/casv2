@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo usuarios.php
+/*~ Archivo listar-subcuentas.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -24,9 +24,6 @@
 	if(!$_COOKIE["sesion"]){
 		header("Location: salir.php");
 	}
-	if($_SESSION["tipo"]=="estandar"){
-		header("Location: home.php");
-	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,64 +36,81 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | Listado de usuarios</title>
+	<title>C.A.S | Listado de Subcuentas</title>
 </head>
 
 <body>
 	<!-- Barra de navegación -->
-	<?php include("nav.php") ?>
+	<?php include("nav.php"); ?>
 
 	<!-- Contenido de la página -->
 	<div class="container" id="contenido">
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Administrar Usuarios - Lista de usuarios</h3>
+        			<h3>Listado de subcuentas</h3>
         		</div>
         		<div class="row">
-        			<?php
-        				include("conexion.php");
+        			<div class="col-lg-12">
+        				<?php 
+        					include("conexion.php");
+        					$consulta = "SELECT 
+	        								CONCAT_WS(' ', a.`codigo_clasificacion`, a.nombre) AS 'Clasificacion', 
+	        								CONCAT_WS(' ', b.`codigo_grupo`, b.`nombre_grupo`) AS 'Grupo', 
+	        								CONCAT_WS(' ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS 'Subgrupo', 
+	        								CONCAT_WS(' ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS 'Cuenta', 
+	        								e.`codigo_subcuenta` AS 'Subcuenta', 
+	        								e.`nombre_subcuenta` AS 'NombreSubcuenta' 
+        								FROM 
+	        								clasificaciones a, 
+	        								catalogo_grupos b, 
+	        								catalogo_subgrupos c, 
+	        								catalogo_cuentas d, 
+	        								catalogo_subcuentas e 
+        								WHERE 
+        									e.`cuenta` = d.`codigo_cuenta` AND 
+        									d.`subgrupo` = c.`codigo_subgrupo` AND 
+        									c.`grupo` = b.`codigo_grupo` AND 
+        									b.`clasificacion` = a.`codigo_clasificacion`";
 
-        				$consulta = "SELECT usuario, DATE_FORMAT(fecha, '%d-%m-%Y') fecha, tipo FROM usuario";
-        				$ejecutar_consulta = $conexion->query($consulta);
-        				
-        				echo "<div>";
-						echo "<table class='table table-hover table-bordered table-striped table-condensed'>";
-						echo "<thead>";
-						echo "<tr>";
-						echo "<th>Usuario</th>";
-						echo "<th>Contraseña</th>";
-						echo "<th>Fecha</th>";
-						echo "<th>Tipo</th>";
-						echo "</tr>";
-						echo "</thead>";
-						echo "<tbody>";
+        					$ejecutar_consulta = $conexion->query($consulta);
 
-						while($registro=$ejecutar_consulta->fetch_assoc()) 
-						{
+        					echo "<div>";
+							echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+							echo "<thead>";
 							echo "<tr>";
-							echo "<td>".$registro['usuario']."</td>";
-							echo "<td>**********</td>";
-							echo "<td>".$registro['fecha']."</td>";
-							echo "<td>".$registro['tipo']."</td>";
+							echo "<th class='text-center'>Clasificación</th>";
+							echo "<th class='text-center'>Grupo</th>";
+							echo "<th class='text-center'>Subgrupo</th>";
+							echo "<th class='text-center'>Cuenta</th>";
+							echo "<th class='text-center'>Subcuenta</th>";
+							echo "<th class='text-center'>Nombre Subcuenta</th>";
 							echo "</tr>";
-						}
+							echo "</thead>";
+							echo "<tbody>";
 
-						echo "</tbody>";
-						echo "</table>";
-						echo "</div>";									
-        			?>
-        			<div class="container well">
-        				<p>
-        					La tabla anterior muestra el listado de los usuarios que están registrados en el sistema. Se muestra el nombre de usuario, que es necesario para el inicio de sesión; la contraseña no se muestra por cuestiones de seguridad. La fecha mostrada es la fecha de creación del usuario y luego se muestra el tipo de usuario, este puede ser administrador o usuario estándar.
-        				</p>
+							while($registro = $ejecutar_consulta->fetch_assoc()){
+								echo "<tr>";
+								echo "<td>".utf8_encode($registro["Clasificacion"])."</td>";
+								echo "<td>".utf8_encode($registro["Grupo"])."</td>";
+								echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
+								echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+								echo "<td>".utf8_encode($registro["Subcuenta"])."</td>";
+								echo "<td>".utf8_encode($registro["NombreSubcuenta"])."</td>";
+								echo "</tr>";
+							}
+							
+							echo "</tbody>";
+							echo "</table>";
+							echo "</div>";
+        				?>
         			</div>
         		</div>
         	</div><!--/span-->
 
-        	<!-- Barra lateral o sidebar -->
+			<!-- Barra lateral o sidebar -->
         	<?php include("sidebar.php"); ?>
-
+        	
         </div>
     </div>
 

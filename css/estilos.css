@@ -1,5 +1,5 @@
 body {
-  background: #FFF;
+  background: #BCE4FC;
   margin-bottom: 80px;
   /*padding: 30px;*/
 }
@@ -94,7 +94,7 @@ textarea {
   padding:10px;
 }
 
-#usuarios{
+table{
   background: #FFF;
 }
 
