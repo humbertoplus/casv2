@@ -99,6 +99,11 @@
         					</fieldset>
         				</form>
         			</div>
+                    <div class="col-md-6">
+                        <p class="well" align="justify">
+                            En este apartado, el usuario administrador podrá dar de baja a algún usuario registrado en el sistema. Vale la pena mencionar que el usuario que actualmente está logueado no puede eliminarse a sí mismo. Se solicita su contraseña por razones de seguridad.
+                        </p>
+                    </div>
         		</div>
         	</div><!--/span-->
 

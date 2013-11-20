@@ -49,10 +49,12 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Nueva cuenta</a></li>
-						<li><a href="#">Extracto de Subcuenta</a></li>
-						<li><a href="#">Extracto de Cuenta</a></li>
-						<li><a href="#">Extracto de Subgrupo</a></li>
 						<li class="divider"></li>
+						<li><a href="#">Buscar Subcuenta</a></li>
+						<li><a href="#">Buscar Cuenta</a></li>
+						<li><a href="#">Buscar Subgrupo</a></li>
+						<li class="divider"></li>
+						<li><a href="catalogo-cuentas.php">Catálogo General de Cuentas</a></li>
 						<li><a href="listar-subcuentas.php">Listado de Subcuentas</a></li>
 						<li><a href="listar-cuentas.php">Listado de Cuentas</a></li>
 						<li><a href="listar-subgrupos.php">Listado de Subgrupos</a></li>

@@ -75,9 +75,10 @@
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
 					<a href="#" class="list-group-item">&#0171; Nueva cuenta</a>
-					<a href="#" class="list-group-item">&#0171; Extracto de Subcuenta</a>
-					<a href="#" class="list-group-item">&#0171; Extracto de Cuenta</a>
-					<a href="#" class="list-group-item">&#0171; Extracto de Subgrupo</a>
+					<a href="#" class="list-group-item">&#0171; Buscar Subcuenta</a>
+					<a href="#" class="list-group-item">&#0171; Buscar Cuenta</a>
+					<a href="#" class="list-group-item">&#0171; Buscar Subgrupo</a>
+					<a href="catalogo-cuentas.php" class="list-group-item">&#0171; Catálogo General de Cuentas</a>
 					<a href="listar-subcuentas.php" class="list-group-item">&#0171; Listado de Subcuentas</a>
 					<a href="listar-cuentas.php" class="list-group-item">&#0171; Listado de Cuentas</a>
 					<a href="listar-subgrupos.php" class="list-group-item">&#0171; Listado de Subgrupos</a>
