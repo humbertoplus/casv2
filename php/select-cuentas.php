@@ -1,5 +1,8 @@
 <?php
 include("sesion.php");
+if(!isset($conexion)){
+	include("conexion.php");
+}
 error_reporting(E_ALL ^ E_NOTICE);
 $consulta = "SELECT * FROM cuentas";
 $ejecutar_consulta = $conexion->query($consulta);

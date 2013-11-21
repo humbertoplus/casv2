@@ -1,6 +1,8 @@
 <?php 
 include("sesion.php");
-include("conexion.php");
+if(!isset($conexion)){
+	include("conexion.php");
+}
 error_reporting(E_ALL ^ E_NOTICE);
 $consulta = "SELECT * FROM grupos;";
 $ejecutar_consulta = $conexion->query($consulta);

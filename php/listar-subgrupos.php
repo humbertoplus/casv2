@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo listar-cuentas.php
+/*~ Archivo listar-subgrupos.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -58,7 +58,9 @@
         					<h4>1. Activos</h4>
         				</div>
         				<?php 
-        					include("conexion.php");
+        					if(!isset($conexion)){
+                                include("conexion.php");
+                            }
         					$consulta = "SELECT 
         								CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo

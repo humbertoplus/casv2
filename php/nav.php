@@ -48,7 +48,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Nueva cuenta</a></li>
+						<li><a href="alta-cuentas.php">Crear cuentas</a></li>
 						<li class="divider"></li>
 						<li><a href="#">Buscar Subcuenta</a></li>
 						<li><a href="#">Buscar Cuenta</a></li>

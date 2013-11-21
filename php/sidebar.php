@@ -23,7 +23,9 @@
 	<div class="col-sm-3">
 
 		<?php
-			include_once("conexion.php");
+			if(!isset($conexion)){
+				include("conexion.php");
+			}
 			$usuario = $_SESSION["usuario"];
         	$consulta = "SELECT * FROM usuario WHERE usuario='$usuario'";
         	$ejecutar_consulta = $conexion->query($consulta); 
@@ -74,7 +76,7 @@
 
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
-					<a href="#" class="list-group-item">&#0171; Nueva cuenta</a>
+					<a href="alta-cuentas.php" class="list-group-item">&#0171; Crear cuentas</a>
 					<a href="#" class="list-group-item">&#0171; Buscar Subcuenta</a>
 					<a href="#" class="list-group-item">&#0171; Buscar Cuenta</a>
 					<a href="#" class="list-group-item">&#0171; Buscar Subgrupo</a>

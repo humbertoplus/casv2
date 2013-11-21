@@ -74,6 +74,7 @@
 											<label for="cuentas" class="control-label">Seleccionar</label>
 										<select name="cuentas_slc" id="cuentas" class="form-control">
 											<option value="">Introduzca el número de cuenta, o seleccione uno de esta lista</option>
+											<?php include("select-cuentas.php"); include("select-subcuentas.php");?>
 										</select>
 										</div>
 									</div>

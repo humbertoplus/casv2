@@ -22,7 +22,9 @@
 <?php 
 //Incluyo el archivo de la conexión a la BD
 include("sesion.php");
-include("conexion.php");
+if(!isset($conexion)){
+	include("conexion.php");
+}
 error_reporting(E_ALL ^ E_NOTICE);
 $consulta = "SELECT usuario FROM usuario ORDER BY usuario";
 //Ejecuto el query

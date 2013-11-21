@@ -58,7 +58,9 @@
         					<h4>1. Activos</h4>
         				</div>
         				<?php 
-        					include("conexion.php");
+        					if(!isset($conexion)){
+        						include("conexion.php");
+        					}
         					$consulta = "SELECT 
         								codigo_subcuenta, nombre_subcuenta
         								FROM catalogo_subcuentas
