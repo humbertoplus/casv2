@@ -39,7 +39,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | Crear Grupo</title>
+	<title>C.A.S | Crear Cuentas</title>
 </head>
 
 <body>
@@ -51,15 +51,16 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Crear Grupo</h3>
+        			<h3>Crear Grupos, Subgrupos, Cuentas o Subcuentas</h3>
         		</div>
         		<div class="row">
         			<div class="col-lg-12 well">
         				<form action="agregar-grupo.php" class="form-horizontal" method="post" name="crear-grupo_frm" enctype="application/x-www-form-urlencoded">
         					<fieldset>
+        						<legend>Crear Grupo</legend>
         						<div class="container">
         							<div class="row">
-        								<div class="col-lg-3">
+        								<div class="col-lg-4">
         									<label for="naturaleza" class="control-label">Naturaleza</label>
         									<select name="naturaleza_slc" id="naturaleza" class="form-control">
         										<option value="">Seleccione</option>
@@ -69,14 +70,15 @@
         										<option value="4">4. Resultados</option>
         									</select>
         								</div>
-        								<div class="col-lg-3">
+        								<div class="col-lg-5">
         									<label for="id_grupo" class="control-label">Código del grupo</label>
-        									<input type="text" id="id_grupo" class="form-control" name="id_grupo_txt" title="Escriba el código en el formato #.#" placeholder="Formato: #.#" required/>
+        									<input type="text" id="id_grupo" class="form-control" name="id_grupo_txt" title="Escriba el código en el formato #.#" placeholder="Escriba el código en el formato #.#" required/>
         								</div>
-        								
-        								<div class="col-lg-6">
+        							</div>
+        							<div class="row">
+        								<div class="col-lg-12">
         									<label for="nombre_grupo" class="control-label">Nombre</label>
-        									<input type="text" id="nombre_grupo" name="nombre_grupo_txt" class="form-control" title="Escriba un nombre para el grupo" placeholder="Nombre del grupo" required/>
+        									<input type="text" id="nombre_grupo" name="nombre_grupo_txt" class="form-control" title="Escriba un nombre para el grupo" placeholder="Escriba el nombre asignado al grupo" required/>
         								</div>
         							</div>
         							<div class="row">
@@ -88,7 +90,7 @@
         							<br>
         							<div class="row">
         								<div class="col-lg-12">
-        									<button class="btn btn-primary pull-right" type="submit"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp; Guardar</button>
+        									<button class="btn btn-success pull-right" type="submit"><span class="glyphicon glyphicon-save"></span>&nbsp; Guardar Grupo</button>
         								</div>
         							</div>
         						</div>
@@ -96,10 +98,12 @@
         				</form>
         			</div>
         		</div>
+
         		<div class="row">
         			<div class="col-lg-12 well">
         				<form action="agregar-subgrupo.php" class="form-horizontal" method="post" id="crear-subgrupo_frm" enctype="application/x-www-form-urlencoded">
         					<fieldset>
+        						<legend>Crear Subgrupo</legend>
         						<div class="container">
         							<div class="row">
         								<div class="col-lg-4">
@@ -111,7 +115,7 @@
         								</div>
         								<div class="col-lg-5">
         									<label for="id_subgrupo" class="control-label">Código del subgrupo</label>
-        									<input type="text" id="id_subgrupo" name="id_subgrupo_txt" class="form-control" placeholder="Escriba el código en el formato #.#.#" title="Escriba el código para el grupo en el formato #.#.#" required />
+        									<input type="text" id="id_subgrupo" name="id_subgrupo_txt" class="form-control" placeholder="Escriba el código en el formato #.#.#" title="Escriba el código para el subgrupo en el formato #.#.#" required />
         								</div>
         							</div>
         							<div class="row">
@@ -129,7 +133,7 @@
         							<br>
         							<div class="row">
         								<div class="col-lg-12">
-        									<button class="btn btn-primary pull-right" type="submit"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;Guardar</button>
+        									<button class="btn btn-success pull-right" type="submit"><span class="glyphicon glyphicon-save"></span>&nbsp;Guardar Subgrupo</button>
         								</div>
         							</div>
         						</div>
@@ -142,6 +146,7 @@
         			<div class="col-lg-12 well">
         				<form action="agregar-cuenta.php" class="form-horizontal" id="crear-cuenta" name="crear-cuenta_frm" method="post" enctype="application/x-www-form-urlencoded">
         					<fieldset>
+        						<legend>Crear Cuenta</legend>
         						<div class="container">
         							<div class="row">
         								<div class="col-lg-4">
@@ -171,7 +176,51 @@
         							<br>
         							<div class="row">
         								<div class="col-lg-12">
-        									<button class="btn btn-primary pull-right" type="submit"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp; Guardar</button>
+        									<button class="btn btn-success pull-right" type="submit"><span class="glyphicon glyphicon-save"></span>&nbsp; Guardar Cuenta</button>
+        								</div>
+        							</div>
+        						</div>
+        					</fieldset>
+        				</form>
+        			</div>
+        		</div>
+
+        		<div class="row">
+        			<div class="col-lg-12 well">
+        				<form action="agregar-subgrupo.php" class="form-horizontal" method="post" id="crear-subgrupo_frm" enctype="application/x-www-form-urlencoded">
+        					<fieldset>
+        						<legend>Crear Subcuenta</legend>
+        						<div class="container">
+        							<div class="row">
+        								<div class="col-lg-4">
+        									<label for="cuentas" class="control-label">Cuenta</label>
+        									<select name="cuentas_slc" id="cuentas" class="form-control">
+        										<option value="">Seleccione cuenta</option>
+        										<?php include("select-cuentas.php"); ?>
+        										
+        									</select>
+        								</div>
+        								<div class="col-lg-5">
+        									<label for="id_subcuenta" class="control-label">Código de la subcuenta</label>
+        									<input type="text" id="id_subcuenta" name="id_subcuenta_txt" class="form-control" placeholder="Escriba el código en el formato #.#.#.#.#" title="Escriba el código para la subcuenta en el formato #.#.#.#.#" required />
+        								</div>
+        							</div>
+        							<div class="row">
+        								<div class="col-lg-12">
+        									<label for="nombre_subcuenta" class="control-label">Nombre de la subcuenta</label>
+        									<input type="text" id="nombre_subcuenta" class="form-control" name="nombre_subcuenta_txt" title="Escriba el nombre de la subcuenta" placeholder="Escriba el nombre asignado a la subcuenta" required/>
+        								</div>
+        							</div>
+        							<div class="row">
+        								<div class="col-lg-12">
+        									<label for="descripcion_subcuenta" class="control-label">Descripción</label>
+        									<textarea name="descripcion_subcuenta_txa" id="descripcion_subcuenta" class="form-control" placeholder="Escriba una descripción para la subcuenta"></textarea>
+        								</div>
+        							</div>
+        							<br>
+        							<div class="row">
+        								<div class="col-lg-12">
+        									<button class="btn btn-success pull-right" type="submit"><span class="glyphicon glyphicon-save"></span>&nbsp;Guardar Subcuenta</button>
         								</div>
         							</div>
         						</div>
