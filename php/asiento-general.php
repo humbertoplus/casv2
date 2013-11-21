@@ -66,16 +66,23 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-lg-2">
-											<label for="cuenta" class="control-label">Cuenta</label>
+										<div class="col-lg-3">
+											<label for="cuenta" class="control-label">Cuenta o subcuenta</label>
 											<input type="text" class="form-control" id="cuenta" placeholder="N° de cuenta" title="Escriba el número de la cuenta afectada" required/>
 										</div>
-										<div class="col-lg-10">
-											<label for="cuentas" class="control-label">Seleccionar</label>
+										<div class="col-lg-5">
+											<label for="cuentas" class="control-label">Seleccionar Cuenta</label>
 										<select name="cuentas_slc" id="cuentas" class="form-control">
-											<option value="">Introduzca el número de cuenta, o seleccione uno de esta lista</option>
-											<?php include("select-cuentas.php"); include("select-subcuentas.php");?>
+											<option value="">Seleccione uno de esta lista</option>
+											<?php include("select-cuentas.php");?>
 										</select>
+										</div>
+										<div class="col-lg-4">
+											<label for="subcuentas" class="control-label">Seleccionar Subcuenta</label>
+											<select name="subcuentas_slc" id="subcuentas" class="form-control">
+												<option value="">Subcuenta</option>
+												<?php include("select-subcuentas.php?opc=subcuentas_slc"); ?>
+											</select>
 										</div>
 									</div>
 									<div class="row">
