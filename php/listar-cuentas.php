@@ -64,7 +64,7 @@
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
         								CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
         								FROM 
-        								clasificaciones a, 
+        								catalogo_clasificaciones a, 
         								catalogo_grupos b, 
         								catalogo_subgrupos c, 
         								catalogo_cuentas d 
@@ -114,7 +114,7 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c, 
                                         catalogo_cuentas d 
@@ -164,7 +164,7 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c, 
                                         catalogo_cuentas d 
@@ -214,7 +214,7 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c, 
                                         catalogo_cuentas d 

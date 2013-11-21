@@ -63,7 +63,7 @@
         								CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
         								FROM 
-        								clasificaciones a, 
+        								catalogo_clasificaciones a, 
         								catalogo_grupos b, 
         								catalogo_subgrupos c
         								WHERE
@@ -108,7 +108,7 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c
                                         WHERE
@@ -153,7 +153,7 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c
                                         WHERE
@@ -198,7 +198,7 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c 
                                         WHERE

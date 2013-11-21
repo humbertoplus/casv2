@@ -61,7 +61,7 @@
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta,
                                         CONCAT_WS('. ', e.`codigo_subcuenta`, e.`nombre_subcuenta`) AS Subcuenta
                                         FROM 
-                                        clasificaciones a, 
+                                        catalogo_clasificaciones a, 
                                         catalogo_grupos b, 
                                         catalogo_subgrupos c, 
                                         catalogo_cuentas d, 
