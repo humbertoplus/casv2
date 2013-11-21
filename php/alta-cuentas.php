@@ -155,7 +155,7 @@
 									<div class="row">
 										<div class="col-lg-4">
 											<label for="subgrupos" class="control-label">Subgrupo</label>
-											<select name="grupos_slc" id="subgrupos" class="form-control" required>
+											<select name="subgrupos_slc" id="subgrupos" class="form-control" required>
 												<option value="">Seleccione subgrupo</option>
 												<?php include("select-subgrupos.php"); ?>
 											</select>
