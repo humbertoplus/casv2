@@ -40,7 +40,7 @@
 	<script>
 		var nav = navigator.appName;
 		if(nav=="Microsoft Internet Explorer"){
-			alert("Está usando "+nav+". El sistema no funcionará correctamente.");
+			alert("Está usando "+nav+". Puede que el sistema no funcione correctamente.");
 		};
 	</script>
 	<title>C.A.S | SIC115</title>
