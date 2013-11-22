@@ -20,7 +20,6 @@
 */
 ?>
 <?php 
-	require_once("conexion.php");
 	include("sesion.php");
 	if(!$_COOKIE["sesion"]){
 		header("Location: salir.php");
@@ -56,7 +55,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 well">
-						<form action="" id="asiento_gral" name="asiento_gral_frm" class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
+						<form action="alta-asientogral.php" id="asiento_gral" name="asiento_gral_frm" class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
 							<fieldset>
 								<div class="container">
 									<div class="row">
@@ -70,35 +69,36 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-lg-3">
-											<label for="cuenta" class="control-label">Cuenta o subcuenta</label>
-											<input type="text" class="form-control" id="cuenta" placeholder="N° de cuenta" title="Escriba el número de la cuenta afectada" required/>
-										</div>
-
-										<div class="col-lg-5">
+										<div class="col-lg-6">
 											<?php 
-												$sql = "SELECT * FROM cuentas";
-												$res = $conexion->query($sql);
+
 											?>
 											<label for="cuentas" class="control-label">Seleccionar Cuenta</label>
 											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.asiento_gral_frm.cuentas_slc.value, 'div-subcuentas', 'cuentas.php')">
 											<option value="0">Seleccione uno de esta lista</option>
 											<?php 
-												while($reg = $res->fetch_assoc()){
-													?>
-													<option value="<?php echo $reg["codigo_cuenta"]; ?>"><?php echo $reg["codigo_cuenta"] .". ". utf8_encode($reg["nombre_cuenta"]); ?></option>
-													<?php
-
+												if(!isset($conexion)){
+													include("conexion.php");
+												}
+												$consulta = "SELECT * FROM cuentas";
+												$ejecutar_consulta = $conexion->query($consulta);
+												while($registro = $ejecutar_consulta->fetch_assoc()){
+													echo "<option value='";
+													echo $registro["codigo_cuenta"];
+													echo "'>";
+													echo $registro["codigo_cuenta"];
+													echo ". ";
+													echo utf8_encode($registro["nombre_cuenta"]);
+													echo "</option>";
 												}
 											?>
 											</select>
 										</div>
 
-										<div class="col-lg-4" id="div-subcuentas">
+										<div class="col-lg-6" id="div-subcuentas">
 											<label for="subcuentas" class="control-label">Seleccionar Subcuenta</label>
 												<select name="subcuentas_slc" id="subcuentas" class="form-control">
 													<option value="">Seleccione Subcuenta</option>
-												
 												</select>
 										</div>
 									</div>
