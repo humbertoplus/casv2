@@ -79,27 +79,27 @@
         					$ejecutar_consulta = $conexion->query($consulta);
 
         					echo "<div>";
-									echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
-									echo "<thead>";
-									echo "<tr>";
-									echo "<th class='text-center'>Grupo</th>";
-									echo "<th class='text-center'>Subgrupo</th>";
-									echo "<th class='text-center'>Cuenta</th>";
-									echo "</tr>";
-									echo "</thead>";
-									echo "<tbody>";
+							echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                            echo "<thead>";
+                            echo "<tr>";
+                            echo "<th class='text-center'>Grupo</th>";
+                            echo "<th class='text-center'>Subgrupo</th>";
+                            echo "<th class='text-center'>Cuenta</th>";
+                            echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
 
-									while($registro = $ejecutar_consulta->fetch_assoc()){
-										echo "<tr>";
-										echo "<td>".utf8_encode($registro["Grupo"])."</td>";
-										echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-										echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
-										echo "</tr>";
-									}
-									
-									echo "</tbody>";
-									echo "</table>";
-									echo "</div>";
+                            while($registro = $ejecutar_consulta->fetch_assoc()){
+                                echo "<tr>";
+                                echo "<td>".utf8_encode($registro["Grupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "</tr>";
+                            }
+                            
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
         				?>
         			</div>
         		</div>
@@ -129,27 +129,27 @@
                             $ejecutar_consulta = $conexion->query($consulta);
 
                             echo "<div>";
-                                    echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
-                                    echo "<thead>";
-                                    echo "<tr>";
-                                    echo "<th class='text-center'>Grupo</th>";
-                                    echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
-                                    echo "</tr>";
-                                    echo "</thead>";
-                                    echo "<tbody>";
+                            echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                            echo "<thead>";
+                            echo "<tr>";
+                            echo "<th class='text-center'>Grupo</th>";
+                            echo "<th class='text-center'>Subgrupo</th>";
+                            echo "<th class='text-center'>Cuenta</th>";
+                            echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
 
-                                    while($registro = $ejecutar_consulta->fetch_assoc()){
-                                        echo "<tr>";
-                                        echo "<td>".utf8_encode($registro["Grupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
-                                        echo "</tr>";
-                                    }
-                                    
-                                    echo "</tbody>";
-                                    echo "</table>";
-                                    echo "</div>";
+                            while($registro = $ejecutar_consulta->fetch_assoc()){
+                                echo "<tr>";
+                                echo "<td>".utf8_encode($registro["Grupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "</tr>";
+                            }
+                            
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
                         ?>
                     </div>
                 </div>
@@ -179,27 +179,27 @@
                             $ejecutar_consulta = $conexion->query($consulta);
 
                             echo "<div>";
-                                    echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
-                                    echo "<thead>";
-                                    echo "<tr>";
-                                    echo "<th class='text-center'>Grupo</th>";
-                                    echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
-                                    echo "</tr>";
-                                    echo "</thead>";
-                                    echo "<tbody>";
+                            echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                            echo "<thead>";
+                            echo "<tr>";
+                            echo "<th class='text-center'>Grupo</th>";
+                            echo "<th class='text-center'>Subgrupo</th>";
+                            echo "<th class='text-center'>Cuenta</th>";
+                            echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
 
-                                    while($registro = $ejecutar_consulta->fetch_assoc()){
-                                        echo "<tr>";
-                                        echo "<td>".utf8_encode($registro["Grupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
-                                        echo "</tr>";
-                                    }
-                                    
-                                    echo "</tbody>";
-                                    echo "</table>";
-                                    echo "</div>";
+                            while($registro = $ejecutar_consulta->fetch_assoc()){
+                                echo "<tr>";
+                                echo "<td>".utf8_encode($registro["Grupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "</tr>";
+                            }
+                            
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
                         ?>
                     </div>
                 </div>
@@ -229,27 +229,27 @@
                             $ejecutar_consulta = $conexion->query($consulta);
 
                             echo "<div>";
-                                    echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
-                                    echo "<thead>";
-                                    echo "<tr>";
-                                    echo "<th class='text-center'>Grupo</th>";
-                                    echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
-                                    echo "</tr>";
-                                    echo "</thead>";
-                                    echo "<tbody>";
+                            echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                            echo "<thead>";
+                            echo "<tr>";
+                            echo "<th class='text-center'>Grupo</th>";
+                            echo "<th class='text-center'>Subgrupo</th>";
+                            echo "<th class='text-center'>Cuenta</th>";
+                            echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
 
-                                    while($registro = $ejecutar_consulta->fetch_assoc()){
-                                        echo "<tr>";
-                                        echo "<td>".utf8_encode($registro["Grupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
-                                        echo "</tr>";
-                                    }
-                                    
-                                    echo "</tbody>";
-                                    echo "</table>";
-                                    echo "</div>";
+                            while($registro = $ejecutar_consulta->fetch_assoc()){
+                                echo "<tr>";
+                                echo "<td>".utf8_encode($registro["Grupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
+                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "</tr>";
+                            }
+                            
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
                         ?>
                     </div>
                 </div>
