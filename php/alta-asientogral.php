@@ -30,18 +30,28 @@ if($num_regs!=0){
 		$sql = "INSERT INTO `sic115`.`registro`( `fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$n_asiento', '$subcuenta', '$concepto', '$debe', '$haber', '$explicacion', null, null, '$usuario', null, '$ip')";
 		$ejecutar_consulta = $conexion->query($sql);
 		if($ejecutar_consulta){
-			header("Location: asiento-general.php?mensaje=si");
+			header("Location: asiento-general.php?error=no");
 		}
 	}
 	else if($subcuenta==0) {
-		$ip = $_SERVER["HTTP_CLIENT_IP"];
-		if(!$ip) {$ip = $_SERVER["REMOTE_ADDR"];}
-		$sql = "INSERT INTO `sic115`.`registro`( `fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$n_asiento', '$cuenta', '$concepto', '$debe', '$haber', '$explicacion', null, null, '$usuario', null, '$ip')";
+		$sql = "SELECT * FROM subcuentas WHERE cuenta = '$cuenta'";
 		$ejecutar_consulta = $conexion->query($sql);
-		if($ejecutar_consulta){
-			header("Location: asiento-general.php?mensaje=si");
+		$num_regs = $ejecutar_consulta->num_rows;
+		if($num_regs==0){
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
+			if(!$ip) {$ip = $_SERVER["REMOTE_ADDR"];}
+			$sql = "INSERT INTO `sic115`.`registro`( `fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$n_asiento', '$cuenta', '$concepto', '$debe', '$haber', '$explicacion', null, null, '$usuario', null, '$ip')";
+			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+			if($ejecutar_consulta){
+				header("Location: asiento-general.php?error=no");
+			}
+		} else{
+			header("Location: asiento-general.php?error=subcuenta");
 		}
+		
 	}
+} else{
+	header("Location: asiento-general.php?error=anio");
 }
 
 ?>

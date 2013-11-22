@@ -54,6 +54,29 @@
 					<h3>Asiento General</h3>
 				</div>
 				<div class="row">
+					<div>
+						<?php 
+							error_reporting(E_ALL ^ E_NOTICE);
+							if($_GET["error"]=="no"){
+								echo "<div class='alert alert-success alert-dismissable'>";
+								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+								echo "Se ha registrado el asiento correctamente.";
+								echo "</div>";
+							} else if($_GET["error"]=="anio"){
+								echo "<div class='alert alert-danger alert-dismissable'>";
+								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+								echo "El año del asiento no coincide con el año contable.";
+								echo "</div>";
+							} else if($_GET["error"]=="subcuenta"){
+								echo "<div class='alert alert-danger alert-dismissable'>";
+								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+								echo "Debe seleccionar una subcuenta.";
+								echo "</div>";
+							}
+						?>
+					</div>
+				</div>
+				<div class="row">
 					<div class="col-md-12 well">
 						<form action="alta-asientogral.php" id="asiento_gral" name="asiento_gral_frm" class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
 							<fieldset>
@@ -65,7 +88,7 @@
 										</div>
 										<div class="col-lg-4">
 											<label for="fecha" class="control-label">Fecha</label>
-											<input type="date" class="form-control" id="fecha" name="fecha_txt" title="Ingrese la fecha del asiento" required/>
+											<input type="date" class="form-control" id="fecha" name="fecha_txt" title="Ingrese la fecha del asiento" placeholder="aaaa-mm-dd" required/>
 										</div>
 									</div>
 									<div class="row">
