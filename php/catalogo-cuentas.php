@@ -50,57 +50,579 @@
                 <div class="page-header">
                     <h3>Catálogo de cuentas</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php
-                            include("conexion.php"); 
-                            $consulta = "SELECT 
-                                        CONCAT_WS('. ', a.`codigo_clasificacion`, a.`nombre`) AS Clasificacion,
-                                        CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
-                                        CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
-                                        CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta,
-                                        CONCAT_WS('. ', e.`codigo_subcuenta`, e.`nombre_subcuenta`) AS Subcuenta
-                                        FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d, 
-                                        catalogo_subcuentas e
-                                        WHERE
-                                        e.`cuenta`=d.`codigo_cuenta` AND
-                                        d.`subgrupo`=c.`codigo_subgrupo` AND
-                                        c.`grupo`=b.`codigo_grupo` AND
-                                        b.`clasificacion`=a.`codigo_clasificacion`";
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Grupos</h2>
+                            <br>
+                            <h3>Activos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM grupos WHERE clasificacion=1";
 
-                            $ejecutar_consulta = $conexion->query($consulta);
+                                $ejecutar_consulta = $conexion->query($consulta);
 
-                            echo "<div>";
-                                    echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
-                                    echo "<thead>";
-                                    echo "<tr>";
-                                    echo "<th class='text-center'>Clasificación</th>";
-                                    echo "<th class='text-center'>Grupo</th>";
-                                    echo "<th class='text-center'>Subgrupo</th>";
-                                    echo "<th class='text-center'>Cuenta</th>";
-                                    echo "<th class='text-center'>Subcuenta</th>";
-                                    echo "</tr>";
-                                    echo "</thead>";
-                                    echo "<tbody>";
-
-                                    while($registro = $ejecutar_consulta->fetch_assoc()){
+                                echo "<div>";
+                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<thead>";
                                         echo "<tr>";
-                                        echo "<td>".utf8_encode($registro["Clasificacion"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Grupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
-                                        echo "<td>".utf8_encode($registro["Subcuenta"])."</td>";
+                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th class='text-center'>Nombre del Grupo</th>";
                                         echo "</tr>";
-                                    }
-                                    
-                                    echo "</tbody>";
-                                    echo "</table>";
-                                    echo "</div>";
-                        ?>
+                                        echo "</thead>";
+                                        echo "<tbody>";
+
+                                        while($registro = $ejecutar_consulta->fetch_assoc()){
+                                            echo "<tr>";
+                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
+                                            echo "</tr>";
+                                        }
+                                        
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                        echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Pasivos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM grupos WHERE clasificacion=2";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<thead>";
+                                        echo "<tr>";
+                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th class='text-center'>Nombre del Grupo</th>";
+                                        echo "</tr>";
+                                        echo "</thead>";
+                                        echo "<tbody>";
+
+                                        while($registro = $ejecutar_consulta->fetch_assoc()){
+                                            echo "<tr>";
+                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
+                                            echo "</tr>";
+                                        }
+                                        
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                        echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Capital</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM grupos WHERE clasificacion=3";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<thead>";
+                                        echo "<tr>";
+                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th class='text-center'>Nombre del Grupo</th>";
+                                        echo "</tr>";
+                                        echo "</thead>";
+                                        echo "<tbody>";
+
+                                        while($registro = $ejecutar_consulta->fetch_assoc()){
+                                            echo "<tr>";
+                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
+                                            echo "</tr>";
+                                        }
+                                        
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                        echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Resultados</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM grupos WHERE clasificacion=4";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<thead>";
+                                        echo "<tr>";
+                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th class='text-center'>Nombre del Grupo</th>";
+                                        echo "</tr>";
+                                        echo "</thead>";
+                                        echo "<tbody>";
+
+                                        while($registro = $ejecutar_consulta->fetch_assoc()){
+                                            echo "<tr>";
+                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
+                                            echo "</tr>";
+                                        }
+                                        
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                        echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Subgrupos</h2>
+                            <br>
+                            <h3>Activos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subgrupos WHERE codigo_subgrupo LIKE '1%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th class='text-center'>Nombre del Subrupo</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
+                                    echo "</tr>";
+                                }
+                                        
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Pasivos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subgrupos WHERE codigo_subgrupo LIKE '2%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th class='text-center'>Nombre del Subgrupo</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Capital</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subgrupos WHERE codigo_subgrupo LIKE '3%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th class='text-center'>Nombre del Subgrupo</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Resultados</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subgrupos WHERE codigo_subgrupo LIKE '4%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th class='text-center'>Nombre del Subgrupo</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Cuentas</h2>
+                            <br>
+                            <h3>Activos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '1%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Cuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                        
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Pasivos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '2%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Cuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Capital</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '3%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Cuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Resultados</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '4%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Cuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container well">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Subcuentas</h2>
+                            <br>
+                            <h3>Activos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subcuentas WHERE codigo_subcuenta LIKE '1%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Subcuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                        
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Pasivos</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subcuentas WHERE codigo_subcuenta LIKE '2%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Subcuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Capital</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subcuentas WHERE codigo_subcuenta LIKE '3%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Subcuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br>
+                            <h3>Resultados</h3>
+                            <?php
+                                if(!isset($conexion)){
+                                    include("conexion.php");
+                                } 
+                                $consulta = "SELECT * FROM subcuentas WHERE codigo_subcuenta LIKE '4%'";
+
+                                $ejecutar_consulta = $conexion->query($consulta);
+
+                                echo "<div>";
+                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th class='text-center'>Nombre de la Subcuenta</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+
+                                while($registro = $ejecutar_consulta->fetch_assoc()){
+                                    echo "<tr>";
+                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+                                    echo "</tr>";
+                                }
+                                
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</div>";
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div><!--/span-->

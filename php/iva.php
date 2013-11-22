@@ -36,6 +36,22 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
+    <script>
+        function validarIva(){
+            var verificar = true;
+            var iva = document.getElementById("n_iva");
+            if(isNaN(iva.value))
+            {
+                alert("El campo iva solo acepta números");
+                iva.focus();
+                verificar = false;
+            }
+            if(verificar)
+            {
+                document.iva_frm.submit();
+            }
+        }
+    </script>
 	<title>C.A.S | IVA</title>
 </head>
 
@@ -69,15 +85,15 @@
         		</div>
         		<div class="row">
         			<div class="col-md-12">
-        				<form action="iva2.php" class="form-inline" method="post">
+        				<form action="iva2.php" name="iva_frm" class="form-inline" method="post">
         					<fieldset>
         						<legend>Cambiar IVA</legend>
 
         						<div class="col-md-6">
-        							<input type="money" class="form-control" id="n_iva" name="n_iva_txt" size="4" maxlength="4" placeholder="Escriba el nuevo valor para el IVA" required/>
+        							<input type="text" class="form-control" id="n_iva" name="n_iva_txt" size="4" maxlength="4" placeholder="Escriba el nuevo valor para el IVA" required/>
         						</div>
         						<div class="col-md-4">
-        							<button type="submit" class="btn btn-info">Cambiar IVA</button>
+        							<button type="button" class="btn btn-info" id="cambio-iva" name="cambio_iva_btn" onclick="validarIva()">Cambiar IVA</button>
         						</div>
         					</fieldset>
         				</form>
