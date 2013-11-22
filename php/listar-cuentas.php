@@ -66,10 +66,10 @@
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
         								CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
         								FROM 
-        								catalogo_clasificaciones a, 
-        								catalogo_grupos b, 
-        								catalogo_subgrupos c, 
-        								catalogo_cuentas d 
+        								clasificaciones a, 
+        								grupos b, 
+        								subgrupos c, 
+        								cuentas d 
         								WHERE
         								d.`subgrupo`=c.`codigo_subgrupo` AND
         								c.`grupo`=b.`codigo_grupo` AND
@@ -116,10 +116,10 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c, 
+                                        cuentas d 
                                         WHERE
                                         d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND
@@ -166,10 +166,10 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c, 
+                                        cuentas d 
                                         WHERE
                                         d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND
@@ -216,10 +216,10 @@
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c, 
-                                        catalogo_cuentas d 
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c, 
+                                        cuentas d 
                                         WHERE
                                         d.`subgrupo`=c.`codigo_subgrupo` AND
                                         c.`grupo`=b.`codigo_grupo` AND

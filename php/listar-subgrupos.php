@@ -65,9 +65,9 @@
         								CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
         								FROM 
-        								catalogo_clasificaciones a, 
-        								catalogo_grupos b, 
-        								catalogo_subgrupos c
+        								clasificaciones a, 
+        								grupos b, 
+        								subgrupos c
         								WHERE
         								c.`grupo`=b.`codigo_grupo` AND
         								b.`clasificacion`=a.`codigo_clasificacion` AND
@@ -110,9 +110,9 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c
                                         WHERE
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND
@@ -155,9 +155,9 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c
                                         WHERE
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND
@@ -200,9 +200,9 @@
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo
                                         FROM 
-                                        catalogo_clasificaciones a, 
-                                        catalogo_grupos b, 
-                                        catalogo_subgrupos c 
+                                        clasificaciones a, 
+                                        grupos b, 
+                                        subgrupos c 
                                         WHERE
                                         c.`grupo`=b.`codigo_grupo` AND
                                         b.`clasificacion`=a.`codigo_clasificacion` AND

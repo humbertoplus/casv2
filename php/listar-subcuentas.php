@@ -63,8 +63,8 @@
         					}
         					$consulta = "SELECT 
         								codigo_subcuenta, nombre_subcuenta
-        								FROM catalogo_subcuentas
-        								WHERE naturaleza='activo'";
+        								FROM subcuentas
+        								WHERE codigo_subcuenta LIKE '1%'";
 
         					$ejecutar_consulta = $conexion->query($consulta);
 
@@ -101,8 +101,8 @@
         				<?php 
         					$consulta = "SELECT 
         								codigo_subcuenta, nombre_subcuenta
-        								FROM catalogo_subcuentas
-        								WHERE naturaleza='pasivo'";
+        								FROM subcuentas
+        								WHERE codigo_subcuenta LIKE '2%'";
 
         					$ejecutar_consulta = $conexion->query($consulta);
 
@@ -139,8 +139,8 @@
         				<?php 
         					$consulta = "SELECT 
         								codigo_subcuenta, nombre_subcuenta
-        								FROM catalogo_subcuentas
-        								WHERE naturaleza='capital'";
+        								FROM subcuentas
+        								WHERE codigo_subcuenta LIKE '3%'";
 
         					$ejecutar_consulta = $conexion->query($consulta);
 
@@ -177,8 +177,8 @@
         				<?php 
         					$consulta = "SELECT 
         								codigo_subcuenta, nombre_subcuenta
-        								FROM catalogo_subcuentas
-        								WHERE naturaleza='resultado'";
+        								FROM subcuentas
+        								WHERE codigo_subcuenta LIKE '4%'";
 
         					$ejecutar_consulta = $conexion->query($consulta);
 
