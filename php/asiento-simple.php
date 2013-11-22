@@ -37,6 +37,7 @@
 		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
 	<title>C.A.S | Asiento simple</title>
+	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
 </head>
 
 <body>
@@ -66,26 +67,62 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-3">
-											<label for="c_debe" class="control-label">Cuenta al debe</label>
-											<input type="text" id="c_debe" name="c_debe_txt" class="form-control" placeholder="N° Cuenta" title="Escriba el número de la cuenta al debe" required/>
-										</div>
-										<div class="col-md-9">
-											<label for="cuentas" class="control-label">Seleccione cuenta</label>
-											<select name="cuentas_slc" id="cuentas" class="form-control">
+										<div class="col-md-6">
+											<label for="cuentasdebe" class="control-label">Seleccione cuenta al debe</label>
+											<select name="cuentasdebe_slc" id="cuentasdebe" class="form-control" onchange="from(document.asiento_simple_frm.cuentasdebe_slc.value, 'scuentasdebe', 'cuentas2.php')">
 												<option value="">Seleccione una cuenta</option>
+												<?php 
+												if(!isset($conexion)){
+													include("conexion.php");
+												}
+												$consulta = "SELECT * FROM cuentas";
+												$ejecutar_consulta = $conexion->query($consulta);
+												while($registro = $ejecutar_consulta->fetch_assoc()){
+													echo "<option value='";
+													echo $registro["codigo_cuenta"];
+													echo "'>";
+													echo $registro["codigo_cuenta"];
+													echo ". ";
+													echo utf8_encode($registro["nombre_cuenta"]);
+													echo "</option>";
+												}
+											?>
+											</select>
+										</div>
+										<div class="col-md-6" id="scuentasdebe">
+											<label for="subcuentasdebe" class="control-label">Seleccione subcuenta al debe</label>
+											<select name="subcuentasdebe_slc" id="subcuentasdebe" class="form-control">
+												<option value="">Seleccione una subcuenta</option>
 											</select>
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-3">
-											<label for="c_haber" class="control-label">Cuenta al haber</label>
-											<input type="text" id="c_haber" name="c_haber_txt" class="form-control" placeholder="N° Cuenta" title="Escriba el número de la cuenta al haber" required/>
-										</div>
-										<div class="col-md-9">
-											<label for="cuentas2" class="control-label">Seleccione cuenta</label>
-											<select name="cuentas_slc" id="cuentas2" class="form-control">
+										<div class="col-md-6">
+											<label for="cuentashaber" class="control-label">Seleccione cuenta al haber</label>
+											<select name="cuentashaber_slc" id="cuentashaber" class="form-control" onchange="from(document.asiento_simple_frm.cuentashaber_slc.value, 'scuentashaber', 'cuentas3.php')">
 												<option value="">Seleccione una cuenta</option>
+												<?php 
+												if(!isset($conexion)){
+													include("conexion.php");
+												}
+												$consulta = "SELECT * FROM cuentas";
+												$ejecutar_consulta = $conexion->query($consulta);
+												while($registro = $ejecutar_consulta->fetch_assoc()){
+													echo "<option value='";
+													echo $registro["codigo_cuenta"];
+													echo "'>";
+													echo $registro["codigo_cuenta"];
+													echo ". ";
+													echo utf8_encode($registro["nombre_cuenta"]);
+													echo "</option>";
+												}
+											?>
+											</select>
+										</div>
+										<div class="col-md-6" id="scuentashaber">
+											<label for="subcuentashaber" class="control-label">Seleccione subcuenta al haber</label>
+											<select name="subcuentashaber_slc" id="subcuentashaber" class="form-control">
+												<option value="">Seleccione una subcuenta</option>
 											</select>
 										</div>
 									</div>
