@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(0);
 include("sesion.php");
 
 if(!isset($conexion)){
@@ -46,5 +46,5 @@ $nombre_subcuenta 		= $_POST["nombre_subcuenta_txt"];
 
 $descripcion_subcuenta 	= $_POST["descripcion_subcuenta_txa"];
 
-
+print_r($_POST);
 ?>

@@ -53,7 +53,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 well">
-						<form action="" id="asiento_simple" name="asiento_simple_frm" method="post" enctype="multipart/form-data" class="form-horizontal">
+						<form action="alta-asientosimple.php" id="asiento_simple" name="asiento_simple_frm" method="post" enctype="multipart/form-data" class="form-horizontal">
 							<fieldset>
 								<div class="container">
 									<div class="row">
