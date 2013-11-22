@@ -2,7 +2,6 @@
 if(!isset($conexion)){
 	include ("conexion.php");
 }
-//print_r ($_GET);
 $id_cuenta = $_GET["id"];
 $consulta = "SELECT * FROM subcuentas WHERE cuenta = '$id_cuenta'";
 $ejecutar_consulta = $conexion->query($consulta);

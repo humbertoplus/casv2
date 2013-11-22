@@ -22,14 +22,14 @@
 <?php
 	function conectarse()
 	{
-		$servidor = "localhost";
-		$usuario = "root";
-		$password = "root";
-		$bd = "sic115";
+		$servidor 	=	 "localhost";
+		$usuario 	=	 "root";
+		$password 	=	 "root";
+		$bd 		=	 "sic115";
 
 		$conectar = new mysqli($servidor, $usuario, $password, $bd);
 		    return $conectar;
 	}
 
-	$conexion= conectarse();
+	$conexion = conectarse();
 ?>

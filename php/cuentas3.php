@@ -7,7 +7,7 @@ $id_cuenta = $_GET["id"];
 $consulta = "SELECT * FROM subcuentas WHERE cuenta = '$id_cuenta'";
 $ejecutar_consulta = $conexion->query($consulta);
 ?>
-<label for="subcuentashaber" class="control-label">Seleccione subcuenta al debe</label>
+<label for="subcuentashaber" class="control-label">Seleccione subcuenta al haber</label>
 <select name="subcuentashaber_slc" id="subcuentashaber" class="form-control">
 	<option value="">Seleccione una subcuenta</option>
 	<?php 
