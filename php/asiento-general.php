@@ -20,6 +20,7 @@
 */
 ?>
 <?php 
+	require_once("conexion.php");
 	include("sesion.php");
 	if(!$_COOKIE["sesion"]){
 		header("Location: salir.php");
@@ -36,7 +37,10 @@
 	<script>
 		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
+	
+
 	<title>C.A.S | Asiento General</title>
+	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
 </head>
 
 <body>
@@ -70,19 +74,32 @@
 											<label for="cuenta" class="control-label">Cuenta o subcuenta</label>
 											<input type="text" class="form-control" id="cuenta" placeholder="N° de cuenta" title="Escriba el número de la cuenta afectada" required/>
 										</div>
+
 										<div class="col-lg-5">
+											<?php 
+												$sql = "SELECT * FROM cuentas";
+												$res = $conexion->query($sql);
+											?>
 											<label for="cuentas" class="control-label">Seleccionar Cuenta</label>
-										<select name="cuentas_slc" id="cuentas" class="form-control">
-											<option value="">Seleccione uno de esta lista</option>
-											<?php include("select-cuentas.php");?>
-										</select>
-										</div>
-										<div class="col-lg-4">
-											<label for="subcuentas" class="control-label">Seleccionar Subcuenta</label>
-											<select name="subcuentas_slc" id="subcuentas" class="form-control">
-												<option value="">Subcuenta</option>
-												<?php include("select-subcuentas.php?opc=subcuentas_slc"); ?>
+											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.asiento_gral_frm.cuentas_slc.value, 'div-subcuentas', 'cuentas.php')">
+											<option value="0">Seleccione uno de esta lista</option>
+											<?php 
+												while($reg = $res->fetch_assoc()){
+													?>
+													<option value="<?php echo $reg["codigo_cuenta"]; ?>"><?php echo $reg["codigo_cuenta"] .". ". utf8_encode($reg["nombre_cuenta"]); ?></option>
+													<?php
+
+												}
+											?>
 											</select>
+										</div>
+
+										<div class="col-lg-4" id="div-subcuentas">
+											<label for="subcuentas" class="control-label">Seleccionar Subcuenta</label>
+												<select name="subcuentas_slc" id="subcuentas" class="form-control">
+													<option value="">Seleccione Subcuenta</option>
+												
+												</select>
 										</div>
 									</div>
 									<div class="row">
