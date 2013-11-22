@@ -70,12 +70,9 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-6">
-											<?php 
-
-											?>
 											<label for="cuentas" class="control-label">Seleccionar Cuenta</label>
 											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.asiento_gral_frm.cuentas_slc.value, 'div-subcuentas', 'cuentas.php')">
-											<option value="0">Seleccione uno de esta lista</option>
+											<option value="0">Seleccione una de esta lista</option>
 											<?php 
 												if(!isset($conexion)){
 													include("conexion.php");
@@ -98,7 +95,7 @@
 										<div class="col-lg-6" id="div-subcuentas">
 											<label for="subcuentas" class="control-label">Seleccionar Subcuenta</label>
 												<select name="subcuentas_slc" id="subcuentas" class="form-control">
-													<option value="">Seleccione Subcuenta</option>
+													<option value="0">Seleccione Subcuenta</option>
 												</select>
 										</div>
 									</div>
@@ -113,7 +110,7 @@
 										<div class="input-group col-lg-2">
 											<label for="debe" class="control-label sr-only">Debe</label>
 											<span class="input-group-addon">$</span>
-											<input type="text" id="debe" name="debe_frm" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" required/>
+											<input type="text" id="debe" name="debe_txt" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" required/>
 										</div>
 									</div>
 									<br>
@@ -121,7 +118,7 @@
 										<div class="input-group col-lg-2">
 											<label for="haber" class="control-label sr-only">Haber</label>
 											<span class="input-group-addon">$</span>
-											<input type="text" id="haber" name="haber_frm" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" required/>
+											<input type="text" id="haber" name="haber_txt" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" required/>
 										</div>
 									</div>
 									
