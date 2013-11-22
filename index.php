@@ -47,12 +47,6 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div>
-				<img class="fading img-responsive img-rounded col-lg-12" src="img/logo1.png"/>
-			</div>
-		</div>
-		
 		<br>
 		<?php
 			error_reporting(E_ALL ^ E_NOTICE);
@@ -72,7 +66,7 @@
 			</p>
 		</div>
 		
-		<form class="form-signin col-lg-12 text-center" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form">
+		<form class="form-signin col-lg-12 text-center" id="login" name="login_frm" method="post" action="php/control.php" enctype="application/x-www-form-urlencoded" role="form" onSubmit="return validacion()">
 			<h2 class="form-signin-heading">Por favor, inicie sesión</h2>
 			<input type="text" class="form-control" id="user" name="user_txt" placeholder="Usuario" required />
 			<input type="password" class="form-control" id="password" name="password_txt" placeholder="Contraseña" required />
@@ -91,7 +85,7 @@
 			</p>
 		</div>
 	</div>
-	
+	<script src="js/validaciones.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 </body>

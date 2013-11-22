@@ -36,23 +36,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-    <script>
-        function validacion(){
-            var verificar = true;
-            var iva = document.getElementById("n_iva");
-            if(isNaN(iva.value))
-            {
-                alert("El campo iva solo acepta números");
-                iva.focus();
-                return false;
-            }
-            return true;
-            // if(verificar)
-            // {
-            //     document.iva_frm.submit();
-            // }
-        }
-    </script>
+    <script src="../js/validaciones.js"></script>
 	<title>C.A.S | IVA</title>
 </head>
 
@@ -86,7 +70,7 @@
         		</div>
         		<div class="row">
         			<div class="col-md-12">
-        				<form action="iva2.php" name="iva_frm" class="form-inline" method="post" onSubmit="return validacion()">
+        				<form action="iva2.php" name="iva_frm" class="form-inline" method="post" onSubmit="return validarIva()">
         					<fieldset>
         						<legend>Cambiar IVA</legend>
 
@@ -133,6 +117,7 @@
 
 	<!-- Ventanas flotantes -->
 	<?php include("modal.php"); ?>
+    
 
 	<script src="../js/bootstrap.min.js"></script>
 </body>

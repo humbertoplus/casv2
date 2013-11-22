@@ -36,8 +36,6 @@
 	<script>
 		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	
-
 	<title>C.A.S | Asiento General</title>
 	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
 </head>
