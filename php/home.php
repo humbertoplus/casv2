@@ -53,11 +53,11 @@
         		</div>
 
         		<div class="row">
-            		<div class="jumbotron col-xs-12">
+            		<div class="jumbotron col-xs-12 text-center">
             			<div class="container">
 	            			<h1>¡Gracias por usar C.A.S!</h1>
 	            			<br>
-	            			<p align="justify">
+	            			<p>
 	            				C.A.S es un sistema de contabilidad basado en la web, en donde puede registrar los procesos contables de manera eficaz, rápida y sencilla. Para utilizar las funciones, puede acceder a ellas mediante la barra de navegación que se encuentra en la parte superior de su pantalla, o bien, puede utilizar el menú de la derecha. 
 	            			</p>
             			</div>
