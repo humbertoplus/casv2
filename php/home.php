@@ -63,11 +63,33 @@
             			</div>
             		</div>
           		</div><!--/row-->
+
           		<div class="row">
           			<div class="col-lg-12 well">
-          				<h1>Objetivo de C.A.S</h1>
+          				<h3>Objetivo de C.A.S</h3>
           				<p align="justify">
           					El objetivo primordial de este software es el de cumplir adecuadamente con los requerimientos de la contabilidad para llevar a cabo el proceso de registro de todas las transacciones relativas a los aspectos contables de una empresa. En este caso, el sistema facilitará los registros contables de una "Sociedad propuesta", que se encarga de la fabricación de vinos a base de frutas naturales de la región de los nonualcos en El Salvador.
+          				</p>
+          			</div>
+          		</div>
+
+          		<div class="row">
+          			<div class="col-lg-12 well">
+          				<h3>¿Cómo empezar?</h3>
+          				<p align="justify">
+          					Una buena forma de comenzar es echándole un vistazo al catálogo general de cuentas, en él aparecen las cuentas que el sistema posee por defecto, organizadas por Grupo, Subgrupo, Cuenta y Subcuenta, y subdivididas en Activo, Pasivo, Capital y Resultados. Luego de revisar estas cuentas, podría iniciar registrando nuevas cuentas (sólo si es usuario administrador) y con esto estará listo para empezar a hacer asientos de sus transacciones contables.
+          				</p>
+          			</div>
+          		</div>
+
+          		<div class="row">
+          			<div class="col-lg-12 well">
+          				<h3>Recomendaciones</h3>
+          				<p align="justify">
+          					Como todo software, C.A.S depende exclusivamente de los datos introducidos por el mismo usuario, por lo tanto, si usted desea ver buenos resultados con el uso de este sistema, deberá ingresarle información coherente y ordenada. Sin embargo, puede despreocuparse al momento de ingresar datos en formatos no admitidos, pues el sistema validará todas las entradas para obtener los datos en los formatos adecuados.
+          				</p>
+          				<p align="justify">
+          					<span class="label label-warning">Importante:</span> La duración de la sesión está preconfigurada en 60 minutos. Luego de este tiempo la sesión se cerrará, todo esto con el objetivo de aumentar la seguridad y evitar los accesos no autorizados que podrían suceder si se dejara el equipo sin la supervisión adecuada por un largo período de tiempo.
           				</p>
           			</div>
           		</div>

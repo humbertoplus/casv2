@@ -92,8 +92,8 @@
 									<div class="row">
 										<div class="col-lg-6">
 											<label for="cuentas" class="control-label">Seleccionar Cuenta</label>
-											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.asiento_gral_frm.cuentas_slc.value, 'div-subcuentas', 'cuentas.php')">
-											<option value="0">Seleccione una de esta lista</option>
+											<select name="cuentas_slc" id="cuentas" class="form-control" required title="Debe seleccionar una cuenta." onchange="from(document.asiento_gral_frm.cuentas_slc.value, 'div-subcuentas', 'cuentas.php')">
+											<option value="">Seleccione una de esta lista</option>
 											<?php 
 												if(!isset($conexion)){
 													include("conexion.php");

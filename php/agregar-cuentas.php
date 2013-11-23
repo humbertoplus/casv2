@@ -20,12 +20,18 @@
 */
 ?>
 <?php 
+
+/* Evita que aparezcan notificaciones en la página. */
 error_reporting(E_ALL ^ E_NOTICE);
+
+/* Verifica que la sesión esté iniciada. */
 include("sesion.php");
 
+/* Realiza la conexión a la base de datos en caso de no estar realizada. */
 if(!isset($conexion)){
 	include("conexion.php");
 }
+
 
 /* Variables del formulario de creación de grupo */
 
