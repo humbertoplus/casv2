@@ -33,7 +33,7 @@
 	<meta name="description" content="Este es un sistema de contabilidad basado en la web, para administrar los procesos contables de la Propuesta para el desarrollo de la actividad vinícola en la microregión de los nonualcos a través de la gestión de la cadena de suministro."/>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/estilos.css"/>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<script>
 	    !window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
 	</script>

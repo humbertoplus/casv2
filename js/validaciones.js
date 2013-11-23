@@ -22,9 +22,20 @@ function validarIva(){
 	var iva = document.getElementById("n_iva").value;
 	if(isNaN(iva))
 	{
-	    alert("El campo IVA solo acepta números");
+	    alert("El campo IVA solo acepta números.");
 	    document.getElementById("n_iva").focus();
 	    return false;
+	}
+
+	return true;
+}
+
+function validarAnioContable(){
+	var indice = document.getElementById("anio").selectedIndex;
+	if(indice == null || indice == 0){
+		alert("Debe seleccionar un año de la lista.");
+		document.getElementById("anio").focus();
+		return false;
 	}
 
 	return true;

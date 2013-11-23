@@ -36,6 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <script src="../js/validaciones.js"></script>
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
@@ -55,7 +56,7 @@
         		</div>
         		<div class="row">
         			<div class="col-lg-12">
-        				<form action="anio-contable-form.php" class="form-inline" method="post" enctype="application/x-www-form-urlencoded">
+        				<form action="anio-contable-form.php" class="form-inline" method="post" enctype="application/x-www-form-urlencoded" onsubmit="return validarAnioContable()">
         					<fieldset>
         						<div class="container">
         							<div class="row">
