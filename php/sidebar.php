@@ -41,9 +41,12 @@
 				echo "</div>";
 				echo "<div class='panel-body' id='sb'>";
 				echo "<div class='list-group text-right'>";
-				echo "<a href='usuarios.php' class='list-group-item'>&#0171 Listado de usuarios</a>";
-				echo "<a href='crear-usuario.php' class='list-group-item'>&#0171 Crear un nuevo usuario</a>";
-				echo "<a href='eliminar-usuario.php' class='list-group-item'>&#0171 Eliminar usuario</a>";
+				echo "<a href='usuarios.php' class='list-group-item'>&#0171; Listado de usuarios</a>";
+				echo "<a href='crear-usuario.php' class='list-group-item'>&#0171; Crear un nuevo usuario</a>";
+				echo "<a href='eliminar-usuario.php' class='list-group-item'>&#0171; Eliminar usuario</a>";
+				echo "<a href='iva.php' class='list-group-item'>&#0171; IVA</a>";
+				echo "<a href='anio-contable.php' class='list-group-item'>&#0171; Año Contable</a>";
+				echo "<a href='log.php' class='list-group-item'>&#0171; Ver log</a>";
 				echo "</div>";
 				echo "</div>";
 				echo "</div>";
@@ -128,17 +131,5 @@
 			</div>
 		</div>
 
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title text-center">Configuración</h3>
-			</div>
-
-			<div class="panel-body" id="sb">
-				<div class="list-group text-right">
-					<a href="iva.php" class="list-group-item">&#0171; IVA</a>
-					<a href="anio-contable.php" class="list-group-item">&#0171; Año Contable</a>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

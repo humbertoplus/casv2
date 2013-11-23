@@ -82,7 +82,7 @@
         									<label for="anio" class="control-label">Año contable:</label>
         								</div>
         								<div class="col-lg-6">
-        									<select name="anio_slc" id="anio" class="form-control">
+        									<select name="anio_slc" id="anio" class="form-control" required>
         										<option value="">Seleccione el año contable</option>
         										<option value="2013">2013</option>
         										<option value="2014">2014</option>

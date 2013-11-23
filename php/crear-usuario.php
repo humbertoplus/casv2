@@ -101,7 +101,7 @@
         							</select>
         						</div>
         						<div class="form-group">
-        							<button type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-floppy-save"></span> &nbsp;Crear usuario</button>
+        							<button type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-user"></span> &nbsp;Crear usuario</button>
         						</div>
         					</fieldset>
         				</form>

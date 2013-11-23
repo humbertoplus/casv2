@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo info.php
+/*~ Archivo log.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -24,6 +24,9 @@
 	if(!$_COOKIE["sesion"]){
 		header("Location: salir.php");
 	}
+	if($_SESSION["tipo"]=="estandar"){
+		header("Location: home.php?error=acceso-denegado");
+	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +39,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | Acerca de</title>
+	<title>C.A.S | Log de Operaciones</title>
 </head>
 
 <body>
@@ -48,29 +51,13 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Acerca de C.A.S</h3>
+        			<h3>Log de Operaciones</h3>
         		</div>
         		<div class="row">
-        			<div class="col-md-12 well">
-        				<div class="alert alert-danger text-center">
-        					<strong>Aviso importante:</strong> <br>Este sistema ha sido diseñado para ser visualizado en los navegadores Google Chrome, Mozilla Firefox, Opera, Safari y Maxthon. Recomendamos encarecidamente no usar Microsoft Internet Explorer. <a href="compatibilidad.php">Detalles.</a>
-        				</div>
-        				<p align="justify">
-        					Computerized Accountancy System es un sistema contable para ser usado en ambiente web, lo que le da la portabilidad para ser ejecutado en cualquier equipo con una conexión a internet, o de forma local en el caso de no contar con ella. El sistema está programado en su totalidad en lenguaje PHP, apoyado con la base de datos MySQL.
-        				</p>
-        				<p align="justify">
-        					Para el estilo visual, se ha utilizado un toolkit denominado Bootstrap 3, que es el archivo que contiene todas las reglas CSS para darle la apariencia al sistema. Además el diseño de la aplicación es completamente responsivo, es decir, que se adapta automáticamente a cualquier dispositivo en el cual esté siendo visualizado, por ejemplo dispositivos móviles como celulares inteligentes y tabletas. Se ha utilizado jQuery para algunos efectos gráficos, todo con el objetivo de tener una aplicación con una interfaz amigable para el usuario. También se ha utilizado Ajax para mejorar la funcionalidad del sistema.
-        				</p>
-        				<p align="justify">
-        					El sistema gestor de base de datos que se ha utilizado es MySQL, debido a su versatilidad y compatibilidad en ambientes web con PHP. Dentro de la base de datos existen elementos importantes, como el &laquo;Log de seguridad&raquo; que consiste en un <em>trigger</em> o <em>disparador</em> que registra cualquier cambio en las tablas críticas de la base de datos.
-        				</p>			
-        				<p align="justify">
-        					Se han utilizado los últimos estándares en diseño web para mejorar el desempeño en los nuevos navegadores.
-        				</p>
-        			</div>
+        			Contenido de la página
         		</div>
         	</div><!--/span-->
-			
+
 			<!-- Barra lateral o sidebar -->
         	<?php include("sidebar.php"); ?>
         	

@@ -57,12 +57,20 @@
             			<div class="container">
 	            			<h1>¡Gracias por usar C.A.S!</h1>
 	            			<br>
-	            			<p>
+	            			<p align="justify">
 	            				C.A.S es un sistema de contabilidad basado en la web, en donde puede registrar los procesos contables de manera eficaz, rápida y sencilla. Para utilizar las funciones, puede acceder a ellas mediante la barra de navegación que se encuentra en la parte superior de su pantalla, o bien, puede utilizar el menú de la derecha. 
 	            			</p>
             			</div>
             		</div>
           		</div><!--/row-->
+          		<div class="row">
+          			<div class="col-lg-12 well">
+          				<h1>Objetivo de C.A.S</h1>
+          				<p align="justify">
+          					El objetivo primordial de este software es el de cumplir adecuadamente con los requerimientos de la contabilidad para llevar a cabo el proceso de registro de todas las transacciones relativas a los aspectos contables de una empresa. En este caso, el sistema facilitará los registros contables de una "Sociedad propuesta", que se encarga de la fabricación de vinos a base de frutas naturales de la región de los nonualcos en El Salvador.
+          				</p>
+          			</div>
+          		</div>
         	</div><!--/span-->
 			
 			<!-- Barra lateral o sidebar -->
