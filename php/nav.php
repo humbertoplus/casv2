@@ -39,7 +39,7 @@
 						<li><a href="asiento-simple.php">Simples</a></li>
 						<li><a href="#">Facturas Recibidas</a></li>
 						<li><a href="#">Facturas Emitidas</a></li>
-						<li><a href="#">Diario</a></li>
+						<li><a href="diario.php">Diario</a></li>
 						<li><a href="#">Descuadros</a></li>
 						<li><a href="#">Buscar / Editar</a></li>
 					</ul>

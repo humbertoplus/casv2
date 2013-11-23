@@ -65,7 +65,7 @@
 					<a href="asiento-simple.php" class="list-group-item">&#0171; Simples</a>
 					<a href="#" class="list-group-item">&#0171; Facturas Recibidas</a>
 					<a href="#" class="list-group-item">&#0171; Facturas Emitidas</a>
-					<a href="#" class="list-group-item">&#0171; Diario</a>
+					<a href="diario.php" class="list-group-item">&#0171; Diario</a>
 					<a href="#" class="list-group-item">&#0171; Descuadros</a>
 					<a href="#" class="list-group-item">&#0171; Buscar/Editar</a>
 				</div>
