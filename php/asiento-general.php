@@ -79,10 +79,11 @@
 						<form action="alta-asientogral.php" id="asiento_gral" name="asiento_gral_frm" class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
 							<fieldset>
 								<div class="container">
+
 									<div class="row">
 										<div class="col-lg-2">
 											<label for="n_asiento" class="control-label">N° de asiento</label>
-											<input type="text" class="form-control" id="n_asiento" name="n_asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento a registrar" required/>
+											<input type="number" min="1" class="form-control" id="n_asiento" name="n_asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento a registrar" required/>
 										</div>
 										<div class="col-lg-4">
 											<label for="fecha" class="control-label">Fecha</label>

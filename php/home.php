@@ -47,6 +47,7 @@
 	<div class="container" id="contenido">
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
+				
 				<?php include("mensajes.php"); ?>
 				<div class="page-header">
         			<h3>Bienvenido/a, <?php echo "<em style='text-transform:capitalize'>" . $_SESSION['usuario'] . "</em>"; ?></h3>

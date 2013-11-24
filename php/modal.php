@@ -66,3 +66,25 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="logout" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Cerrar sesión</h4>
+				</div>
+
+				<div class="modal-body">
+					<p>
+						<h4 class="text-center"><em>¿Está seguro que desea cerrar sesión?</em></h4>
+						<br><br>
+					</p>
+
+					<div class="modal-footer">
+						<a href="salir.php" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> &nbsp;Cerrar Sesión</a>
+						<a href="#" class="btn btn-primary" data-dismiss="modal">Cancelar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
