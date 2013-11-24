@@ -14,7 +14,7 @@ function asientos($conexion, $transaccion) {
 	echo "<table class='table table-bordered table-condensed table-hover'>";
 	echo "<thead>";
 	echo "<tr>";
-	echo "<th class='text-center'>Id</th>";
+	echo "<th class='text-center'>ID</th>";
 	echo "<th class='text-center'>Fecha</th>";
 	echo "<th class='text-center'>Cuenta</th>";
 	echo "<th class='text-center'>Descripción</th>";

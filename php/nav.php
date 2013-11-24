@@ -35,44 +35,38 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Asientos <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="asiento-general.php">Generales</a></li>
-						<li><a href="asiento-simple.php">Simples</a></li>
-						<li><a href="#">Facturas Recibidas</a></li>
-						<li><a href="#">Facturas Emitidas</a></li>
-						<li><a href="diario.php">Diario</a></li>
-						<li><a href="#">Descuadros</a></li>
-						<li><a href="#">Buscar / Editar</a></li>
+						<li><a href="asiento-general.php"> ● &nbsp;Generales</a></li>
+						<li><a href="asiento-simple.php"> ● &nbsp;Simples </a></li>
+						<li><a href="diario.php"> ● &nbsp;Diario </a></li>
+						<li><a href="#"> ● &nbsp;Buscar / Editar </a></li>
 					</ul>
 				</li>
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuentas <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="alta-cuentas.php">Crear cuentas</a></li>
+						<li><a href="alta-cuentas.php"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;Crear cuentas</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Buscar Subcuenta</a></li>
-						<li><a href="#">Buscar Cuenta</a></li>
-						<li><a href="#">Buscar Subgrupo</a></li>
+						<li><a href="#">● &nbsp;Buscar Subcuenta</a></li>
+						<li><a href="#">● &nbsp;Buscar Cuenta</a></li>
+						<li><a href="#">● &nbsp;Buscar Subgrupo</a></li>
 						<li class="divider"></li>
-						<li><a href="catalogo-cuentas.php">Catálogo General de Cuentas</a></li>
-						<li><a href="listar-subcuentas.php">Listado de Subcuentas</a></li>
-						<li><a href="listar-cuentas.php">Listado de Cuentas</a></li>
-						<li><a href="listar-subgrupos.php">Listado de Subgrupos</a></li>
-						<li><a href="#">Editar</a></li>
-						<li><a href="#">Borrar cuenta</a></li>
+						<li><a href="catalogo-cuentas.php">● &nbsp;Catálogo General de Cuentas</a></li>
+						<li><a href="listar-subcuentas.php">● &nbsp;Listado de Subcuentas</a></li>
+						<li><a href="listar-cuentas.php">● &nbsp;Listado de Cuentas</a></li>
+						<li><a href="listar-subgrupos.php"> ● &nbsp;Listado de Subgrupos</a></li>
+						<li><a href="#"> ● &nbsp;Editar</a></li>
+						<li><a href="#"> ● &nbsp;Borrar cuenta</a></li>
 					</ul>
 				</li>
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Balances</a></li>
-						<li><a href="#">Otros Listados</a></li>
-						<li><a href="#">Procesos Periódicos</a></li>
-						<li><a href="#">Control de tablas</a></li>
-						<li><a href="#">Búsquedas</a></li>
-						<li><a href="#">Listados</a></li>
-						<li><a href="#">Otros</a></li>
+						<li><a href="#"> ● &nbsp;Balances</a></li>
+						<li><a href="#"> ● &nbsp;Búsquedas</a></li>
+						<li><a href="#"> ● &nbsp;Listados</a></li>
+
 					</ul>
 				</li>
 

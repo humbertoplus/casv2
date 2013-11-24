@@ -63,10 +63,7 @@
 				<div class="list-group text-right">
 					<a href="asiento-general.php" class="list-group-item">&#0171; Generales</a>
 					<a href="asiento-simple.php" class="list-group-item">&#0171; Simples</a>
-					<a href="#" class="list-group-item">&#0171; Facturas Recibidas</a>
-					<a href="#" class="list-group-item">&#0171; Facturas Emitidas</a>
 					<a href="diario.php" class="list-group-item">&#0171; Diario</a>
-					<a href="#" class="list-group-item">&#0171; Descuadros</a>
 					<a href="#" class="list-group-item">&#0171; Buscar/Editar</a>
 				</div>
 			</div>
@@ -101,12 +98,8 @@
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
 					<a href="#" class="list-group-item">&#0171; Balances</a>
-					<a href="#" class="list-group-item">&#0171; Otros Listados</a>
-					<a href="#" class="list-group-item">&#0171; Procesos Periódicos</a>
-					<a href="#" class="list-group-item">&#0171; Control de tablas</a>
 					<a href="#" class="list-group-item">&#0171; Búsquedas</a>
 					<a href="#" class="list-group-item">&#0171; Listados</a>
-					<a href="#" class="list-group-item">&#0171; Otros</a>
 				</div>
 			</div>
 		</div>
@@ -124,9 +117,7 @@
 					<a href="#" class="list-group-item">&#0171; Facturas Recibidas</a>
 					<a href="#" class="list-group-item">&#0171; Pedidos</a>
 					<a href="#" class="list-group-item">&#0171; Pedidos por Cliente</a>
-					<a href="#" class="list-group-item">&#0171; Asignar Facturas a Pedidos</a>
 					<a href="#" class="list-group-item">&#0171; Facturas Emitidas</a>
-					<a href="#" class="list-group-item">&#0171; Listados</a>
 				</div>
 			</div>
 		</div>
