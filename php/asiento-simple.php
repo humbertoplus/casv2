@@ -57,9 +57,9 @@
 							<fieldset>
 								<div class="container">
 									<div class="row">
-										<div class="col-md-3">
+										<div class="col-md-2">
 											<label for="asiento" class="control-label">N° de asiento</label>
-											<input type="text" id="asiento" class="form-control" name="asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento" required/>
+											<input type="number" min="1" id="asiento" class="form-control" name="asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento" required/>
 										</div>
 										<div class="col-md-4">
 											<label for="fecha" class="control-label">Fecha</label>

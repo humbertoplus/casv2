@@ -50,12 +50,12 @@
                 <div class="page-header">
                     <h3>Catálogo de cuentas</h3>
                 </div>
-                <div class="container well">
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h2>Grupos</h2>
                             <br>
-                            <h3>Activos</h3>
+                            <h3><span class="label label-primary">Activos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -65,10 +65,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                         echo "<thead>";
                                         echo "<tr>";
-                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th width='110px' class='text-center'>Código Grupo</th>";
                                         echo "<th class='text-center'>Nombre del Grupo</th>";
                                         echo "</tr>";
                                         echo "</thead>";
@@ -76,7 +76,7 @@
 
                                         while($registro = $ejecutar_consulta->fetch_assoc()){
                                             echo "<tr>";
-                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td class='text-right'>".utf8_encode($registro["codigo_grupo"])."</td>";
                                             echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
                                             echo "</tr>";
                                         }
@@ -90,7 +90,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Pasivos</h3>
+                            <h3><span class="label label-success">Pasivos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -100,10 +100,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                         echo "<thead>";
                                         echo "<tr>";
-                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th width='110px' class='text-center'>Código Grupo</th>";
                                         echo "<th class='text-center'>Nombre del Grupo</th>";
                                         echo "</tr>";
                                         echo "</thead>";
@@ -111,7 +111,7 @@
 
                                         while($registro = $ejecutar_consulta->fetch_assoc()){
                                             echo "<tr>";
-                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td class='text-right'>".utf8_encode($registro["codigo_grupo"])."</td>";
                                             echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
                                             echo "</tr>";
                                         }
@@ -125,7 +125,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Capital</h3>
+                            <h3><span class="label label-warning">Capital</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -135,10 +135,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                         echo "<thead>";
                                         echo "<tr>";
-                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th width='110px' class='text-center'>Código Grupo</th>";
                                         echo "<th class='text-center'>Nombre del Grupo</th>";
                                         echo "</tr>";
                                         echo "</thead>";
@@ -146,7 +146,7 @@
 
                                         while($registro = $ejecutar_consulta->fetch_assoc()){
                                             echo "<tr>";
-                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td class='text-right'>".utf8_encode($registro["codigo_grupo"])."</td>";
                                             echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
                                             echo "</tr>";
                                         }
@@ -160,7 +160,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Resultados</h3>
+                            <h3><span class="label label-danger">Resultados</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -170,10 +170,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                        echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                        echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                         echo "<thead>";
                                         echo "<tr>";
-                                        echo "<th class='text-center'>Código Grupo</th>";
+                                        echo "<th width='110px' class='text-center'>Código Grupo</th>";
                                         echo "<th class='text-center'>Nombre del Grupo</th>";
                                         echo "</tr>";
                                         echo "</thead>";
@@ -181,7 +181,7 @@
 
                                         while($registro = $ejecutar_consulta->fetch_assoc()){
                                             echo "<tr>";
-                                            echo "<td>".utf8_encode($registro["codigo_grupo"])."</td>";
+                                            echo "<td class='text-right'>".utf8_encode($registro["codigo_grupo"])."</td>";
                                             echo "<td>".utf8_encode($registro["nombre_grupo"])."</td>";
                                             echo "</tr>";
                                         }
@@ -194,12 +194,14 @@
                     </div>
                 </div>
 
-                <div class="container well">
+                <hr>
+
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h2>Subgrupos</h2>
                             <br>
-                            <h3>Activos</h3>
+                            <h3><span class="label label-primary">Activos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -209,10 +211,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th width='110px' class='text-center'>Código Subgrupo</th>";
                                 echo "<th class='text-center'>Nombre del Subrupo</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -220,7 +222,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subgrupo"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
                                     echo "</tr>";
                                 }
@@ -234,7 +236,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Pasivos</h3>
+                            <h3><span class="label label-success">Pasivos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -244,10 +246,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th width='110px' class='text-center'>Código Subgrupo</th>";
                                 echo "<th class='text-center'>Nombre del Subgrupo</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -255,7 +257,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subgrupo"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
                                     echo "</tr>";
                                 }
@@ -269,7 +271,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Capital</h3>
+                            <h3><span class="label label-warning">Capital</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -279,10 +281,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th width='110px' class='text-center'>Código Subgrupo</th>";
                                 echo "<th class='text-center'>Nombre del Subgrupo</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -290,7 +292,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subgrupo"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
                                     echo "</tr>";
                                 }
@@ -304,7 +306,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Resultados</h3>
+                            <h3><span class="label label-danger">Resultados</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -314,10 +316,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subgrupo</th>";
+                                echo "<th width='110px' class='text-center'>Código Subgrupo</th>";
                                 echo "<th class='text-center'>Nombre del Subgrupo</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -325,7 +327,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subgrupo"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subgrupo"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subgrupo"])."</td>";
                                     echo "</tr>";
                                 }
@@ -338,12 +340,14 @@
                     </div>
                 </div>
 
-                <div class="container well">
+                <hr>
+
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h2>Cuentas</h2>
                             <br>
-                            <h3>Activos</h3>
+                            <h3><span class="label label-primary">Activos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -353,10 +357,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Cuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Cuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -364,7 +368,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_cuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -378,7 +382,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Pasivos</h3>
+                            <h3><span class="label label-success">Pasivos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -388,10 +392,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Cuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Cuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -399,7 +403,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_cuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -413,7 +417,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Capital</h3>
+                            <h3><span class="label label-warning">Capital</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -423,10 +427,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Cuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Cuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -434,7 +438,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_cuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -448,7 +452,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Resultados</h3>
+                            <h3><span class="label label-danger">Resultados</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -458,10 +462,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Cuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Cuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Cuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -469,7 +473,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_cuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_cuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_cuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -482,12 +486,14 @@
                     </div>
                 </div>
 
-                <div class="container well">
+                <hr>
+
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h2>Subcuentas</h2>
                             <br>
-                            <h3>Activos</h3>
+                            <h3><span class="label label-primary">Activos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -497,10 +503,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Subcuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Subcuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -508,7 +514,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -522,7 +528,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Pasivos</h3>
+                            <h3><span class="label label-success">Pasivos</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -532,10 +538,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Subcuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Subcuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -543,7 +549,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -557,7 +563,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Capital</h3>
+                            <h3><span class="label label-warning">Capital</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -567,10 +573,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Subcuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Subcuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -578,7 +584,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
                                     echo "</tr>";
                                 }
@@ -592,7 +598,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <br>
-                            <h3>Resultados</h3>
+                            <h3><span class="label label-danger">Resultados</span></h3>
                             <?php
                                 if(!isset($conexion)){
                                     include("conexion.php");
@@ -602,10 +608,10 @@
                                 $ejecutar_consulta = $conexion->query($consulta);
 
                                 echo "<div>";
-                                echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
+                                echo "<table class='table table-hover table-condensed table-bordered text-left'>";
                                 echo "<thead>";
                                 echo "<tr>";
-                                echo "<th class='text-center'>Código Subcuenta</th>";
+                                echo "<th width='110px' class='text-center'>Código Subcuenta</th>";
                                 echo "<th class='text-center'>Nombre de la Subcuenta</th>";
                                 echo "</tr>";
                                 echo "</thead>";
@@ -613,7 +619,7 @@
 
                                 while($registro = $ejecutar_consulta->fetch_assoc()){
                                     echo "<tr>";
-                                    echo "<td>".utf8_encode($registro["codigo_subcuenta"])."</td>";
+                                    echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
                                     echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
                                     echo "</tr>";
                                 }

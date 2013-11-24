@@ -61,7 +61,7 @@
         				$ejecutar_consulta = $conexion->query($consulta);
         				
         				echo "<div>";
-						echo "<table class='table table-hover table-bordered table-striped table-condensed'>";
+						echo "<table class='table table-hover  table-condensed'>";
 						echo "<thead>";
 						echo "<tr>";
 						echo "<th>Usuario</th>";
