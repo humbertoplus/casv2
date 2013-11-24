@@ -32,14 +32,14 @@
 	$regs = $ejecutar_consulta->num_rows;
 
 	if($regs==0){
-		header("Location: cambio-pw.php?error=si");
+		header("Location: cambio-pw.php?error=si&has=has-error");
 	}else if($nueva==$confirmar){
 		//Actualizo la contraseña
 		$consulta = "UPDATE usuario SET password=SHA1('$nueva') WHERE usuario='$usuario'";
 		$ejecutar_consulta = $conexion->query($consulta);
-		header("Location: cambio-pw.php?error=no");
+		header("Location: cambio-pw.php?error=no&has=has-success");
 	}
 	else if($nueva!=$confirmar){
-		header("Location: cambio-pw.php?error=retype");
+		header("Location: cambio-pw.php?error=retype&has=has-warning");
 	}
 ?>

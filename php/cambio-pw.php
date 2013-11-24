@@ -55,6 +55,7 @@
             				<fieldset>
 	            				<?php 
 	            					error_reporting(E_ALL ^ E_NOTICE);
+	            					
 	            					if($_GET["error"]=="si"){
 	            						echo "<div class='alert alert-danger alert-dismissable'>";
 	            						echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
@@ -76,15 +77,15 @@
 	            						echo "</div>";
 	            					}
 	            				?>
-			            		<div class="form-group">
+			            		<div class="form-group <?php $has = $_GET["has"]; echo $has; ?>">
 			            			<label for="actual" class="control-label">Escriba su contraseña actual</label>
 			            			<input type="password" id="actual" name="actual_txt" class="form-control" autofocus required/>
 			            		</div>
-			            		<div class="form-group">
+			            		<div class="form-group <?php $has = $_GET["has"]; echo $has; ?>">
 			            			<label for="nueva" class="control-label">Nueva contraseña</label>
 			            			<input type="password" id="nueva" name="nueva_txt" class="form-control" required/>
 			            		</div>
-								<div class="form-group">
+								<div class="form-group <?php $has = $_GET["has"]; echo $has; ?>">
 									<label for="confirmar" class="control-label">Confirme contraseña</label>
 									<input type="password" id="confirmar" name="confirmar_txt" class="form-control" required/>
 								</div>

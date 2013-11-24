@@ -55,7 +55,7 @@
         		<div class="row">
         			<div class="col-lg-12">
         				<div class="page-header">
-        					<h4>1. Activos</h4>
+        					<h3><span class="label label-primary">1. Activos</span></h3>
         				</div>
         				<?php 
         					if(!isset($conexion)){
@@ -79,7 +79,7 @@
 							echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th class='text-center'>Grupo</th>";
+                           echo "<th width='150px' class='text-center'>Grupo</th>";
                             echo "<th class='text-center'>Subgrupo</th>";
                             echo "</tr>";
                             echo "</thead>";
@@ -103,7 +103,7 @@
         		<div class="row">
                     <div class="col-lg-12">
                         <div class="page-header">
-                            <h4>2. Pasivos</h4>
+                            <h3><span class="label label-success">2. Pasivos</span></h3>
                         </div>
                         <?php 
                             $consulta = "SELECT 
@@ -124,7 +124,7 @@
                             echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th class='text-center'>Grupo</th>";
+                           echo "<th width='150px' class='text-center'>Grupo</th>";
                             echo "<th class='text-center'>Subgrupo</th>";
                             echo "</tr>";
                             echo "</thead>";
@@ -148,7 +148,7 @@
         		<div class="row">
                     <div class="col-lg-12">
                         <div class="page-header">
-                            <h4>3. Capital</h4>
+                            <h3><span class="label label-warning">3. Capital</span></h3>
                         </div>
                         <?php 
                             $consulta = "SELECT 
@@ -169,7 +169,7 @@
                             echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th class='text-center'>Grupo</th>";
+                           echo "<th width='150px' class='text-center'>Grupo</th>";
                             echo "<th class='text-center'>Subgrupo</th>";
                             echo "</tr>";
                             echo "</thead>";
@@ -193,7 +193,7 @@
         		<div class="row">
                     <div class="col-lg-12">
                         <div class="page-header">
-                            <h4>4. Resultados</h4>
+                            <h3><span class="label label-danger">4. Resultados</span></h3>
                         </div>
                         <?php 
                             $consulta = "SELECT 
@@ -214,7 +214,7 @@
                             echo "<table class='table table-hover table-bordered table-striped  table-condensed table-responsive text-left'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th class='text-center'>Grupo</th>";
+                           echo "<th width='150px' class='text-center'>Grupo</th>";
                             echo "<th class='text-center'>Subgrupo</th>";
                             echo "</tr>";
                             echo "</thead>";

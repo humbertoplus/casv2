@@ -53,19 +53,31 @@
         			<h3>Diario</h3>
         		</div>
         		<div class="row">
+        			<div class="col-lg-12 well">
+        				<p align="justify">
+        					En esta sección usted podrá revisar el historial de transacciones que se han realizado en el sistema de manera periódica. Para ver los detalles de cada transacción haga click en el ID correspondiente a cada registro (etiquetas rojas).
+        				</p>
+        			</div>
+        		</div>
+        		<div class="row">
         			<div class="col-lg-12">
         				<?php 
         				if(!isset($conexion)){ include("conexion.php");}
-        				$sql = "SELECT DISTINCTROW(transaccion) AS transacciones FROM registro";
+        				$sql = "SELECT * FROM registro";
         				$ejecutar_consulta = $conexion->query($sql);
-        				while($registro = $ejecutar_consulta->fetch_assoc()){
-        					//print_r($registro); echo "<br />";
-        					asientos($conexion, $registro["transacciones"]);
-
+        				if($ejecutar_consulta->num_rows!=0){
+        					$sql = "SELECT DISTINCTROW(transaccion) AS transacciones FROM registro";
+        					$ejecutar_consulta = $conexion->query($sql);
+        					while($registro = $ejecutar_consulta->fetch_assoc()){
+        						//print_r($registro); echo "<br />";
+        						asientos($conexion, $registro["transacciones"]);
+        					}
+        				} else {
+        					echo "<div class='alert alert-info'>";
+        					echo "No hay asientos.";
+        					echo "</div>";
         				}
-        				
-        				
-        				?>
+         				?>
         			</div>
         		</div>
         	</div><!--/span-->

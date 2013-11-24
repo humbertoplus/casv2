@@ -1,9 +1,12 @@
 <?php 
 
-function asientos($conexion, $transaccion){
-	$sql = "SELECT DATE_FORMAT(fecha,'%d-%m-%Y')as fecha, cuenta, concepto, debe, haber FROM registro WHERE transaccion = $transaccion ORDER BY fecha ASC" ;
+function asientos($conexion, $transaccion) {
+	$sql = "SELECT id, DATE_FORMAT(fecha,'%d-%m-%Y')as fecha, cuenta, concepto, debe, haber FROM registro WHERE transaccion = $transaccion ORDER BY fecha ASC" ;
 	$ex_query = $conexion->query($sql);
-	//$fin = 0;
+	if($ex_query->num_rows==0){
+		return;
+	}
+
 	echo "<div>";
 	echo "<h4><span class='label label-primary'>Asiento N°: ".$transaccion."</span></h4>";
 	echo "<br />";
@@ -11,6 +14,7 @@ function asientos($conexion, $transaccion){
 	echo "<table class='table table-bordered table-condensed table-hover'>";
 	echo "<thead>";
 	echo "<tr>";
+	echo "<th class='text-center'>Id</th>";
 	echo "<th class='text-center'>Fecha</th>";
 	echo "<th class='text-center'>Cuenta</th>";
 	echo "<th class='text-center'>Descripción</th>";
@@ -21,9 +25,10 @@ function asientos($conexion, $transaccion){
 	echo "</thead>";
 	echo "<tbody>";
 	while ($regs = $ex_query->fetch_assoc()) {
-		//echo $regs["fecha"]." | ".$regs["cuenta"]." | ".$regs["debe"]." | ".$regs["haber"]."<br />";
-		//$fin = 0;
+
+		$id=$regs["id"];
 		echo "<tr>";
+		echo "<td width='50' align='center'><a class='label label-danger' href='ver-asiento.php?id=$id'>".$regs["id"]."</td>";
 		echo "<td width='100'>".$regs["fecha"]."</td>";
 		echo "<td width='80'>".$regs["cuenta"]."</td>";
 		echo "<td width=500'>".utf8_encode($regs["concepto"])."</td>";
@@ -35,31 +40,26 @@ function asientos($conexion, $transaccion){
 
 	}
 	
-	//$fin=1;
-	//if($fin==1){
-		$sql = "SELECT SUM(debe) as sumadebe, SUM(haber) AS sumahaber FROM registro WHERE transaccion=$transaccion";
-		$ex_query = $conexion->query($sql);
-		while($regs = $ex_query->fetch_assoc()){
-			$dif = $regs["sumadebe"]-$regs["sumahaber"];
-			echo "<tr>";
-			echo "<td colspan='3' class='text-right'>SUMAS</td>" ;
-			echo "<td align='right'>".$regs["sumadebe"]."</td>";
-			echo "<td align='right'>".$regs["sumahaber"]."</td>";
-			if($dif!=0){
-				echo "<td class='danger' align='right'>".$dif."</td>";
-			} else{
-				echo "<td></td>";
-			}
+	$sql = "SELECT SUM(debe) as sumadebe, SUM(haber) AS sumahaber FROM registro WHERE transaccion=$transaccion";
+	$ex_query = $conexion->query($sql);
+	while($regs = $ex_query->fetch_assoc()){
+		$dif = $regs["sumadebe"]-$regs["sumahaber"];
+		echo "<tr>";
+		echo "<td colspan='4' class='text-right'>SUMAS</td>" ;
+		echo "<td align='right'>$ ".$regs["sumadebe"]."</td>";
+		echo "<td align='right'>$ ".$regs["sumahaber"]."</td>";
+		if($dif!=0){
+			echo "<td class='danger' align='right'><strong>$ ".$dif."</strong></td>";
+		} else{
+			echo "<td></td>";
+		}
 
-			echo "</tr>";
+		echo "</tr>";
 
 		}
 		echo "</tbody>";
 		echo "</table>";
 		echo "</div>";
-		echo "</div>";
-	//}
-	
-	
-}
+		echo "</div>";	
+	}
 ?>

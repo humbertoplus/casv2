@@ -160,9 +160,17 @@
 												<?php include("select-subgrupos.php"); ?>
 											</select>
 										</div>
-										<div class="col-lg-5">
+										<div class="col-lg-4">
 											<label for="id_cuenta" class="control-label">Código de la cuenta</label>
 											<input type="text" id="id_cuenta" name="id_cuenta_txt" class="form-control" title="Escriba el código de la cuenta" placeholder="Escriba el código en el formato #.#.#.#" required/>
+										</div>
+										<div class="col-lg-4">
+											<label for="subctas" class="control-label">¿Tiene Subcuentas? <a title="Si la cuenta tendrá subcuentas seleccione Si, de lo contrario seleccione No."><span class="glyphicon glyphicon-question-sign"></span></a></label>
+											<select name="subctas_slc" id="subctas" class="form-control" required>
+												<option value="">Seleccione una opción</option>
+												<option value="si">Si</option>
+												<option value="no">No</option>
+											</select>
 										</div>
 									</div>
 									<div class="row">
