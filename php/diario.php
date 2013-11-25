@@ -72,6 +72,27 @@
         						//print_r($registro); echo "<br />";
         						asientos($conexion, $registro["transacciones"]);
         					}
+                            echo "<br><hr>";
+                            $sql = "SELECT sum(debe) as sumadebe, sum(haber) as sumahaber from registro";
+                            $ejecutar_consulta = $conexion->query($sql);
+                            while($registro = $ejecutar_consulta->fetch_assoc()){
+                                $dif = $registro["sumadebe"]-$registro["sumahaber"];
+                                echo "<div>";
+                                echo "<table class='table table-bordered table-condensed table-hover'>";
+                                echo "<tr>";
+                                echo "<td width='730' class='text-right'><strong>SUMAS TOTALES</strong></td>" ;
+                                echo "<td width='90' align='right'><strong>$ ".$registro["sumadebe"]."</strong></td>";
+                                echo "<td width='90' align='right'><strong>$ ".$registro["sumahaber"]."</strong></td>";
+                                if($dif!=0){
+                                    echo "<td width='90' class='danger' align='right'><strong>$ ".$dif."</strong></td>";
+                                } else{
+                                    echo "<td width='90'></td>";
+                                }
+
+                                echo "</tr>";
+                                echo "</table>";
+                                echo "</div>";
+                            }
         				} else {
         					echo "<div class='alert alert-info'>";
         					echo "No hay asientos.";

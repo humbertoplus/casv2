@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"tex",
+				"text-left"
+			],
+			[
+				"reg",
+				"regs"
+			],
+			[
+				"te",
+				"text-center"
+			],
+			[
 				"table",
 				"table-bordered"
 			],
@@ -21,10 +33,6 @@
 			],
 			[
 				"re",
-				"regs"
-			],
-			[
-				"reg",
 				"regs"
 			],
 			[
@@ -150,14 +158,6 @@
 			[
 				"lis",
 				"list-group-item"
-			],
-			[
-				"te",
-				"text-right"
-			],
-			[
-				"tex",
-				"text-center"
 			],
 			[
 				"us",
@@ -387,142 +387,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/wamp/www/casv1/php/alta-asientogral.php",
-			"settings":
-			{
-				"buffer_size": 4597,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/anio-contable.php",
-			"settings":
-			{
-				"buffer_size": 5452,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/diario.php",
-			"settings":
-			{
-				"buffer_size": 3189,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/catwin/diario.php",
-			"settings":
-			{
-				"buffer_size": 3480,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/catwin/funciones.php",
-			"settings":
-			{
-				"buffer_size": 12460,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/funciones.php",
-			"settings":
-			{
-				"buffer_size": 2009,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/usuarios.php",
-			"settings":
-			{
-				"buffer_size": 4182,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/asiento-general.php",
-			"settings":
-			{
-				"buffer_size": 8008,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/modal.php",
-			"settings":
-			{
-				"buffer_size": 4075,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/nav.php",
-			"settings":
-			{
-				"buffer_size": 4925,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/css/offcanvas.css",
-			"settings":
-			{
-				"buffer_size": 889,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/css/estilos.css",
-			"settings":
-			{
-				"buffer_size": 1934,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/footer.php",
-			"settings":
-			{
-				"buffer_size": 1880,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/asiento-simple.php",
-			"settings":
-			{
-				"buffer_size": 7864,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/sidebar.php",
-			"settings":
-			{
-				"buffer_size": 6040,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/home.php",
-			"settings":
-			{
-				"buffer_size": 5761,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/catalogo-cuentas.php",
-			"settings":
-			{
-				"buffer_size": 33704,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -580,6 +444,32 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/casv1/php/listar-subcuentas.php",
+		"/C/wamp/www/casv1/php/catalogo-cuentas.php",
+		"/C/wamp/www/casv1/php/listar-subgrupos.php",
+		"/C/wamp/www/casv1/php/listar-cuentas.php",
+		"/C/wamp/www/casv1/php/funciones.php",
+		"/C/wamp/www/catwin/funciones.php",
+		"/C/wamp/www/casv1/php/ver-asiento.php",
+		"/C/wamp/www/casv1/php/sidebar.php",
+		"/C/wamp/www/catwin/log.php",
+		"/C/wamp/www/casv1/php/diario.php",
+		"/C/wamp/www/casv1/php/cambio-pw.php",
+		"/C/wamp/www/casv1/php/cambiar-pw.php",
+		"/C/wamp/www/casv1/php/nav.php",
+		"/C/wamp/www/casv1/php/home.php",
+		"/C/wamp/www/casv1/php/alta-asientogral.php",
+		"/C/wamp/www/casv1/php/anio-contable.php",
+		"/C/wamp/www/casv1/php/usuarios.php",
+		"/C/wamp/www/casv1/php/modal.php",
+		"/C/wamp/www/casv1/css/offcanvas.css",
+		"/C/wamp/www/casv1/css/estilos.css",
+		"/C/wamp/www/casv1/php/footer.php",
+		"/C/wamp/www/casv1/php/asiento-simple.php",
+		"/C/wamp/www/casv1/php/alta-cuentas.php",
+		"/C/wamp/www/bootstrap-tutorial/css.html",
+		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/catwin/diario.php",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/offcanvas/index.html",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/offcanvas/offcanvas.css",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/offcanvas/offcanvas.js",
@@ -589,16 +479,11 @@
 		"/C/wamp/www/catwin/listados.php",
 		"/C/wamp/www/catwin/sumysal.php",
 		"/C/wamp/www/catwin/estiloimpr.css",
-		"/C/wamp/www/casv1/php/sidebar.php",
-		"/C/wamp/www/casv1/php/nav.php",
 		"/C/wamp/www/casv1/php/head.php",
 		"/C/wamp/www/catwin/head.php",
-		"/C/wamp/www/casv1/php/asiento-general.php",
 		"/C/wamp/www/casv1/php/crear-usuario.php",
 		"/C/wamp/www/casv1/php/info.php",
-		"/C/wamp/www/casv1/php/home.php",
 		"/C/wamp/www/casv1/php/log.php",
-		"/C/wamp/www/casv1/php/anio-contable.php",
 		"/C/wamp/www/casv1/php/iva.php",
 		"/C/wamp/www/casv1/js/validaciones.js",
 		"/C/wamp/www/curso-js-jquery/index.html",
@@ -615,21 +500,13 @@
 		"/C/wamp/www/catwin/altaapu1.php",
 		"/C/wamp/www/catwin/altaapu.php",
 		"/C/wamp/www/curso-php/mis-contactos/php/agregar-contacto.php",
-		"/C/wamp/www/casv1/php/alta-asientogral.php",
-		"/C/wamp/www/casv1/php/footer.php",
 		"/C/wamp/www/casv1/php/anio-contable-form.php",
 		"/C/wamp/www/casv1/php/cuentas.php",
-		"/C/wamp/www/casv1/php/listar-subgrupos.php",
-		"/C/wamp/www/casv1/php/listar-subcuentas.php",
-		"/C/wamp/www/casv1/php/listar-cuentas.php",
 		"/C/wamp/www/casv1/php/cuentas3.php",
 		"/C/wamp/www/casv1/php/select-subcuentas.php",
 		"/C/wamp/www/casv1/php/conexion.php",
-		"/C/wamp/www/casv1/php/asiento-simple.php",
 		"/C/wamp/www/casv1/php/cuentas2.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/formulario-mail.php",
-		"/C/wamp/www/casv1/php/catalogo-cuentas.php",
-		"/C/wamp/www/casv1/php/alta-cuentas.php",
 		"/C/wamp/www/casv1/php/alta-asientosimple.php",
 		"/C/wamp/www/casv1/sql/sic115.sql",
 		"/C/wamp/www/video_php_25/conexion/conexion.php",
@@ -645,25 +522,20 @@
 		"/C/wamp/www/casv1/php/select-usuario.php",
 		"/C/wamp/www/casv1/php/select-grupos.php",
 		"/C/wamp/www/mantenimiento/php/select_programa.php",
-		"/C/wamp/www/casv1/css/estilos.css",
 		"/C/wamp/www/casv1/php/crear-cuenta.php",
 		"/C/wamp/www/casv1/php/crear-subgrupo.php",
 		"/C/wamp/www/maths/index.php",
 		"/C/wamp/www/curso-php/00Basicos/hola.php",
 		"/C/wamp/www/casv1/php/plantilla-maestra.php",
 		"/C/Users/Alex Contreras/Desktop/sic.txt",
-		"/C/wamp/www/casv1/php/usuarios.php",
 		"/C/wamp/www/casv1/php/compatibilidad.php",
 		"/C/wamp/www/casv1/php/eliminar-usuario.php",
 		"/C/wamp/www/casv1/php/control.php",
 		"/C/wamp/www/curso-php/00Basicos/info.php",
 		"/C/wamp/www/casv1/error/404.html",
 		"/C/wamp/www/casv1/error/403.html",
-		"/C/wamp/www/casv1/php/modal.php",
-		"/C/wamp/www/casv1/php/cambio-pw.php",
 		"/C/wamp/www/casv1/php/ayuda.php",
 		"/C/wamp/www/casv1/php/borrar-usuario.php",
-		"/C/wamp/www/casv1/php/cambiar-pw.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/class.smtp.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/class.pop3.php",
 		"/C/wamp/www/casv1/php/prueba-nav.php",
@@ -699,15 +571,7 @@
 		"/C/wamp/www/casv1/php/select-tipo.php",
 		"/C/wamp/www/mantenimiento/php/registrar.php",
 		"/C/wamp/www/casv1/php/example.php",
-		"/C/wamp/www/bootstrap-tutorial/extras2.html",
-		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/navbar/index.html",
-		"/C/wamp/www/curso-php/mis-contactos/php/cambios-contacto.php",
-		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/navbar/navbar.css",
-		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/jumbotron/index.html",
-		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/theme/index.html",
-		"/C/wamp/www/casv1/php/prueba-bd.php",
-		"/C/wamp/www/sic/conex.php",
-		"/C/wamp/www/bootstrap-php/index.php"
+		"/C/wamp/www/bootstrap-tutorial/extras2.html"
 	],
 	"find":
 	{
@@ -726,6 +590,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"LOG ",
+			"LOG",
+			"$f ",
+			"echo \"<th class='text-center'>Subgrupo</th>\";",
+			"echo \"<th class='text-center'>Grupo</th>\";",
+			" echo \"<th class='text-center'>Grupo</th>\";",
+			"<h4>1. Activos</h4>",
+			"<td>\".utf8_encode($registro[\"codigo_sub",
+			"<th class='text-center'>Sub",
 			"<td>\".utf8_encode($registro[\"codigo",
 			"<th class='text-center'>Código",
 			"<h3>Resultados</h3>",
@@ -795,6 +668,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"echo \"<th width='300px' class='text-center'>Subgrupo</th>\";",
+			"echo \"<th width='400px' class='text-center'>Subgrupo</th>\";",
+			"echo \"<th width='200px' class='text-center'>Subgrupo</th>\";",
+			"echo \"<th width='150px' class='text-center'>Grupo</th>\";",
+			"<h4><span class='label label-primary'>1. Activos</span></h4>",
+			"<h3 class='label label-primary'>1. Activos</h3>",
+			"<h4 class='label label-primary'>1. Activos</h4>",
+			"<h4 class='label label-primary>1. Activos</h4>",
+			"<td class='text-right'>\".utf8_encode($registro[\"codigo_sub",
+			"<th width='110px' class='text-center'>Sub",
 			"<td class='text-right'>\".utf8_encode($registro[\"codigo",
 			"<td width='110px'>\".utf8_encode($registro[\"codigo",
 			"<th width='110px' class='text-center'>Código",
@@ -820,473 +703,8 @@
 	"groups":
 	[
 		{
-			"selected": 16,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/wamp/www/casv1/php/alta-asientogral.php",
-					"settings":
-					{
-						"buffer_size": 4597,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1422,
-								1422
-							]
-						],
-						"settings":
-						{
-							"rulers":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1215.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/wamp/www/casv1/php/anio-contable.php",
-					"settings":
-					{
-						"buffer_size": 5452,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1546,
-								1546
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/wamp/www/casv1/php/diario.php",
-					"settings":
-					{
-						"buffer_size": 3189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2665,
-								2665
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 690.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/wamp/www/catwin/diario.php",
-					"settings":
-					{
-						"buffer_size": 3480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2077,
-								2077
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1170.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/wamp/www/catwin/funciones.php",
-					"settings":
-					{
-						"buffer_size": 12460,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4538,
-								4538
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1845.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/wamp/www/casv1/php/funciones.php",
-					"settings":
-					{
-						"buffer_size": 2009,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								431,
-								431
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/wamp/www/casv1/php/usuarios.php",
-					"settings":
-					{
-						"buffer_size": 4182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2730,
-								2730
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 810.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/C/wamp/www/casv1/php/asiento-general.php",
-					"settings":
-					{
-						"buffer_size": 8008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3351,
-								3351
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/C/wamp/www/casv1/php/modal.php",
-					"settings":
-					{
-						"buffer_size": 4075,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3715,
-								3715
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1004.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/wamp/www/casv1/php/nav.php",
-					"settings":
-					{
-						"buffer_size": 4925,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1448,
-								1449
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/C/wamp/www/casv1/css/offcanvas.css",
-					"settings":
-					{
-						"buffer_size": 889,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/C/wamp/www/casv1/css/estilos.css",
-					"settings":
-					{
-						"buffer_size": 1934,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/C/wamp/www/casv1/php/footer.php",
-					"settings":
-					{
-						"buffer_size": 1880,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1879,
-								1880
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/C/wamp/www/casv1/php/asiento-simple.php",
-					"settings":
-					{
-						"buffer_size": 7864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2682,
-								2682
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 810.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/C/wamp/www/casv1/php/sidebar.php",
-					"settings":
-					{
-						"buffer_size": 6040,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1393,
-								1393
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 278.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/C/wamp/www/casv1/php/home.php",
-					"settings":
-					{
-						"buffer_size": 5761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2191,
-								2191
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 593.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/C/wamp/www/casv1/php/catalogo-cuentas.php",
-					"settings":
-					{
-						"buffer_size": 33704,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5982,
-								5982
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1297.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1350,6 +768,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 232.0,
+	"side_bar_width": 242.0,
 	"status_bar_visible": true
 }

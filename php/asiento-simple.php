@@ -52,6 +52,23 @@
 					<h3>Asiento simple</h3>
 				</div>
 				<div class="row">
+					<?php
+					error_reporting(E_ALL ^ E_NOTICE);
+					$mensaje = $_GET["mensaje"];
+					$error=$_GET["error"];
+					if($error=="si"){
+						echo "<div class='alert alert-danger'>";
+						echo $mensaje;
+						echo "</div>";
+					}
+
+					if($error=="no"){
+						echo "<div class='alert alert-success alert-dismissable'>";
+						echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+						echo $mensaje;
+						echo "</div>";
+					}
+					?>
 					<div class="col-md-12 well">
 						<form action="alta-asientosimple.php" id="asiento_simple" name="asiento_simple_frm" method="post" enctype="multipart/form-data" class="form-horizontal">
 							<fieldset>
@@ -69,7 +86,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<label for="cuentasdebe" class="control-label">Seleccione cuenta al debe</label>
-											<select name="cuentasdebe_slc" id="cuentasdebe" class="form-control" onchange="from(document.asiento_simple_frm.cuentasdebe_slc.value, 'scuentasdebe', 'cuentas2.php')">
+											<select name="cuentasdebe_slc" id="cuentasdebe" class="form-control" onchange="from(document.asiento_simple_frm.cuentasdebe_slc.value, 'scuentasdebe', 'cuentas2.php')" required>
 												<option value="">Seleccione una cuenta</option>
 												<?php 
 												if(!isset($conexion)){
@@ -99,7 +116,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<label for="cuentashaber" class="control-label">Seleccione cuenta al haber</label>
-											<select name="cuentashaber_slc" id="cuentashaber" class="form-control" onchange="from(document.asiento_simple_frm.cuentashaber_slc.value, 'scuentashaber', 'cuentas3.php')">
+											<select name="cuentashaber_slc" id="cuentashaber" class="form-control" onchange="from(document.asiento_simple_frm.cuentashaber_slc.value, 'scuentashaber', 'cuentas3.php')" required>
 												<option value="">Seleccione una cuenta</option>
 												<?php 
 												if(!isset($conexion)){
