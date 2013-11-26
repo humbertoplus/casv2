@@ -46,10 +46,10 @@ function asientos($conexion, $transaccion) {
 		$dif = $regs["sumadebe"]-$regs["sumahaber"];
 		echo "<tr>";
 		echo "<td colspan='4' class='text-right'>SUMAS</td>" ;
-		echo "<td align='right'>$ ".$regs["sumadebe"]."</td>";
-		echo "<td align='right'>$ ".$regs["sumahaber"]."</td>";
+		echo "<td align='right'>$ ".number_format($regs["sumadebe"], 2)."</td>";
+		echo "<td align='right'>$ ".number_format($regs["sumahaber"], 2)."</td>";
 		if($dif!=0){
-			echo "<td class='danger' align='right'><strong>$ ".$dif."</strong></td>";
+			echo "<td class='danger' align='right'><strong>$ ".number_format($dif, 2)."</strong></td>";
 		} else{
 			echo "<td></td>";
 		}

@@ -81,10 +81,10 @@
                                 echo "<table class='table table-bordered table-condensed table-hover'>";
                                 echo "<tr>";
                                 echo "<td width='730' class='text-right'><strong>SUMAS TOTALES</strong></td>" ;
-                                echo "<td width='90' align='right'><strong>$ ".$registro["sumadebe"]."</strong></td>";
-                                echo "<td width='90' align='right'><strong>$ ".$registro["sumahaber"]."</strong></td>";
+                                echo "<td width='90' align='right'><strong>$ ".number_format($registro["sumadebe"],2)."</strong></td>";
+                                echo "<td width='90' align='right'><strong>$ ".number_format($registro["sumahaber"], 2)."</strong></td>";
                                 if($dif!=0){
-                                    echo "<td width='90' class='danger' align='right'><strong>$ ".$dif."</strong></td>";
+                                    echo "<td width='90' class='danger' align='right'><strong>$ ".number_format($dif, 2)."</strong></td>";
                                 } else{
                                     echo "<td width='90'></td>";
                                 }

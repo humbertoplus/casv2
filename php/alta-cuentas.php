@@ -39,6 +39,7 @@
 	<script>
 		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
+	<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
 	<title>C.A.S | Crear Cuentas</title>
 </head>
 
@@ -256,6 +257,14 @@
 	<!-- Ventanas flotantes -->
 	<?php include("modal.php"); ?>
 
+	<script>
+	jQuery(function($){
+	   $("#id_grupo").mask("9.9?9", {placeholder:" "});
+	   $("#id_subgrupo").mask("9.9.9?9", {placeholder:" "});
+	   $("#id_cuenta").mask("9.9.9.9?9", {placeholder:" "});
+	   $("#id_subcuenta").mask("9.9.9.9.9?9", {placeholder:" "});
+	});
+	</script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

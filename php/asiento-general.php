@@ -55,6 +55,19 @@
 					<div>
 						<?php 
 							error_reporting(E_ALL ^ E_NOTICE);
+							if(!isset($conexion)){ include("conexion.php");}
+							$sql = "SELECT transaccion FROM registro ORDER BY id DESC LIMIT 1";
+							$ejecutar_consulta = $conexion->query($sql);
+							$num_regs = $ejecutar_consulta->num_rows;
+							if($num_regs>0){
+								$reg = $ejecutar_consulta->fetch_assoc();
+								$ult_asiento = $reg["transaccion"];
+								echo "<div class='alert alert-info alert-dismissable'>";
+								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+								echo "El último asiento registrado es: <strong>".$ult_asiento."</strong>";
+								echo "</div>";
+							}
+
 							if($_GET["error"]=="no"){
 								echo "<div class='alert alert-success alert-dismissable'>";
 								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";

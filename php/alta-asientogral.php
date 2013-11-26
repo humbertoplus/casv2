@@ -21,7 +21,7 @@
 ?>
 
 <?php 
-/* Verfica que la sesión esté iniciada */
+/* Verifica que la sesión esté iniciada */
 include("sesion.php");
 
 /* Variables que vienen del formulario de nuevo asiento general. */
