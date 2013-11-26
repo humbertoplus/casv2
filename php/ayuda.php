@@ -51,7 +51,8 @@
         			<h3>Ayuda del sistema.</h3>
         		</div>
         		<div class="col-md-12 well">
-        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, optio, atque vel ex hic culpa nobis adipisci nisi architecto facere quis laudantium deleniti vero non ab eaque odio porro! Minus!</p>
+        			<h5>Titulo de la ayuda</h5>
+        			<p>Contenido de la ayuda</p>
         		</div>
         	</div><!--/span-->
 

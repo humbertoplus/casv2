@@ -37,7 +37,7 @@ if(!isset($conexion)){
 
 $naturaleza 			= $_POST["naturaleza_slc"];
 
-$codigo_grupo 			= $_POST["naturaleza_slc"].".".$_POST["corr_grupo_txt"];
+$codigo_grupo 			= $naturaleza.".".$_POST["corr_grupo_txt"]; echo $codigo_grupo."<br>";
 
 $nombre_grupo 			= $_POST["nombre_grupo_txt"];
 
@@ -47,7 +47,7 @@ $descripcion 			= $_POST["descripcion_grupo_txa"];
 
 $grupo 					= $_POST["grupos_slc"];
 
-$codigo_subgrupo 		= $_POST["id_subgrupo_txt"];
+$codigo_subgrupo 		= $grupo.".".$_POST["corr_subgrupo_txt"];
 
 $nombre_subgrupo 		= $_POST["nombre_subgrupo_txt"];
 
@@ -57,7 +57,9 @@ $descripcion_subgrupo 	= $_POST["descripcion_subgrupo_txa"];
 
 $subgrupo 				= $_POST["subgrupos_slc"];
 
-$codigo_cuenta 			= $_POST["id_cuenta_txt"];
+$codigo_cuenta 			= $subgrupo.".".$_POST["corr_cuenta_txt"];
+
+$tiene_subcuenta 	= $_POST["subctas_slc"];
 
 $nombre_cuenta 			= $_POST["nombre_cuenta_txt"];
 
@@ -67,7 +69,7 @@ $descripcion_cuenta 	= $_POST["descripcion_cuenta_txa"];
 
 $cuenta 				= $_POST["cuentas_slc"];
 
-$codigo_subcuenta 		= $_POST["id_subcuenta_txt"];
+$codigo_subcuenta 		= $cuenta.".".$_POST["corr_subcuenta_txt"];
 
 $nombre_subcuenta 		= $_POST["nombre_subcuenta_txt"];
 
@@ -75,5 +77,4 @@ $descripcion_subcuenta 	= $_POST["descripcion_subcuenta_txa"];
 
 print_r($_POST);
 echo "<br>";
-echo $codigo_grupo;
 ?>

@@ -166,7 +166,7 @@
 									<div class="row">
 										<div class="col-lg-3 input-group">
 											<span class="input-group-addon">$</span>
-											<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe" title="Escriba el importe del asiento" required/>
+											<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe" title="Escriba el importe del asiento" onblur="validaDinero()" required/>
 										</div>
 									</div>
 									<div class="row">
@@ -207,6 +207,16 @@
 	<!-- Ventanas flotantes -->
 	<?php include("modal.php"); ?>
 
+	<script>
+		function validaDinero(){
+			var importe = document.getElementById("importe");
+			if(isNaN(importe.value)){
+				alert("El monto del importe tiene que ser numérico.");
+				importe.value=null;
+				importe.focus();
+			}
+		}
+	</script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

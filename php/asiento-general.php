@@ -145,7 +145,7 @@
 										<div class="input-group col-lg-2">
 											<label for="debe" class="control-label sr-only">Debe</label>
 											<span class="input-group-addon">$</span>
-											<input type="text" id="debe" name="debe_txt" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" required/>
+											<input type="text" id="debe" name="debe_txt" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" onblur="validaDinero()" required/>
 										</div>
 									</div>
 									<br>
@@ -153,7 +153,7 @@
 										<div class="input-group col-lg-2">
 											<label for="haber" class="control-label sr-only">Haber</label>
 											<span class="input-group-addon">$</span>
-											<input type="text" id="haber" name="haber_txt" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" required/>
+											<input type="text" id="haber" name="haber_txt" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" onblur="validaDinero()" required/>
 										</div>
 									</div>
 									
@@ -195,6 +195,23 @@
 	<!-- Ventanas flotantes -->
 	<?php include("modal.php"); ?>
 
+	<script>
+		function validaDinero(){
+			var debe = document.getElementById("debe");
+			var haber = document.getElementById("haber");
+			if(isNaN(debe.value)){
+				alert("El monto del debe tiene que ser numérico.");
+				debe.value=null;
+				debe.focus();
+			}
+
+			if(isNaN(haber.value)){
+				alert("El monto del haber tiene que ser numérico.");
+				haber.value=null;
+				haber.focus();
+			}
+		}
+	</script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

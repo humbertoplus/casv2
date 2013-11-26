@@ -43,6 +43,7 @@
 	<!-- Barra de navegación -->
 	<?php include("nav.php"); ?>
 	<?php 
+    error_reporting(E_ALL ^ E_NOTICE);
 	if(!isset($conexion)){ include("conexion.php");}
 	$id = $_GET["cuenta"];
 	$sql = "SELECT * FROM cuentas WHERE codigo_cuenta='$id'";
