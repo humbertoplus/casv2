@@ -61,7 +61,7 @@
         					if(!isset($conexion)){
                                 include("conexion.php");
                             }
-        					$consulta = "SELECT 
+        					$consulta = "SELECT d.codigo_cuenta as id,
         								CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
         								CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
         								CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
@@ -90,10 +90,11 @@
                             echo "<tbody>";
 
                             while($registro = $ejecutar_consulta->fetch_assoc()){
+                                $codigo_cuenta = $registro["id"];
                                 echo "<tr>";
                                 echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                 echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "<td><a href='detalle-cuenta.php?cuenta=$codigo_cuenta'>".utf8_encode($registro["Cuenta"])."</a></td>";
                                 echo "</tr>";
                             }
                             
@@ -111,7 +112,7 @@
                             <h3><span class="label label-success">2. Pasivos</span></h3>
                         </div>
                         <?php 
-                            $consulta = "SELECT 
+                            $consulta = "SELECT d.codigo_cuenta as id,
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
@@ -140,10 +141,11 @@
                             echo "<tbody>";
 
                             while($registro = $ejecutar_consulta->fetch_assoc()){
+                                $codigo_cuenta = $registro["id"];
                                 echo "<tr>";
                                 echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                 echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "<td><a href='detalle-cuenta.php?cuenta=$codigo_cuenta'>".utf8_encode($registro["Cuenta"])."</a></td>";
                                 echo "</tr>";
                             }
                             
@@ -161,7 +163,7 @@
                             <h3><span class="label label-warning">3. Capital</span></h3>
                         </div>
                         <?php 
-                            $consulta = "SELECT 
+                            $consulta = "SELECT d.codigo_cuenta as id,
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
@@ -190,10 +192,11 @@
                             echo "<tbody>";
 
                             while($registro = $ejecutar_consulta->fetch_assoc()){
+                                $codigo_cuenta = $registro["id"];
                                 echo "<tr>";
                                 echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                 echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "<td><a href='detalle-cuenta.php?cuenta=$codigo_cuenta'>".utf8_encode($registro["Cuenta"])."</a></td>";
                                 echo "</tr>";
                             }
                             
@@ -211,7 +214,7 @@
                             <h3><span class="label label-danger">4. Resultados</span></h3>
                         </div>
                         <?php 
-                            $consulta = "SELECT 
+                            $consulta = "SELECT d.codigo_cuenta as id,
                                         CONCAT_WS('. ', b.`codigo_grupo`, b.`nombre_grupo`) AS Grupo,
                                         CONCAT_WS('. ', c.`codigo_subgrupo`, c.`nombre_subgrupo`) AS Subgrupo,
                                         CONCAT_WS('. ', d.`codigo_cuenta`, d.`nombre_cuenta`) AS Cuenta
@@ -240,10 +243,11 @@
                             echo "<tbody>";
 
                             while($registro = $ejecutar_consulta->fetch_assoc()){
+                                $codigo_cuenta = $registro["id"];
                                 echo "<tr>";
                                 echo "<td>".utf8_encode($registro["Grupo"])."</td>";
                                 echo "<td>".utf8_encode($registro["Subgrupo"])."</td>";
-                                echo "<td>".utf8_encode($registro["Cuenta"])."</td>";
+                                echo "<td><a href='detalle-cuenta.php?cuenta=$codigo_cuenta'>".utf8_encode($registro["Cuenta"])."</a></td>";
                                 echo "</tr>";
                             }
                             

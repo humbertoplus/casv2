@@ -62,4 +62,37 @@ function asientos($conexion, $transaccion) {
 		echo "</div>";
 		echo "</div>";	
 	}
+
+	function actualizarCuentas($conexion, $cuenta){
+		$c = explode('.', $cuenta);
+		if(isset($c[4])){
+			$sql = "SELECT SUM(debe) sumadebe, SUM(haber) sumahaber FROM registro WHERE cuenta='$cuenta'";
+			$ejecutar_consulta = $conexion->query($sql);
+			while($regs = $ejecutar_consulta->fetch_assoc()){
+				$saldo_debe = $regs["sumadebe"];
+				$saldo_haber = $regs["sumahaber"];
+
+				$update = "UPDATE subcuentas SET saldo_debe=$saldo_debe, saldo_haber=$saldo_haber WHERE codigo_subcuenta='$cuenta'";
+				$ex_query = $conexion->query($update);
+				if($ex_query){
+					//echo "OK. <br>";
+				}
+			}
+		}
+
+		if(!isset($c[4])){
+			$sql = "SELECT SUM(debe) sumadebe, SUM(haber) sumahaber FROM registro WHERE cuenta='$cuenta'";
+			$ejecutar_consulta = $conexion->query($sql);
+			while($regs = $ejecutar_consulta->fetch_assoc()){
+				$saldo_debe = $regs["sumadebe"];
+				$saldo_haber = $regs["sumahaber"];
+
+				$update = "UPDATE cuentas SET saldo_debe=$saldo_debe, saldo_haber=$saldo_haber WHERE codigo_cuenta='$cuenta'";
+				$ex_query = $conexion->query($update);
+				if($ex_query){
+					//echo "OK. <br>";
+				}
+			}
+		}
+	}
 ?>

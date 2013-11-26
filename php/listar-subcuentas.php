@@ -79,9 +79,10 @@
 							echo "<tbody>";
 
 							while($registro = $ejecutar_consulta->fetch_assoc()){
+								$codigo_subcuenta = $registro["codigo_subcuenta"];
 								echo "<tr>";
-								echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
-								echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+								echo "<td class='text-right'><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["codigo_subcuenta"])."</a></td>";
+								echo "<td><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["nombre_subcuenta"])."</a></td>";
 								echo "</tr>";
 							}
 							
@@ -117,9 +118,10 @@
 							echo "<tbody>";
 
 							while($registro = $ejecutar_consulta->fetch_assoc()){
+								$codigo_subcuenta = $registro["codigo_subcuenta"];
 								echo "<tr>";
-								echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
-								echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+								echo "<td class='text-right'><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["codigo_subcuenta"])."</a></td>";
+								echo "<td><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["nombre_subcuenta"])."</a></td>";
 								echo "</tr>";
 							}
 							
@@ -155,9 +157,10 @@
 							echo "<tbody>";
 
 							while($registro = $ejecutar_consulta->fetch_assoc()){
+								$codigo_subcuenta = $registro["codigo_subcuenta"];
 								echo "<tr>";
-								echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
-								echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+								echo "<td class='text-right'><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["codigo_subcuenta"])."</a></td>";
+								echo "<td><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["nombre_subcuenta"])."</a></td>";
 								echo "</tr>";
 							}
 							
@@ -193,9 +196,10 @@
 							echo "<tbody>";
 
 							while($registro = $ejecutar_consulta->fetch_assoc()){
+								$codigo_subcuenta = $registro["codigo_subcuenta"];
 								echo "<tr>";
-								echo "<td class='text-right'>".utf8_encode($registro["codigo_subcuenta"])."</td>";
-								echo "<td>".utf8_encode($registro["nombre_subcuenta"])."</td>";
+								echo "<td class='text-right'><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["codigo_subcuenta"])."</a></td>";
+								echo "<td><a href='detalle-subcuenta.php?subcuenta=$codigo_subcuenta'>".utf8_encode($registro["nombre_subcuenta"])."</a></td>";
 								echo "</tr>";
 							}
 							
