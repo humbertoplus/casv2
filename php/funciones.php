@@ -95,4 +95,8 @@ function asientos($conexion, $transaccion) {
 			}
 		}
 	}
+
+	function generarMayor($conexion){
+		
+	}
 ?>
