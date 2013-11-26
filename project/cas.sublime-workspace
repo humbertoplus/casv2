@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cod",
+				"codigo_grupo"
+			],
+			[
+				"na",
+				"naturaleza_slc"
+			],
+			[
 				"subg",
 				"subgrupo"
 			],
@@ -22,10 +30,6 @@
 			[
 				"reg",
 				"reg"
-			],
-			[
-				"cod",
-				"codigo_cuenta"
 			],
 			[
 				"ex",
@@ -472,14 +476,6 @@
 	"buffers":
 	[
 		{
-			"file": "/C/wamp/www/casv1/php/asiento-simple.php",
-			"settings":
-			{
-				"buffer_size": 8951,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/C/wamp/www/casv1/php/alta-asientogral.php",
 			"settings":
 			{
@@ -566,6 +562,78 @@
 				"buffer_size": 5162,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/alta-cuentas.php",
+			"settings":
+			{
+				"buffer_size": 13833,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/cuentas.php",
+			"settings":
+			{
+				"buffer_size": 690,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+			"settings":
+			{
+				"buffer_size": 8951,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/prefijo-grupo.php",
+			"settings":
+			{
+				"buffer_size": 216,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/agregar-cuentas.php",
+			"settings":
+			{
+				"buffer_size": 2762,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/prefijo-subgrupo.php",
+			"settings":
+			{
+				"buffer_size": 219,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/prefijo-cuenta.php",
+			"settings":
+			{
+				"buffer_size": 217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/prefijo-subcuenta.php",
+			"settings":
+			{
+				"buffer_size": 214,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/js/validaciones.js",
+			"settings":
+			{
+				"buffer_size": 979,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -624,6 +692,7 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/casv1/php/prefijo-grupo.php",
 		"/C/wamp/www/catwin/funciones.php",
 		"/C/wamp/www/casv1/php/alta-asientosimple.php",
 		"/C/wamp/www/casv1/php/listar-subcuentas.php",
@@ -750,8 +819,7 @@
 		"/C/Users/Alex Contreras/Desktop/css.html",
 		"/C/wamp/www/casv1/php/select-tipo.php",
 		"/C/wamp/www/mantenimiento/php/registrar.php",
-		"/C/wamp/www/casv1/php/example.php",
-		"/C/wamp/www/bootstrap-tutorial/extras2.html"
+		"/C/wamp/www/casv1/php/example.php"
 	],
 	"find":
 	{
@@ -884,39 +952,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 19,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/wamp/www/casv1/php/asiento-simple.php",
-					"settings":
-					{
-						"buffer_size": 8951,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/C/wamp/www/casv1/php/alta-asientogral.php",
 					"settings":
 					{
@@ -943,7 +983,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/C/wamp/www/casv1/php/funciones.php",
 					"settings":
 					{
@@ -970,7 +1010,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "/C/wamp/www/casv1/php/diario.php",
 					"settings":
 					{
@@ -998,7 +1038,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "/C/wamp/www/casv1/php/conexion.php",
 					"settings":
 					{
@@ -1025,7 +1065,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "/C/wamp/www/casv1/php/prueba-suma.php",
 					"settings":
 					{
@@ -1051,7 +1091,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "/C/wamp/www/casv1/php/detalle-cuenta.php",
 					"settings":
 					{
@@ -1068,7 +1108,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 1139.0,
@@ -1077,7 +1119,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "/C/wamp/www/casv1/php/listar-cuentas.php",
 					"settings":
 					{
@@ -1117,7 +1159,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "/C/wamp/www/casv1/php/listar-subcuentas.php",
 					"settings":
 					{
@@ -1155,7 +1197,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "/C/wamp/www/bootstrap-tutorial/css.html",
 					"settings":
 					{
@@ -1183,7 +1225,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "/C/wamp/www/casv1/php/prueba-caracteres.php",
 					"settings":
 					{
@@ -1210,7 +1252,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "/C/wamp/www/casv1/php/detalle-subcuenta.php",
 					"settings":
 					{
@@ -1227,10 +1269,251 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 1279.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/wamp/www/casv1/php/alta-cuentas.php",
+					"settings":
+					{
+						"buffer_size": 13833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11809,
+								11809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3346.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/wamp/www/casv1/php/cuentas.php",
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+					"settings":
+					{
+						"buffer_size": 8951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1962,
+								2049
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1402.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/C/wamp/www/casv1/php/prefijo-grupo.php",
+					"settings":
+					{
+						"buffer_size": 216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/C/wamp/www/casv1/php/agregar-cuentas.php",
+					"settings":
+					{
+						"buffer_size": 2762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2758,
+								2758
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/wamp/www/casv1/php/prefijo-subgrupo.php",
+					"settings":
+					{
+						"buffer_size": 219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/C/wamp/www/casv1/php/prefijo-cuenta.php",
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/C/wamp/www/casv1/php/prefijo-subcuenta.php",
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/C/wamp/www/casv1/js/validaciones.js",
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

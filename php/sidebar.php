@@ -45,7 +45,6 @@
 				echo "<a href='crear-usuario.php' class='list-group-item'>&#0171; Crear un nuevo usuario</a>";
 				echo "<a href='eliminar-usuario.php' class='list-group-item'>&#0171; Eliminar usuario</a>";
 				echo "<a href='iva.php' class='list-group-item'>&#0171; IVA</a>";
-				echo "<a href='anio-contable.php' class='list-group-item'>&#0171; Año Contable</a>";
 				echo "<a href='log.php' class='list-group-item'>&#0171; Ver log</a>";
 				echo "</div>";
 				echo "</div>";
@@ -97,6 +96,7 @@
 
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
+					<a href="mayor.php" class="list-group-item">&#0171; Libro Mayor</a>
 					<a href="#" class="list-group-item">&#0171; Balances</a>
 					<a href="#" class="list-group-item">&#0171; Búsquedas</a>
 					<a href="#" class="list-group-item">&#0171; Listados</a>
