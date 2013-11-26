@@ -40,6 +40,7 @@
 		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
 	<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
 	<title>C.A.S | Crear Cuentas</title>
 </head>
 
@@ -58,14 +59,14 @@
 				<!-- Crear Grupo -->
 				<div class="row">
 					<div class="col-lg-12 well">
-						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear-grupo_frm" enctype="application/x-www-form-urlencoded">
+						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear_grupo_frm" enctype="application/x-www-form-urlencoded">
 							<fieldset>
 								<legend>Crear Grupo</legend>
 								<div class="container">
 									<div class="row">
 										<div class="col-lg-4">
 											<label for="naturaleza" class="control-label">Naturaleza</label>
-											<select name="naturaleza_slc" id="naturaleza" class="form-control" required>
+											<select name="naturaleza_slc" id="naturaleza" class="form-control" onchange="from(document.crear_grupo_frm.naturaleza_slc.value, 'prefijo', 'prefijo-grupo.php'), document.getElementById('corr_grupo').focus()" required>
 												<option value="">Seleccione</option>
 												<option value="1">1. Activo</option>
 												<option value="2">2. Pasivo</option>
@@ -73,9 +74,13 @@
 												<option value="4">4. Resultados</option>
 											</select>
 										</div>
-										<div class="col-lg-5">
-											<label for="id_grupo" class="control-label">Código del grupo</label>
-											<input type="text" id="id_grupo" class="form-control" name="id_grupo_txt" title="Escriba el código en el formato #.#" placeholder="Escriba el código en el formato #.#" required/>
+										<div class="col-lg-1" id="prefijo">
+											<label for="codigo" class="control-label">&nbsp;&nbsp;</label>
+											<p class="form-control-static text-right"><h4></h4></p>
+										</div>
+										<div class="col-lg-7 pull-left">
+											<label for="corr_grupo" class="control-label">Correlativo del grupo</label>
+											<input type="text" id="corr_grupo" class="form-control" name="corr_grupo_txt" maxlength="2" title="Escriba el correlativo del grupo." placeholder="Escriba el número correlativo del grupo." required/>
 										</div>
 									</div>
 									<div class="row">
@@ -105,21 +110,25 @@
 				<!-- Crear Subgrupo -->
 				<div class="row">
 					<div class="col-lg-12 well">
-						<form action="agregar-cuentas.php" class="form-horizontal" method="post" id="crear-subgrupo_frm" enctype="application/x-www-form-urlencoded">
+						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear_subgrupo_frm" enctype="application/x-www-form-urlencoded">
 							<fieldset>
 								<legend>Crear Subgrupo</legend>
 								<div class="container">
 									<div class="row">
 										<div class="col-lg-4">
 											<label for="grupos" class="control-label">Grupo</label>
-											<select name="grupos_slc" id="grupos" class="form-control" required>
+											<select name="grupos_slc" id="grupos" class="form-control" onchange="from(document.crear_subgrupo_frm.grupos_slc.value, 'prefijo_subgrupo', 'prefijo-subgrupo.php'), document.getElementById('corr_subgrupo').focus()" required/>
 												<option value="">Seleccione grupo</option>
 												<?php include("select-grupos.php"); ?>
 											</select>
 										</div>
-										<div class="col-lg-5">
-											<label for="id_subgrupo" class="control-label">Código del subgrupo</label>
-											<input type="text" id="id_subgrupo" name="id_subgrupo_txt" class="form-control" placeholder="Escriba el código en el formato #.#.#" title="Escriba el código para el subgrupo en el formato #.#.#" required />
+										<div class="col-lg-1" id="prefijo_subgrupo">
+											<label for="" class="control-label">&nbsp;&nbsp;</label>
+											<p class="form-control-static text-right"><strong>&nbsp;&nbsp;&nbsp;</strong></p>
+										</div>
+										<div class="col-lg-7">
+											<label for="corr_subgrupo" class="control-label">Correlativo del Subgrupo</label>
+											<input type="text" id="corr_subgrupo" name="corr_subgrupo_txt" class="form-control" maxlength="2" placeholder="Escriba el correlativo del subgrupo" title="Escriba el número correlativo del subgrupo" required />
 										</div>
 									</div>
 									<div class="row">
@@ -149,28 +158,32 @@
 				<!-- Crear Cuenta -->
 				<div class="row">
 					<div class="col-lg-12 well">
-						<form action="agregar-cuentas.php" class="form-horizontal" id="crear-cuenta" name="crear-cuenta_frm" method="post" enctype="application/x-www-form-urlencoded">
+						<form action="agregar-cuentas.php" class="form-horizontal" id="crear-cuenta" name="crear_cuenta_frm" method="post" enctype="application/x-www-form-urlencoded">
 							<fieldset>
 								<legend>Crear Cuenta</legend>
 								<div class="container">
 									<div class="row">
-										<div class="col-lg-4">
+										<div class="col-lg-3">
 											<label for="subgrupos" class="control-label">Subgrupo</label>
-											<select name="subgrupos_slc" id="subgrupos" class="form-control" required>
+											<select name="subgrupos_slc" id="subgrupos" class="form-control" onchange="from(document.crear_cuenta_frm.subgrupos_slc.value, 'prefijo_cuenta','prefijo-cuenta.php'), document.getElementById('corr_cuenta').focus()" required>
 												<option value="">Seleccione subgrupo</option>
 												<?php include("select-subgrupos.php"); ?>
 											</select>
 										</div>
+										<div class="col-lg-1" id="prefijo_cuenta">
+											<label for="" class="control-label">&nbsp;&nbsp;</label>
+											<p class="form-control-static text-right"><strong>&nbsp;&nbsp;&nbsp;</strong></p>
+										</div>
 										<div class="col-lg-4">
-											<label for="id_cuenta" class="control-label">Código de la cuenta</label>
-											<input type="text" id="id_cuenta" name="id_cuenta_txt" class="form-control" title="Escriba el código de la cuenta" placeholder="Escriba el código en el formato #.#.#.#" required/>
+											<label for="corr_cuenta" class="control-label">Correlativo de la cuenta</label>
+											<input type="text" id="corr_cuenta" name="corr_cuenta_txt" class="form-control" title="Escriba el correlativo de la cuenta" placeholder="Escriba el correlativo de la cuenta." required/>
 										</div>
 										<div class="col-lg-4">
 											<label for="subctas" class="control-label">¿Tiene Subcuentas? <a title="Si la cuenta tendrá subcuentas seleccione Si, de lo contrario seleccione No."><span class="glyphicon glyphicon-question-sign"></span></a></label>
 											<select name="subctas_slc" id="subctas" class="form-control" required>
 												<option value="">Seleccione una opción</option>
-												<option value="si">Si</option>
-												<option value="no">No</option>
+												<option value="Si">Si</option>
+												<option value="No">No</option>
 											</select>
 										</div>
 									</div>
@@ -201,22 +214,25 @@
 				<!-- Crear Subcuenta -->
 				<div class="row">
 					<div class="col-lg-12 well">
-						<form action="agregar-cuentas.php" class="form-horizontal" method="post" id="crear-subgrupo_frm" enctype="application/x-www-form-urlencoded">
+						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear_subcuenta_frm" enctype="application/x-www-form-urlencoded">
 							<fieldset>
 								<legend>Crear Subcuenta</legend>
 								<div class="container">
 									<div class="row">
 										<div class="col-lg-4">
 											<label for="cuentas" class="control-label">Cuenta</label>
-											<select name="cuentas_slc" id="cuentas" class="form-control" required>
+											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.crear_subcuenta_frm.cuentas_slc.value, 'prefijo_subcuenta', 'prefijo-subcuenta.php'), document.getElementById('corr_subcuenta').focus()" required>
 												<option value="">Seleccione cuenta</option>
-												<?php include("select-cuentas.php"); ?>
-												
+												<?php include("select-cuentas.php"); ?>												
 											</select>
 										</div>
-										<div class="col-lg-5">
-											<label for="id_subcuenta" class="control-label">Código de la subcuenta</label>
-											<input type="text" id="id_subcuenta" name="id_subcuenta_txt" class="form-control" placeholder="Escriba el código en el formato #.#.#.#.#" title="Escriba el código para la subcuenta en el formato #.#.#.#.#" required />
+										<div class="col-lg-1" id="prefijo_subcuenta">
+											<label for="" class="control-label">&nbsp;&nbsp;</label>
+											<p class="form-control-static text-right"><strong>&nbsp;&nbsp;&nbsp;</strong></p>
+										</div>
+										<div class="col-lg-7">
+											<label for="corr_subcuenta" class="control-label">Correlativo de la subcuenta</label>
+											<input type="text" id="corr_subcuenta" name="corr_subcuenta_txt" class="form-control" placeholder="Escriba el número correlativo de la subcuenta" title="Escriba el número correlativo de la subcuenta" maxlength="2" required />
 										</div>
 									</div>
 									<div class="row">
@@ -259,10 +275,10 @@
 
 	<script>
 	jQuery(function($){
-	   $("#id_grupo").mask("9.9?9", {placeholder:" "});
-	   $("#id_subgrupo").mask("9.9.9?9", {placeholder:" "});
-	   $("#id_cuenta").mask("9.9.9.9?9", {placeholder:" "});
-	   $("#id_subcuenta").mask("9.9.9.9.9?9", {placeholder:" "});
+		$("#corr_grupo").mask("9?9", {placeholder:" "});
+		$("#corr_subgrupo").mask("9?9", {placeholder:" "});
+		$("#corr_cuenta").mask("9?9", {placeholder:" "});
+		$("#corr_subcuenta").mask("9?9", {placeholder:" "});
 	});
 	</script>
 	<script src="../js/bootstrap.min.js"></script>

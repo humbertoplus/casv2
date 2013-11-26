@@ -37,7 +37,7 @@ if(!isset($conexion)){
 
 $naturaleza 			= $_POST["naturaleza_slc"];
 
-$codigo_grupo 			= $_POST["id_grupo_txt"];
+$codigo_grupo 			= $_POST["naturaleza_slc"].".".$_POST["corr_grupo_txt"];
 
 $nombre_grupo 			= $_POST["nombre_grupo_txt"];
 
@@ -74,4 +74,6 @@ $nombre_subcuenta 		= $_POST["nombre_subcuenta_txt"];
 $descripcion_subcuenta 	= $_POST["descripcion_subcuenta_txa"];
 
 print_r($_POST);
+echo "<br>";
+echo $codigo_grupo;
 ?>
