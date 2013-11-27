@@ -13,108 +13,117 @@ $usuario = $_SESSION["usuario"];
 
 $a = explode("-", $fecha);
 
-$b = $a[0];
+$fecha_valida = checkdate($a[1], $a[2], $a[0]);
 
-if(!isset($conexion)){
-	include("conexion.php");
-}
+if($fecha_valida){
+	$b = $a[0];
 
-$sql = "SELECT anio_contable from anio_contable WHERE anio_contable='$b'";
-$ejecutar_consulta = $conexion->query($sql);
-$num_regs = $ejecutar_consulta->num_rows;
-$ok1 = "false";
-$ok2 = "false";
-if($num_regs==0){
-	$mensaje = "El año de la fecha del asiento difiere con el año contable.";
-	header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
-} else {
-	if($subcuenta==0){
-		$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta'";
-		$ejecutar_consulta = $conexion->query($sql);
-		$reg = $ejecutar_consulta->fetch_assoc();
-		if($reg["tiene_subcuenta"]=="Si"){
-			$mensaje = "Error, la cuenta en el debe tiene subcuentas, debe seleccionar una.";
-			header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+	if(!isset($conexion)){
+		include("conexion.php");
+	}
+
+	$sql = "SELECT anio_contable from anio_contable WHERE anio_contable='$b'";
+	$ejecutar_consulta = $conexion->query($sql);
+	$num_regs = $ejecutar_consulta->num_rows;
+	$ok1 = "false";
+	$ok2 = "false";
+	if($num_regs==0){
+		$mensaje = "El año de la fecha del asiento difiere con el año contable.";
+		header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+	} else {
+		if($subcuenta==0){
+			$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta'";
+			$ejecutar_consulta = $conexion->query($sql);
+			$reg = $ejecutar_consulta->fetch_assoc();
+			if($reg["tiene_subcuenta"]=="Si"){
+				$mensaje = "Error, la cuenta en el debe tiene subcuentas, debe seleccionar una.";
+				header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+			} else {
+				$ok1 = "true";
+			}
+
+			if($subcuenta_pd==0){
+				$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta_pd'";
+				$ejecutar_consulta = $conexion->query($sql);
+				$reg = $ejecutar_consulta->fetch_assoc();
+				if($reg["tiene_subcuenta"]=="Si"){
+					$mensaje = "Error, la cuenta en el haber tiene subcuentas, debe seleccionar una.";
+					header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+				} else {
+					$ok2 = "true";
+				}
+			} else {
+				$ok2 = "true";
+			}
 		} else {
 			$ok1 = "true";
-		}
-
-		if($subcuenta_pd==0){
-			$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta_pd'";
-			$ejecutar_consulta = $conexion->query($sql);
-			$reg = $ejecutar_consulta->fetch_assoc();
-			if($reg["tiene_subcuenta"]=="Si"){
-				$mensaje = "Error, la cuenta en el haber tiene subcuentas, debe seleccionar una.";
-				header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+			if($subcuenta_pd==0){
+				$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta_pd'";
+				$ejecutar_consulta = $conexion->query($sql);
+				$reg = $ejecutar_consulta->fetch_assoc();
+				if($reg["tiene_subcuenta"]=="Si"){
+					$mensaje = "Error, la cuenta en el haber tiene subcuentas, debe seleccionar una.";
+					header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
+				} else {
+					$ok2 = "true";
+				}
 			} else {
 				$ok2 = "true";
 			}
-		} else {
-			$ok2 = "true";
 		}
-	} else {
-		$ok1 = "true";
-		if($subcuenta_pd==0){
-			$sql = "SELECT tiene_subcuenta FROM cuentas WHERE codigo_cuenta='$cuenta_pd'";
-			$ejecutar_consulta = $conexion->query($sql);
-			$reg = $ejecutar_consulta->fetch_assoc();
-			if($reg["tiene_subcuenta"]=="Si"){
-				$mensaje = "Error, la cuenta en el haber tiene subcuentas, debe seleccionar una.";
-				header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
-			} else {
-				$ok2 = "true";
+	}
+
+	if($ok1=="true" && $ok2=="true"){
+		//echo "Todo blue!";
+		//echo "<br>";
+		if($subcuenta==0){
+			// echo "Metemos la info del debe en la BD afectando a la CUENTA. <br>";
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
+			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
+			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+			if($ejecutar_consulta){
+				$mensaje = "Se ha dado de alta al asiento exitosamente.";
+				header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
 			}
 		} else {
-			$ok2 = "true";
+			//echo "Metemos la info del debe en la BD afectando a la SUBCUENTA. <br>";
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
+			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
+			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+			if($ejecutar_consulta){
+				$mensaje = "Se ha dado de alta al asiento exitosamente.";
+				header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
+			}
+		}
+
+		if($subcuenta_pd==0){
+			//echo "Metemos la info del haber en la BD afectando a la CUENTA. <br>";
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
+			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
+			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+			if($ejecutar_consulta){
+				$mensaje = "Se ha dado de alta al asiento exitosamente.";
+				header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
+			}
+		} else {
+			//echo "Metemos la info del haber en la BD afectando a la SUBCUENTA. <br>";
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
+			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
+			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+			if($ejecutar_consulta){
+				$mensaje = "Se ha dado de alta al asiento exitosamente.";
+				header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
+			}
 		}
 	}
+} else {
+	$mensaje = "Debe ingresar una fecha válida.";
+	header("Location: asiento-simple.php?mensaje=$mensaje&error=si");
 }
 
-if($ok1=="true" && $ok2=="true"){
-	//echo "Todo blue!";
-	//echo "<br>";
-	if($subcuenta==0){
-		// echo "Metemos la info del debe en la BD afectando a la CUENTA. <br>";
-		$ip = $_SERVER["HTTP_CLIENT_IP"];
-		if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-		$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
-		$ejecutar_consulta = $conexion->query(utf8_decode($sql));
-		if($ejecutar_consulta){
-			$mensaje = "Se ha dado de alta al asiento exitosamente.";
-			header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
-		}
-	} else {
-		//echo "Metemos la info del debe en la BD afectando a la SUBCUENTA. <br>";
-		$ip = $_SERVER["HTTP_CLIENT_IP"];
-		if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-		$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
-		$ejecutar_consulta = $conexion->query(utf8_decode($sql));
-		if($ejecutar_consulta){
-			$mensaje = "Se ha dado de alta al asiento exitosamente.";
-			header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
-		}
-	}
 
-	if($subcuenta_pd==0){
-		//echo "Metemos la info del haber en la BD afectando a la CUENTA. <br>";
-		$ip = $_SERVER["HTTP_CLIENT_IP"];
-		if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-		$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
-		$ejecutar_consulta = $conexion->query(utf8_decode($sql));
-		if($ejecutar_consulta){
-			$mensaje = "Se ha dado de alta al asiento exitosamente.";
-			header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
-		}
-	} else {
-		//echo "Metemos la info del haber en la BD afectando a la SUBCUENTA. <br>";
-		$ip = $_SERVER["HTTP_CLIENT_IP"];
-		if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-		$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
-		$ejecutar_consulta = $conexion->query(utf8_decode($sql));
-		if($ejecutar_consulta){
-			$mensaje = "Se ha dado de alta al asiento exitosamente.";
-			header("Location: asiento-simple.php?mensaje=$mensaje&error=no");
-		}
-	}
-}
 ?>

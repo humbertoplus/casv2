@@ -41,7 +41,7 @@ $usuario 			= $_SESSION["usuario"];
 
 /* Convertimos la fecha ingresada en un vector de cadenas sin los símbolos '-' */
 $a = explode("-", $fecha);
-print_r($a);
+
 $fecha_valida = checkdate($a[1], $a[2], $a[0]);
 
 if($fecha_valida){
@@ -97,7 +97,7 @@ if($fecha_valida){
 		} else{
 			header("Location: asiento-general.php?error=anio");
 		}
-		
+
 	} else {
 		header("Location: asiento-general.php?error=fecha-invalida");
 	}

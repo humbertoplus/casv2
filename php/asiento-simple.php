@@ -38,6 +38,7 @@
 	</script>
 	<title>C.A.S | Asiento simple</title>
 	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
+	<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -93,7 +94,7 @@
 										</div>
 										<div class="col-md-4">
 											<label for="fecha" class="control-label">Fecha</label>
-											<input type="date" id="fecha" name="fecha_txt" class="form-control" title="Ingrese la fecha del asiento" required/>
+											<input type="date" id="fecha" name="fecha_txt" class="form-control" title="Ingrese la fecha del asiento" placeholder="AAAA-MM-DD" required/>
 										</div>
 									</div>
 									<div class="row">
@@ -216,6 +217,12 @@
 				importe.focus();
 			}
 		}
+	</script>
+	<script>
+		jQuery(function($){
+			$("#fecha").mask("9999-99-99", {placeholder:"_"});
+			$("#asiento").mask("9?99999", {placeholder:" "});
+		});
 	</script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
