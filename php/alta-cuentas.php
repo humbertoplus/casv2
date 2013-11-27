@@ -64,6 +64,7 @@
 								<legend>Crear Grupo</legend>
 								<div class="container">
 									<div class="row">
+										<input type="hidden" value="1" name="tipo_hdn"/>
 										<div class="col-lg-4">
 											<label for="naturaleza" class="control-label">Naturaleza</label>
 											<select name="naturaleza_slc" id="naturaleza" class="form-control" onchange="from(document.crear_grupo_frm.naturaleza_slc.value, 'prefijo', 'prefijo-grupo.php'), document.getElementById('corr_grupo').focus()" required>
@@ -115,6 +116,7 @@
 								<legend>Crear Subgrupo</legend>
 								<div class="container">
 									<div class="row">
+										<input type="hidden" value="2" name="tipo_hdn"/>
 										<div class="col-lg-4">
 											<label for="grupos" class="control-label">Grupo</label>
 											<select name="grupos_slc" id="grupos" class="form-control" onchange="from(document.crear_subgrupo_frm.grupos_slc.value, 'prefijo_subgrupo', 'prefijo-subgrupo.php'), document.getElementById('corr_subgrupo').focus()" required/>
@@ -163,6 +165,7 @@
 								<legend>Crear Cuenta</legend>
 								<div class="container">
 									<div class="row">
+										<input type="hidden" value="3" name="tipo_hdn"/>
 										<div class="col-lg-3">
 											<label for="subgrupos" class="control-label">Subgrupo</label>
 											<select name="subgrupos_slc" id="subgrupos" class="form-control" onchange="from(document.crear_cuenta_frm.subgrupos_slc.value, 'prefijo_cuenta','prefijo-cuenta.php'), document.getElementById('corr_cuenta').focus()" required>
@@ -219,6 +222,7 @@
 								<legend>Crear Subcuenta</legend>
 								<div class="container">
 									<div class="row">
+										<input type="hidden" value="4" name="tipo_hdn"/>
 										<div class="col-lg-4">
 											<label for="cuentas" class="control-label">Cuenta</label>
 											<select name="cuentas_slc" id="cuentas" class="form-control" onchange="from(document.crear_subcuenta_frm.cuentas_slc.value, 'prefijo_subcuenta', 'prefijo-subcuenta.php'), document.getElementById('corr_subcuenta').focus()" required>

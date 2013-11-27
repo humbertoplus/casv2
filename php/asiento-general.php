@@ -100,6 +100,7 @@
 								<div class="container">
 
 									<div class="row">
+										<input type="hidden" name="tipoasiento_hdn" value="general">
 										<div class="col-lg-2">
 											<label for="n_asiento" class="control-label">N° de asiento</label>
 											<input type="number" min="1" class="form-control" id="n_asiento" name="n_asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento a registrar" required/>
@@ -222,7 +223,7 @@
 	<script>
 		jQuery(function($){
 			$("#fecha").mask("9999-99-99", {placeholder:"_"});
-			$("#n_asiento").mask("9?99999", {placeholder:" "});
+			//$("#n_asiento").mask("9?99999", {placeholder:" "});
 		});
 	</script>
 

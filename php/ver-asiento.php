@@ -132,6 +132,16 @@
 												<span class="glyphicon glyphicon-circle-arrow-left"></span>  
 												Regresar
 											</a>
+											&nbsp;&nbsp;&nbsp;
+											<a href="editar-asiento.php?id=<?php echo $transaccion;?>" class="btn btn-primary">
+												<span class="glyphicon glyphicon-edit"></span>
+												Editar
+											</a>
+											&nbsp;&nbsp;&nbsp;
+											<a href="borrar-asiento.php?id=<?php echo $transaccion;?>" class="btn btn-danger">
+												<span class="glyphicon glyphicon-trash"></span>
+												Borrar
+											</a>
 										</div>
 									</div>
 								</div>        						

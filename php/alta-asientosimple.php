@@ -1,5 +1,6 @@
 <?php 
 include("sesion.php");
+$tipoasiento = $_POST["tipoasiento_hdn"];
 $transaccion = $_POST["asiento_txt"];
 $fecha = $_POST["fecha_txt"];
 $cuenta = $_POST["cuentasdebe_slc"];
@@ -80,7 +81,7 @@ if($fecha_valida){
 			// echo "Metemos la info del debe en la BD afectando a la CUENTA. <br>";
 			$ip = $_SERVER["HTTP_CLIENT_IP"];
 			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`,`tipo`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$tipoasiento', '$cuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
 			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
 			if($ejecutar_consulta){
 				$mensaje = "Se ha dado de alta al asiento exitosamente.";
@@ -90,7 +91,7 @@ if($fecha_valida){
 			//echo "Metemos la info del debe en la BD afectando a la SUBCUENTA. <br>";
 			$ip = $_SERVER["HTTP_CLIENT_IP"];
 			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `tipo`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$tipoasiento', '$subcuenta', '$concepto', '$importe', 0.00, '$descripcion', null, null, '$usuario', null, '$ip')";
 			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
 			if($ejecutar_consulta){
 				$mensaje = "Se ha dado de alta al asiento exitosamente.";
@@ -102,7 +103,7 @@ if($fecha_valida){
 			//echo "Metemos la info del haber en la BD afectando a la CUENTA. <br>";
 			$ip = $_SERVER["HTTP_CLIENT_IP"];
 			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$cuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `tipo`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$tipoasiento', '$cuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
 			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
 			if($ejecutar_consulta){
 				$mensaje = "Se ha dado de alta al asiento exitosamente.";
@@ -112,7 +113,7 @@ if($fecha_valida){
 			//echo "Metemos la info del haber en la BD afectando a la SUBCUENTA. <br>";
 			$ip = $_SERVER["HTTP_CLIENT_IP"];
 			if(!$ip) { $ip = $_SERVER["REMOTE_ADDR"]; }
-			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$subcuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
+			$sql = "INSERT INTO `sic115`.`registro` (`fecha`, `transaccion`, `tipo`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES ('$fecha', '$transaccion', '$tipoasiento', '$subcuenta_pd', '$concepto', 0.00, '$importe', '$descripcion', null, null, '$usuario', null, '$ip')";
 			$ejecutar_consulta = $conexion->query(utf8_decode($sql));
 			if($ejecutar_consulta){
 				$mensaje = "Se ha dado de alta al asiento exitosamente.";

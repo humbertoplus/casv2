@@ -88,6 +88,7 @@
 							<fieldset>
 								<div class="container">
 									<div class="row">
+										<input type="hidden" name="tipoasiento_hdn" value="simple">
 										<div class="col-md-2">
 											<label for="asiento" class="control-label">N° de asiento</label>
 											<input type="number" min="1" id="asiento" class="form-control" name="asiento_txt" placeholder="Asiento N°" title="Escriba el número de asiento" required/>
@@ -221,7 +222,7 @@
 	<script>
 		jQuery(function($){
 			$("#fecha").mask("9999-99-99", {placeholder:"_"});
-			$("#asiento").mask("9?99999", {placeholder:" "});
+			//$("#asiento").mask("9?99999", {placeholder:" "});
 		});
 	</script>
 	<script src="../js/bootstrap.min.js"></script>

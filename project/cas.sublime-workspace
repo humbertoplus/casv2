@@ -4,28 +4,88 @@
 		"selected_items":
 		[
 			[
-				"utf",
-				"utf8_encode"
+				"descripcion_S",
+				"descripcion_subgrupo"
 			],
 			[
-				"res",
-				"regs"
-			],
-			[
-				"saldo",
-				"saldo_debe"
-			],
-			[
-				"qu",
-				"query"
+				"descripcion_sub",
+				"descripcion_subgrupo"
 			],
 			[
 				"num",
 				"num_rows"
 			],
 			[
+				"ee",
+				"ejecutar_consulta"
+			],
+			[
+				"codi",
+				"codigo_subgrupo"
+			],
+			[
+				"alta",
+				"alta-cuentas"
+			],
+			[
+				"des",
+				"descripcion"
+			],
+			[
+				"co",
+				"conexion"
+			],
+			[
+				"s",
+				"sql"
+			],
+			[
+				"no",
+				"nombre_cuenta"
+			],
+			[
+				"e",
+				"execute"
+			],
+			[
+				"ex",
+				"exec"
+			],
+			[
+				"re",
+				"registros"
+			],
+			[
+				"sal",
+				"saldo_haber"
+			],
+			[
+				"sa",
+				"saldo_haber"
+			],
+			[
+				"subcuenta",
+				"codigo_subcuenta"
+			],
+			[
+				"saldo",
+				"saldo_debe"
+			],
+			[
+				"codigo",
+				"codigo_subgrupo"
+			],
+			[
+				"clas",
+				"clasificacion"
+			],
+			[
 				"fec",
-				"fetch_assoc"
+				"fecha_valida"
+			],
+			[
+				"jquer",
+				"jquery"
 			],
 			[
 				"cod",
@@ -40,10 +100,6 @@
 				"subgrupo"
 			],
 			[
-				"co",
-				"codigo_subcuenta"
-			],
-			[
 				"ut",
 				"utf8_encode"
 			],
@@ -56,10 +112,6 @@
 				"reg"
 			],
 			[
-				"ex",
-				"ex_query"
-			],
-			[
 				"suma",
 				"sumadebe"
 			],
@@ -68,20 +120,12 @@
 				"cuenta"
 			],
 			[
-				"sa",
-				"saldo_haber"
-			],
-			[
-				"sal",
-				"saldo_debe"
-			],
-			[
-				"re",
-				"registro"
-			],
-			[
 				"err",
 				"error_reporting"
+			],
+			[
+				"utf",
+				"utf8_decode"
 			],
 			[
 				"con",
@@ -120,10 +164,6 @@
 				"asiento-simple"
 			],
 			[
-				"s",
-				"subcuenta_pd"
-			],
-			[
 				"num_",
 				"num_regs"
 			],
@@ -134,10 +174,6 @@
 			[
 				"S",
 				"SELECT"
-			],
-			[
-				"e",
-				"ejecutar_consulta"
 			],
 			[
 				"su",
@@ -200,20 +236,12 @@
 				"getElementById"
 			],
 			[
-				"codi",
-				"codigo_subgrupo"
-			],
-			[
 				"id",
 				"id_cuenta"
 			],
 			[
 				"subcuentas",
 				"subcuentas_slc"
-			],
-			[
-				"des",
-				"descripcion_subcuenta"
 			],
 			[
 				"Clasi",
@@ -485,33 +513,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "/C/wamp/www/casv1/php/sidebar.php",
-			"settings":
-			{
-				"buffer_size": 5404,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/mayor.php",
-			"settings":
-			{
-				"buffer_size": 4797,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp/www/casv1/php/funciones.php",
-			"settings":
-			{
-				"buffer_size": 3301,
-				"line_ending": "Windows"
-			}
-		}
-	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -568,36 +569,45 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/casv1/php/alta-asientogral.php",
-		"/C/wamp/www/casv1/php/funciones.php",
-		"/C/wamp/www/casv1/php/diario.php",
-		"/C/wamp/www/casv1/php/conexion.php",
-		"/C/wamp/www/casv1/php/prueba-suma.php",
 		"/C/wamp/www/casv1/php/detalle-cuenta.php",
-		"/C/wamp/www/casv1/php/listar-cuentas.php",
-		"/C/wamp/www/casv1/php/listar-subcuentas.php",
-		"/C/wamp/www/bootstrap-tutorial/css.html",
-		"/C/wamp/www/casv1/php/prueba-caracteres.php",
 		"/C/wamp/www/casv1/php/detalle-subcuenta.php",
-		"/C/wamp/www/casv1/php/alta-cuentas.php",
-		"/C/wamp/www/casv1/php/cuentas.php",
-		"/C/wamp/www/casv1/php/asiento-simple.php",
-		"/C/wamp/www/casv1/php/prefijo-grupo.php",
-		"/C/wamp/www/casv1/php/agregar-cuentas.php",
-		"/C/wamp/www/casv1/php/prefijo-subgrupo.php",
-		"/C/wamp/www/casv1/php/prefijo-cuenta.php",
-		"/C/wamp/www/casv1/php/prefijo-subcuenta.php",
-		"/C/wamp/www/casv1/js/validaciones.js",
-		"/C/wamp/www/catwin/funciones.php",
+		"/C/wamp/www/casv1/php/plantilla-maestra.php",
+		"/C/wamp/www/casv1/php/busquedas.php",
+		"/C/wamp/www/casv1/php/buscar-cuentas.php",
+		"/C/wamp/www/casv1/php/nav.php",
+		"/C/wamp/www/casv1/php/sidebar.php",
+		"/C/wamp/www/casv1/php/ayuda.php",
+		"/D/Alex Contreras/Downloads/ayuda (1).php",
+		"/C/wamp/www/casv1/php/diario.php",
+		"/C/wamp/www/casv1/php/funciones.php",
+		"/C/wamp/www/casv1/php/alta-asientogral.php",
 		"/C/wamp/www/casv1/php/alta-asientosimple.php",
+		"/C/wamp/www/casv1/php/asiento-general.php",
+		"/C/wamp/www/casv1/php/asiento-simple.php",
+		"/C/wamp/www/casv1/php/salir.php",
+		"/C/wamp/www/casv1/php/ver-asiento.php",
+		"/C/wamp/www/casv1/php/pruebadate.php",
+		"/C/wamp/www/casv1/js/validaciones.js",
+		"/C/wamp/www/casv1/php/prefijo-subcuenta.php",
+		"/C/wamp/www/casv1/php/prefijo-cuenta.php",
+		"/C/wamp/www/casv1/php/prefijo-subgrupo.php",
+		"/C/wamp/www/casv1/php/agregar-cuentas.php",
+		"/C/wamp/www/casv1/php/prefijo-grupo.php",
+		"/C/wamp/www/casv1/php/cuentas.php",
+		"/C/wamp/www/casv1/php/alta-cuentas.php",
+		"/C/wamp/www/casv1/php/prueba-caracteres.php",
+		"/C/wamp/www/bootstrap-tutorial/css.html",
+		"/C/wamp/www/casv1/php/listar-subcuentas.php",
+		"/C/wamp/www/casv1/php/listar-cuentas.php",
+		"/C/wamp/www/casv1/php/prueba-suma.php",
+		"/C/wamp/www/casv1/php/conexion.php",
+		"/D/Alex Contreras/Downloads/ayuda.php",
+		"/C/wamp/www/catwin/funciones.php",
 		"/C/wamp/www/casv1/php/catalogo-cuentas.php",
 		"/C/wamp/www/casv1/php/listar-subgrupos.php",
-		"/C/wamp/www/casv1/php/ver-asiento.php",
-		"/C/wamp/www/casv1/php/sidebar.php",
 		"/C/wamp/www/catwin/log.php",
 		"/C/wamp/www/casv1/php/cambio-pw.php",
 		"/C/wamp/www/casv1/php/cambiar-pw.php",
-		"/C/wamp/www/casv1/php/nav.php",
 		"/C/wamp/www/casv1/php/home.php",
 		"/C/wamp/www/casv1/php/anio-contable.php",
 		"/C/wamp/www/casv1/php/usuarios.php",
@@ -605,7 +615,6 @@
 		"/C/wamp/www/casv1/css/offcanvas.css",
 		"/C/wamp/www/casv1/css/estilos.css",
 		"/C/wamp/www/casv1/php/footer.php",
-		"/C/wamp/www/casv1/php/asiento-general.php",
 		"/C/wamp/www/catwin/diario.php",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/offcanvas/index.html",
 		"/D/Alex Contreras/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/examples/offcanvas/offcanvas.css",
@@ -658,7 +667,6 @@
 		"/C/wamp/www/casv1/php/crear-subgrupo.php",
 		"/C/wamp/www/maths/index.php",
 		"/C/wamp/www/curso-php/00Basicos/hola.php",
-		"/C/wamp/www/casv1/php/plantilla-maestra.php",
 		"/C/Users/Alex Contreras/Desktop/sic.txt",
 		"/C/wamp/www/casv1/php/compatibilidad.php",
 		"/C/wamp/www/casv1/php/eliminar-usuario.php",
@@ -666,14 +674,12 @@
 		"/C/wamp/www/curso-php/00Basicos/info.php",
 		"/C/wamp/www/casv1/error/404.html",
 		"/C/wamp/www/casv1/error/403.html",
-		"/C/wamp/www/casv1/php/ayuda.php",
 		"/C/wamp/www/casv1/php/borrar-usuario.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/class.smtp.php",
 		"/C/wamp/www/curso-php/06EnvioCorreo/class.pop3.php",
 		"/C/wamp/www/casv1/php/prueba-nav.php",
 		"/C/wamp/www/casv1/php/verificar-sesion.php",
 		"/C/wamp/www/casv1/php/sesion.php",
-		"/C/wamp/www/casv1/php/salir.php",
 		"/C/wamp/www/curso-php/04Cookies/borrar-cookie.php",
 		"/C/wamp/www/curso-php/04Cookies/espaniol.php",
 		"/C/wamp/www/curso-php/04Cookies/grabar-cookie.php",
@@ -690,12 +696,7 @@
 		"/C/wamp/www/catwin/iva.php",
 		"/C/Users/Alex Contreras/Desktop/CREATE TABLE Persona.sql",
 		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/consultas lab 4.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/123.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/lab3.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/cursorito-ejemplo.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/CONSULTAS LAB2 TPI.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/clase 27-09-2013.sql",
-		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/clase 04-10-2013 tpi.sql"
+		"/D/Alex Contreras/Dropbox/Mis Asignaturas/TPI115/SQL/123.sql"
 	],
 	"find":
 	{
@@ -714,6 +715,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"primary",
 			"width='90'",
 			"LOG ",
 			"LOG",
@@ -825,95 +827,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "/C/wamp/www/casv1/php/sidebar.php",
-					"settings":
-					{
-						"buffer_size": 5404,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4451,
-								4451
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1092.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/wamp/www/casv1/php/mayor.php",
-					"settings":
-					{
-						"buffer_size": 4797,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3822,
-								3822
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/wamp/www/casv1/php/funciones.php",
-					"settings":
-					{
-						"buffer_size": 3301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3295,
-								3295
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1134.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 0.0
@@ -974,6 +887,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 157.0,
+	"side_bar_width": 264.0,
 	"status_bar_visible": true
 }

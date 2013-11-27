@@ -55,9 +55,19 @@
         		<div class="row">
         			<div class="col-lg-12 well">
         				<p align="justify">
-        					En esta sección usted podrá revisar el historial de transacciones que se han realizado en el sistema de manera periódica. Para ver los detalles de cada transacción haga click en el ID correspondiente a cada registro (etiquetas rojas).
+        					En esta sección usted podrá revisar el historial de transacciones que se han realizado en el sistema de manera periódica. Para ver los detalles de cada transacción haga click en el ID correspondiente a cada registro (etiquetas verdes).
         				</p>
         			</div>
+                    <div class="col-lg-12">
+                        <?php 
+                        if(isset($_GET["mensaje"])){
+                            echo "<div class='alert alert-info alert-dismissable'>";
+                            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+                            echo $_GET["mensaje"];
+                            echo "</div>";
+                        }
+                        ?>
+                    </div>
         		</div>
         		<div class="row">
         			<div class="col-lg-12">
@@ -98,6 +108,7 @@
         					echo "No hay asientos.";
         					echo "</div>";
         				}
+                        
          				?>
         			</div>
         		</div>

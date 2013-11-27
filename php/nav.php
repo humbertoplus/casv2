@@ -47,9 +47,9 @@
 					<ul class="dropdown-menu">
 						<li><a href="alta-cuentas.php"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;Crear cuentas</a></li>
 						<li class="divider"></li>
-						<li><a href="#">● &nbsp;Buscar Subcuenta</a></li>
-						<li><a href="#">● &nbsp;Buscar Cuenta</a></li>
-						<li><a href="#">● &nbsp;Buscar Subgrupo</a></li>
+						<li><a href="buscar-cuentas.php">● &nbsp;Búsquedas</a></li>
+						<li class="divider"></li>
+						<li><a href="actualizar.php">● &nbsp;Actualizaciones</a></li>
 						<li class="divider"></li>
 						<li><a href="catalogo-cuentas.php">● &nbsp;Catálogo General de Cuentas</a></li>
 						<li><a href="listar-subcuentas.php">● &nbsp;Listado de Subcuentas</a></li>
