@@ -38,6 +38,7 @@
 	</script>
 	<title>C.A.S | Asiento General</title>
 	<script type="text/javascript" language="javascript" src="../js/funciones.js"></script>
+	<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -78,6 +79,11 @@
 								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
 								echo "El año del asiento no coincide con el año contable.";
 								echo "</div>";
+							} else if($_GET["error"]=="fecha-invalida"){
+								echo "<div class='alert alert-danger alert-dismissable'>";
+								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+								echo "Debe ingresar una fecha válida.";
+								echo "</div>";
 							} else if($_GET["error"]=="subcuenta"){
 								echo "<div class='alert alert-danger alert-dismissable'>";
 								echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
@@ -100,7 +106,7 @@
 										</div>
 										<div class="col-lg-4">
 											<label for="fecha" class="control-label">Fecha</label>
-											<input type="date" class="form-control" id="fecha" name="fecha_txt" title="Ingrese la fecha del asiento" placeholder="aaaa-mm-dd" required/>
+											<input type="date" class="form-control" id="fecha" name="fecha_txt" title="Ingrese la fecha del asiento" placeholder="AAAA-MM-DD" required/>
 										</div>
 									</div>
 									<div class="row">
@@ -212,6 +218,14 @@
 			}
 		}
 	</script>
+
+	<script>
+		jQuery(function($){
+			$("#fecha").mask("9999-99-99", {placeholder:"_"});
+			$("#n_asiento").mask("9?99999", {placeholder:" "});
+		});
+	</script>
+
 	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

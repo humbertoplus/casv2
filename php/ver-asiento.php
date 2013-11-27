@@ -59,6 +59,7 @@
 
 									<div class="row">
 										<?php 
+										error_reporting(0);
 										if(!isset($conexion)){include("conexion.php");}
 										$transaccion = $_GET["id"];
 										$sql = "SELECT * FROM registro WHERE id=$transaccion";
