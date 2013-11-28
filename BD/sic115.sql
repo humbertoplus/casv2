@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-11-2013 a las 14:41:14
+-- Tiempo de generación: 28-11-2013 a las 03:41:35
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.16
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `sic115` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `sic115`;
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `reiniciar_saldos`()
+BEGIN
+		update subcuentas set saldo_debe=0.00, saldo_haber=0.00;
+		update cuentas set saldo_debe=0.00, saldo_haber=0.00;
+    END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -40,6 +52,31 @@ CREATE TABLE IF NOT EXISTS `anio_contable` (
 
 INSERT INTO `anio_contable` (`id`, `anio_contable`) VALUES
 (1, 2013);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cargos_empleados`
+--
+
+CREATE TABLE IF NOT EXISTS `cargos_empleados` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cargo` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Volcado de datos para la tabla `cargos_empleados`
+--
+
+INSERT INTO `cargos_empleados` (`id`, `cargo`) VALUES
+(1, 'Gerente General'),
+(2, 'Contador'),
+(3, 'Encargado de Comercialización'),
+(4, 'Encargado de Producción'),
+(5, 'Recepcionista'),
+(6, 'Motorista'),
+(7, 'Auxiliar');
 
 -- --------------------------------------------------------
 
@@ -247,23 +284,68 @@ CREATE TABLE IF NOT EXISTS `cuentas` (
 INSERT INTO `cuentas` (`codigo_cuenta`, `subgrupo`, `nombre_cuenta`, `tiene_subcuenta`, `descripcion_cuenta`, `saldo_debe`, `saldo_haber`) VALUES
 ('1.2.1.1', '1.2.1', 'Materiales Directos', 'Si', NULL, 0, 0),
 ('1.2.1.2', '1.2.1', 'Materiales Indirectos', 'Si', NULL, 0, 0),
-('1.2.2.1', '1.2.2', 'Botellas de Vino de Naranja', 'No', NULL, 1500, 0),
+('1.2.2.1', '1.2.2', 'Botellas de Vino de Naranja', 'No', NULL, 0, 0),
 ('1.2.2.2', '1.2.2', 'Botellas de Vino de Mandarina', 'No', NULL, 0, 0),
 ('1.2.2.3', '1.2.2', 'Botellas de Vino de Piña', 'No', NULL, 0, 0),
 ('1.2.2.4', '1.2.2', 'Botellas de Vino de Marañón', 'No', NULL, 0, 0),
-('1.2.2.5', '1.2.2', 'Botellas de Vino de Coco', 'No', NULL, 0, 1500),
+('1.2.2.5', '1.2.2', 'Botellas de Vino de Coco', 'No', NULL, 0, 0),
 ('1.2.2.6', '1.2.2', 'Botellas de Vino de Rosa de Jamaica', 'No', NULL, 0, 0),
-('4.1.1.1', '4.1.1', 'Mano de Obra Directa', 'No', NULL, 1500, 0),
+('1.3.5.1', '1.3.5', 'Inversión en Mobiliario y Equipo de Oficina', 'No', 'En este rubro se incluye todo el mobiliario y equipo para la totalidad de las áreas administrativas a considerar para la empresa Vinos Nonualcos y Cia. De C.V.', 0, 0),
+('1.3.6.1', '1.3.6', 'Inversión en Obra Civil', 'No', 'Cuenta para registrar las inversiones relacionadas con el trabajo de Obra Civil.', 0, 0),
+('4.1.1.1', '4.1.1', 'Mano de Obra Directa', 'No', NULL, 0, 0),
 ('4.1.1.2', '4.1.1', 'Costo de Materias Primas', 'No', NULL, 0, 0),
-('4.1.2.1', '4.1.2', 'Sueldos y Salarios', 'No', NULL, 0, 50),
+('4.1.2.1', '4.1.2', 'Sueldos y Salarios', 'No', NULL, 0, 0),
 ('4.1.2.2', '4.1.2', 'Prestaciones Laborales', 'Si', NULL, 0, 0),
 ('4.1.2.3', '4.1.2', 'Servicios Médicos', 'No', NULL, 0, 0),
 ('4.1.3.1', '4.1.3', 'Luz', 'No', NULL, 0, 0),
 ('4.1.3.2', '4.1.3', 'Teléfono', 'No', NULL, 0, 0),
-('4.1.3.3', '4.1.3', 'Agua', 'No', NULL, 0, 1500),
-('4.1.3.4', '4.1.3', 'Internet', 'No', NULL, 0, 1250),
+('4.1.3.3', '4.1.3', 'Agua', 'No', NULL, 0, 0),
+('4.1.3.4', '4.1.3', 'Internet', 'No', NULL, 0, 0),
 ('4.1.4.1', '4.1.4', 'Depreciación de bienes Muebles', 'No', NULL, 0, 0),
-('4.1.4.2', '4.1.4', 'Depreciación de Maquinaria y Equipo', 'No', NULL, 455.9, 0);
+('4.1.4.2', '4.1.4', 'Depreciación de Maquinaria y Equipo', 'No', NULL, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleados`
+--
+
+CREATE TABLE IF NOT EXISTS `empleados` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo_empleado` varchar(8) NOT NULL,
+  `primer_nombre` varchar(50) DEFAULT NULL,
+  `segundo_nombre` varchar(50) DEFAULT NULL,
+  `primer_apellido` varchar(50) DEFAULT NULL,
+  `segundo_apellido` varchar(50) DEFAULT NULL,
+  `cargo` varchar(30) DEFAULT NULL,
+  `salario_mensual_contratado` double NOT NULL,
+  `isss_trabajador` double DEFAULT NULL,
+  `isss_patrono` double DEFAULT NULL,
+  `afp_trabajador` double DEFAULT NULL,
+  `afp_patrono` double DEFAULT NULL,
+  `renta` double DEFAULT NULL,
+  `salario_diario` double DEFAULT NULL,
+  `vacaciones` double DEFAULT NULL,
+  `aguinaldo` double DEFAULT NULL,
+  `salario_mensual` double DEFAULT NULL,
+  `aportaciones_mensuales_patrono` double DEFAULT NULL,
+  `pago_salario_patrono` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `codigo_empleado` (`codigo_empleado`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id`, `codigo_empleado`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `cargo`, `salario_mensual_contratado`, `isss_trabajador`, `isss_patrono`, `afp_trabajador`, `afp_patrono`, `renta`, `salario_diario`, `vacaciones`, `aguinaldo`, `salario_mensual`, `aportaciones_mensuales_patrono`, `pago_salario_patrono`) VALUES
+(1, 'GG000001', 'Juan', 'José', 'Pérez', 'Martínez', 'Gerente General', 500, 15, 37.5, 31.25, 22.5, 33.81, 16.67, 27.08, 13.89, 460.91, 60, 520.91),
+(2, 'CR000001', 'Carlos', 'Alberto', 'Rivas', 'Rodríguez', 'Contador', 400, 12, 30, 25, 18, 23.81, 13.33, 21.67, 11.11, 371.97, 48, 419.97),
+(3, 'EC000001', 'María', 'Sandra', 'Romero', 'López', 'Encargado de Comercialización', 300, 9, 22.5, 18.75, 13.5, 13.81, 10, 16.25, 8.33, 283.02, 36, 319.02),
+(4, 'EP000001', 'Carmen', 'Alejandra', 'Villalobos', 'Hernández', 'Encargado de Producción', 300, 9, 22.5, 18.75, 13.5, 13.81, 10, 16.25, 8.33, 283.02, 36, 319.02),
+(5, 'RR000001', 'Susana', 'Carolina', 'Martínez', 'Romero', 'Recepcionista', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
+(6, 'MM000001', 'Pedro', 'Antonio', 'Monterrosa', 'Vanegas', 'Motorista', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
+(7, 'AX000001', 'Stephanie', 'Emperatriz', 'Cerna', 'Espinosa', 'Auxiliar', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52);
 
 -- --------------------------------------------------------
 
@@ -274,6 +356,7 @@ INSERT INTO `cuentas` (`codigo_cuenta`, `subgrupo`, `nombre_cuenta`, `tiene_subc
 CREATE TABLE IF NOT EXISTS `grupos` (
   `codigo_grupo` varchar(10) COLLATE latin1_general_ci NOT NULL,
   `nombre_grupo` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  `descripcion` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `clasificacion` int(11) DEFAULT NULL,
   PRIMARY KEY (`codigo_grupo`),
   KEY `clasificacion` (`clasificacion`)
@@ -283,15 +366,16 @@ CREATE TABLE IF NOT EXISTS `grupos` (
 -- Volcado de datos para la tabla `grupos`
 --
 
-INSERT INTO `grupos` (`codigo_grupo`, `nombre_grupo`, `clasificacion`) VALUES
-('1.1', 'Activo Circulante', 1),
-('1.2', 'Inventarios', 1),
-('1.3', 'Activo Fijo', 1),
-('1.4', 'Depreciacion Acumulada', 1),
-('2.1', 'Cuentas por Pagar', 2),
-('3.1', 'Capital Social', 3),
-('4.1', 'Costos', 4),
-('4.2', 'Ingresos', 4);
+INSERT INTO `grupos` (`codigo_grupo`, `nombre_grupo`, `descripcion`, `clasificacion`) VALUES
+('1.1', 'Activo Circulante', NULL, 1),
+('1.2', 'Inventarios', NULL, 1),
+('1.3', 'Activo Fijo', NULL, 1),
+('1.4', 'Depreciacion Acumulada', NULL, 1),
+('2.1', 'Cuentas por Pagar', NULL, 2),
+('3.1', 'Capital Social', NULL, 3),
+('3.2', 'Capital', 'capital', 3),
+('4.1', 'Costos', NULL, 4),
+('4.2', 'Ingresos', NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -315,6 +399,29 @@ INSERT INTO `iva` (`id`, `iva`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `mayor`
+--
+
+CREATE TABLE IF NOT EXISTS `mayor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cuenta` varchar(20) COLLATE latin1_general_ci NOT NULL,
+  `nombre` varchar(50) COLLATE latin1_general_ci DEFAULT NULL,
+  `debe` double NOT NULL,
+  `haber` double NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cuenta` (`cuenta`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `mayor`
+--
+
+INSERT INTO `mayor` (`id`, `cuenta`, `nombre`, `debe`, `haber`) VALUES
+(1, '1.2.1.1.2', 'Mandarina', 455, 555);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `registro`
 --
 
@@ -322,6 +429,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
   `transaccion` int(11) NOT NULL,
+  `tipo` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `cuenta` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `concepto` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `debe` decimal(18,2) DEFAULT NULL,
@@ -333,30 +441,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `usuario_modif` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `ip` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=40 ;
-
---
--- Volcado de datos para la tabla `registro`
---
-
-INSERT INTO `registro` (`id`, `fecha`, `transaccion`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES
-(1, '2013-11-24', 1, '1.2.1.1.1', 'Compra de 120 naranjas agrias', '30.00', '0.00', 'Se compraron 120 naranjas a $0.25 c/u.', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(2, '2013-11-24', 1, '1.2.1.2.1', 'Compra de 40 libras de azúcar', '20.00', '0.00', 'Se compraron 40 libras de azúcar a $0.50 la libra.', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(20, '2013-11-24', 1, '4.1.2.1', 'Cargo de compras', '0.00', '50.00', 'Se cargó el gasto de compras de naranja y azúcar a la cuenta de sueldos y salarios.', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(22, '2013-11-25', 3, '4.1.1.1', 'Pago de los empleados', '1500.00', '0.00', 'Se incurrió en el pago de los empleados por $1500 al contado.', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(23, '2013-11-24', 3, '1.2.2.5', 'Saldando', '0.00', '1500.00', 'Hora de saldar.', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(28, '2013-11-24', 4, '1.2.1.1.1', 'Compra de naranjas abonado a mis vacaciones :(', '500.52', '0.00', 'Ni modo :(', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(29, '2013-11-24', 4, '4.1.2.2.2', 'Compra de naranjas abonado a mis vacaciones :(', '0.00', '500.52', 'Ni modo :(', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(30, '2013-11-06', 4, '1.2.2.1', 'Prueba cuentas', '1500.00', '0.00', '1.2.2.1 al debe, 4.1.3.3 al haber', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(31, '2013-11-06', 4, '4.1.3.3', 'Prueba cuentas', '0.00', '1500.00', '1.2.2.1 al debe, 4.1.3.3 al haber', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(32, '2013-11-08', 5, '1.2.1.1.3', 'test', '1250.00', '0.00', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(33, '2013-11-08', 5, '4.1.3.4', 'test', '0.00', '1250.00', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(34, '2013-11-24', 5, '4.1.4.2', 'test', '455.90', '0.00', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(35, '2013-11-24', 5, '4.1.2.2.2', 'test', '0.00', '455.90', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(36, '2013-11-24', 5, '4.1.2.2.1', 'Aguinaldo y vacaciones', '2000.00', '0.00', ':O', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(37, '2013-11-24', 5, '4.1.2.2.2', 'Aguinaldo y vacaciones', '0.00', '2000.00', ':O', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(38, '2013-11-25', 6, '1.2.1.1.1', 'Mas naranjitas', '135.26', '0.00', ':D', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
-(39, '2013-11-25', 7, '1.2.1.2.3', 'Compra de 10,000 cápsulas de seguridad', '100.00', '0.00', 'Cápsulas de seguridad.', NULL, NULL, 'administrador', NULL, '127.0.0.1');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -365,20 +450,22 @@ INSERT INTO `registro` (`id`, `fecha`, `transaccion`, `cuenta`, `concepto`, `deb
 --
 
 CREATE TABLE IF NOT EXISTS `security_log` (
-  `id_evento` int(11) NOT NULL,
+  `id_evento` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` datetime NOT NULL,
-  `evento` varchar(160) COLLATE latin1_general_ci NOT NULL,
+  `evento` varchar(255) COLLATE latin1_general_ci NOT NULL,
   `user` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `ip` varchar(20) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id_evento`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `security_log`
 --
 
 INSERT INTO `security_log` (`id_evento`, `fecha`, `evento`, `user`, `ip`) VALUES
-(3, '2013-11-22 18:46:54', 'Se insertó un nuevo registro en la tabla subcuentas. El valor es: 4.1.2.2.4', 'root@localhost', 'root@localhost');
+(1, '2013-11-27 08:24:30', 'Se insertó un nuevo registro en la tabla subcuentas. El valor es: 1.1.1.1.1', 'root@localhost', 'root@localhost'),
+(2, '2013-11-27 08:25:06', 'Se insertó un nuevo registro en la tabla subcuentas. El valor es: 1.1.1.1.2', 'root@localhost', 'root@localhost'),
+(3, '2013-11-27 08:47:19', 'Se insertó un nuevo registro en la tabla subcuentas. El valor es: 1.1.1.1.1', 'root@localhost', 'root@localhost');
 
 -- --------------------------------------------------------
 
@@ -391,7 +478,6 @@ CREATE TABLE IF NOT EXISTS `subcuentas` (
   `cuenta` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `nombre_subcuenta` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `descripcion` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
-  `naturaleza` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
   `saldo_debe` double NOT NULL,
   `saldo_haber` double NOT NULL,
   PRIMARY KEY (`codigo_subcuenta`),
@@ -402,20 +488,20 @@ CREATE TABLE IF NOT EXISTS `subcuentas` (
 -- Volcado de datos para la tabla `subcuentas`
 --
 
-INSERT INTO `subcuentas` (`codigo_subcuenta`, `cuenta`, `nombre_subcuenta`, `descripcion`, `naturaleza`, `saldo_debe`, `saldo_haber`) VALUES
-('1.2.1.1.1', '1.2.1.1', 'Naranja', 'Cuenta para registrar los movimientos del activo "Naranja"', 'Activo', 665.78, 0),
-('1.2.1.1.2', '1.2.1.1', 'Mandarina', 'Cuenta para registrar los movimientos del activo "Mandarina"', 'Activo', 0, 0),
-('1.2.1.1.3', '1.2.1.1', 'Piña', 'Cuenta para registrar los movimientos del activo "Piña"', 'Activo', 1250, 0),
-('1.2.1.1.4', '1.2.1.1', 'Marañón', 'Cuenta para registrar los movimientos del activo "Marañón"', 'Activo', 0, 0),
-('1.2.1.1.5', '1.2.1.1', 'Coco', 'Cuenta para registrar los movimientos del activo "Coco"', 'Activo', 0, 0),
-('1.2.1.1.6', '1.2.1.1', 'Rosa de Jamaica', 'Cuenta para registrar los movimientos del activo "Rosa de Jamaica"', 'Activo', 0, 0),
-('1.2.1.2.1', '1.2.1.2', 'Azúcar', 'Cuenta para registrar los movimientos del activo "Azucar"', 'Activo', 20, 0),
-('1.2.1.2.2', '1.2.1.2', 'Levadura', 'Cuenta para registrar los movimientos del activo "Levadura"', 'Activo', 0, 0),
-('1.2.1.2.3', '1.2.1.2', 'Cápsulas de Seguridad', 'Cuenta para registrar los movimientos del activo "Cápsulas de Seguridad"', 'Activo', 100, 0),
-('1.2.1.2.4', '1.2.1.2', 'Etiquetas', 'Cuenta para registrar los movimientos del activo "Etiquetas"', 'Activo', 0, 0),
-('1.2.1.2.5', '1.2.1.2', 'Cajas', 'Cuenta para registrar los movimientos del activo "Cajas"', 'Activo', 0, 0),
-('4.1.2.2.1', '4.1.2.2', 'Aguinaldo', 'Pago equivalente a una quincena de trabajo. El aguinaldo se le dará a un empleado que tenga más de 1 año laborando para la empresa.', 'Resultado', 2000, 0),
-('4.1.2.2.2', '4.1.2.2', 'Vacaciones', 'Pago de las vacaciones del empleado.', 'Resultado', 0, 2956.42);
+INSERT INTO `subcuentas` (`codigo_subcuenta`, `cuenta`, `nombre_subcuenta`, `descripcion`, `saldo_debe`, `saldo_haber`) VALUES
+('1.2.1.1.1', '1.2.1.1', 'Naranja', 'Cuenta para registrar los movimientos del activo "Naranja"', 0, 0),
+('1.2.1.1.2', '1.2.1.1', 'Mandarina', 'Cuenta para registrar los movimientos del activo "Mandarina"', 0, 0),
+('1.2.1.1.3', '1.2.1.1', 'Piña', 'Cuenta para registrar los movimientos del activo "Piña"', 0, 0),
+('1.2.1.1.4', '1.2.1.1', 'Marañón', 'Cuenta para registrar los movimientos del activo "Marañón"', 0, 0),
+('1.2.1.1.5', '1.2.1.1', 'Coco', 'Cuenta para registrar los movimientos del activo "Coco"', 0, 0),
+('1.2.1.1.6', '1.2.1.1', 'Rosa de Jamaica', 'Cuenta para registrar los movimientos del activo "Rosa de Jamaica"', 0, 0),
+('1.2.1.2.1', '1.2.1.2', 'Azúcar', 'Cuenta para registrar los movimientos del activo "Azucar"', 0, 0),
+('1.2.1.2.2', '1.2.1.2', 'Levadura', 'Cuenta para registrar los movimientos del activo "Levadura"', 0, 0),
+('1.2.1.2.3', '1.2.1.2', 'Cápsulas de Seguridad', 'Cuenta para registrar los movimientos del activo "Cápsulas de Seguridad"', 0, 0),
+('1.2.1.2.4', '1.2.1.2', 'Etiquetas', 'Cuenta para registrar los movimientos del activo "Etiquetas"', 0, 0),
+('1.2.1.2.5', '1.2.1.2', 'Cajas', 'Cuenta para registrar los movimientos del activo "Cajas"', 0, 0),
+('4.1.2.2.1', '4.1.2.2', 'Aguinaldo', 'Pago equivalente a una quincena de trabajo. El aguinaldo se le dará a un empleado que tenga más de 1 año laborando para la empresa.', 0, 0),
+('4.1.2.2.2', '4.1.2.2', 'Vacaciones', 'Pago de las vacaciones del empleado.', 0, 0);
 
 --
 -- Disparadores `subcuentas`
@@ -439,6 +525,7 @@ DELIMITER ;
 CREATE TABLE IF NOT EXISTS `subgrupos` (
   `codigo_subgrupo` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `nombre_subgrupo` varchar(50) COLLATE latin1_general_ci DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `grupo` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`codigo_subgrupo`),
   KEY `grupo` (`grupo`)
@@ -448,21 +535,24 @@ CREATE TABLE IF NOT EXISTS `subgrupos` (
 -- Volcado de datos para la tabla `subgrupos`
 --
 
-INSERT INTO `subgrupos` (`codigo_subgrupo`, `nombre_subgrupo`, `grupo`) VALUES
-('1.1.1', 'Efectivo en Caja', '1.1'),
-('1.2.1', 'Materia Prima', '1.2'),
-('1.2.2', 'Producto Terminado', '1.2'),
-('1.3.1', 'Edificio', '1.3'),
-('1.3.2', 'Maquinaria', '1.3'),
-('1.3.3', 'Inventario', '1.3'),
-('1.3.4', 'Automóviles', '1.3'),
-('2.1.1', 'Proveedores', '2.1'),
-('2.1.2', 'Pasivos a Largo Plazo', '2.1'),
-('4.1.1', 'Costos de Producción', '4.1'),
-('4.1.2', 'Gastos de Administración', '4.1'),
-('4.1.3', 'Costos Indirectos', '4.1'),
-('4.1.4', 'Depreciación', '4.1'),
-('4.2.1', 'Ingresos por Venta', '4.2');
+INSERT INTO `subgrupos` (`codigo_subgrupo`, `nombre_subgrupo`, `descripcion`, `grupo`) VALUES
+('1.1.1', 'Efectivo en Caja', NULL, '1.1'),
+('1.2.1', 'Materia Prima', NULL, '1.2'),
+('1.2.2', 'Producto Terminado', NULL, '1.2'),
+('1.3.1', 'Edificio', NULL, '1.3'),
+('1.3.2', 'Maquinaria', NULL, '1.3'),
+('1.3.3', 'Inventario', NULL, '1.3'),
+('1.3.4', 'Automóviles', NULL, '1.3'),
+('1.3.5', 'Mobiliario y Equipo de Oficina', 'Subgrupo para las cuentas relacionadas al mobiliario y equipo de oficina', '1.3'),
+('1.3.6', 'Obra Civil', 'Este rubro se refiere a todas las actividades de construcción de la obra civil, desde la preparación del terreno hasta la infraestructura externa e interna de todas las áreas establecidas como necesarias en la sección de Distribución en planta.', '1.3'),
+('2.1.1', 'Proveedores', NULL, '2.1'),
+('2.1.2', 'Pasivos a Largo Plazo', NULL, '2.1'),
+('3.2.1', 'test', 'test', '3.2'),
+('4.1.1', 'Costos de Producción', NULL, '4.1'),
+('4.1.2', 'Gastos de Administración', NULL, '4.1'),
+('4.1.3', 'Costos Indirectos', NULL, '4.1'),
+('4.1.4', 'Depreciación', NULL, '4.1'),
+('4.2.1', 'Ingresos por Venta', NULL, '4.2');
 
 -- --------------------------------------------------------
 
