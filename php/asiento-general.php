@@ -53,6 +53,13 @@
 					<h3>Asiento General</h3>
 				</div>
 				<div class="row">
+					<div class="col-lg-12 well">
+						<h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Asientos generales</h2>
+						<p align="justify" class="text-info">
+							Un asiento general se realiza cuando se va a registrar una salida o entrada de dinero para una única cuenta. Debe tener el cuidado de insertar correctamente las cantidades en el debe y el haber, de acuerdo al tipo de cuenta. Para cumplir con partida doble, deberá generar otro asiento en el que se vea afectada la otra cuenta. Puede asignarle el mismo número de asiento si así lo desea. Como recomendación le sugerimos que asigne el mismo número de asiento a las transacciones que estén relacionadas entre sí, o las que se complementen con partida doble.
+						</p>
+					</div>
+					<hr>
 					<div>
 						<?php 
 							error_reporting(E_ALL ^ E_NOTICE);
@@ -149,21 +156,24 @@
 									</div>
 									<br>
 									<div class="row">
-										<div class="input-group col-lg-2">
-											<label for="debe" class="control-label sr-only">Debe</label>
-											<span class="input-group-addon">$</span>
-											<input type="text" id="debe" name="debe_txt" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" onblur="validaDinero()" required/>
+										<div class="col-lg-2">
+											<label for="debe" class="control-label">Debe</label>
+											<div class="input-group">
+												<span class="input-group-addon">$</span>
+												<input type="text" id="debe" name="debe_txt" class="form-control" placeholder="Debe" title="Ingrese el importe para el debe" onblur="validaDinero()" required/>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-2">
+											<label for="haber" class="control-label">Haber</label>
+											<div class="input-group">
+												<span class="input-group-addon">$</span>
+												<input type="text" id="haber" name="haber_txt" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" onblur="validaDinero()" required/>
+											</div>
 										</div>
 									</div>
 									<br>
-									<div class="row">
-										<div class="input-group col-lg-2">
-											<label for="haber" class="control-label sr-only">Haber</label>
-											<span class="input-group-addon">$</span>
-											<input type="text" id="haber" name="haber_txt" class="form-control" placeholder="Haber" title="Ingrese el importe para el haber" onblur="validaDinero()" required/>
-										</div>
-									</div>
-									
 									<div class="row">
 										<div class="col-lg-12">
 											<label for="justificante" class="control-label">Justificante</label>
@@ -186,7 +196,7 @@
 								</div>        						
 							</fieldset>
 						</form>
-					</div>
+					</div>					
 				</div>
 			</div><!--/span-->
 			

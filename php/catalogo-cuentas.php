@@ -52,6 +52,13 @@
                 </div>
                 <div class="container">
                     <div class="row">
+                        <div class="col-lg-12 well">
+                            <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Catálogo General de Cuentas</h2>
+                            <p align="justify" class="text-info">
+                                En este apartado se listan todas las cuentas que el sistema posee inicialmente, basadas en el documento de la empresa propuesta. Se muestran las cuentas desglosadas y clasificadas por su naturaleza y en grupos, subgrupos, cuentas y subcuentas.
+                            </p>
+                        </div>
+                        <hr>
                         <div class="col-lg-12">
                             <h2>Grupos</h2>
                             <br>

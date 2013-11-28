@@ -53,11 +53,13 @@
         			<h3>Diario</h3>
         		</div>
         		<div class="row">
-        			<div class="col-lg-12 well">
-        				<p align="justify">
-        					En esta sección usted podrá revisar el historial de transacciones que se han realizado en el sistema de manera periódica. Para ver los detalles de cada transacción haga click en el ID correspondiente a cada registro (etiquetas verdes).
-        				</p>
-        			</div>
+                    <div class="col-lg-12 well">
+                        <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Libro Diario General</h2>
+                        <p align="justify" class="text-info">
+                            En esta sección usted podrá revisar el historial de transacciones que se han realizado en el sistema de manera periódica. Para ver los detalles de cada transacción haga click en el ID correspondiente a cada registro (etiquetas verdes).
+                        </p>
+                    </div>
+                    <hr>
                     <div class="col-lg-12">
                         <?php 
                         if(isset($_GET["mensaje"])){

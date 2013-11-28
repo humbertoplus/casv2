@@ -54,6 +54,13 @@
         			<h3>Crear un nuevo usuario</h3>
         		</div>
         		<div class="row">
+                    <div class="col-lg-12 well">
+                        <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Dar de alta nuevos usuarios</h2>
+                        <p align="justify" class="text-info">
+                            Si desea crear nuevos usuarios para el sistema, rellene el formulario que aparece abajo. Cabe mencionar que esta operación sólo puede ser realizada por un usuario de tipo administrador.
+                        </p>
+                    </div>
+                    <hr>
         			<div class="col-md-6">
         				<form id="crear_usuario" name="crear_usuario_frm" class="form-horizontal" action="agregar-usuario.php" method="post" enctype="application/x-www-form-urlencoded" role="form">
         					<fieldset>

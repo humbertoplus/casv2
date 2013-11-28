@@ -54,6 +54,13 @@
         			<h3>Administrar Usuarios - Lista de usuarios</h3>
         		</div>
         		<div class="row">
+        			<div class="col-lg-12 well">
+        			    <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Listado de Usuarios</h2>
+        			    <p align="justify" class="text-info">
+        			        Este apartado está reservado para los administradores del sistema. Podrán consultar los usuarios del sistema que se encuentran registrados y así podrán llevar el control de las personas que pueden iniciar sesión en C.A.S.
+        			    </p>
+        			</div>
+        			<hr>
         			<?php
         				include("conexion.php");
 

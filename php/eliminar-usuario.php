@@ -54,6 +54,13 @@
         			<h3>Eliminar usuario</h3>
         		</div>
         		<div class="row">
+                    <div class="col-lg-12 well">
+                        <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Eliminar usuarios</h2>
+                        <p align="justify" class="text-info">
+                            Si desea eliminar el perfil de alguno de los usuarios del sistema, selecciónelo en la lista que aparece abajo. Deberá proporcionar su contraseña para que C.A.S se asegure de que usted quiere realizar la operación de eliminación. Recuerde que usted no puede eliminar su propia cuenta.
+                        </p>
+                    </div>
+                    <hr>
         			<div class="col-md-6">
         				<form id="eliminar_usuario" name="eliminar_usuario_frm" action="borrar-usuario.php" method="post" class="form-horizontal" enctype="application/x-www-form-urlencoded">
         					<fieldset>

@@ -105,18 +105,13 @@
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title text-center">Gestión Comercial</h3>
+				<h3 class="panel-title text-center">Empleados</h3>
 			</div>
 
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
-					<a href="#" class="list-group-item">&#0171; Proveedores</a>
-					<a href="#" class="list-group-item">&#0171; Clientes</a>
-					<a href="#" class="list-group-item">&#0171; Inventario</a>
-					<a href="#" class="list-group-item">&#0171; Facturas Recibidas</a>
-					<a href="#" class="list-group-item">&#0171; Pedidos</a>
-					<a href="#" class="list-group-item">&#0171; Pedidos por Cliente</a>
-					<a href="#" class="list-group-item">&#0171; Facturas Emitidas</a>
+					<a href="alta-empleado.php" class="list-group-item">&#0171; Registrar empleado</a>
+					<a href="planilla-empleados.php" class="list-group-item">&#0171; Planilla de empleados</a>
 				</div>
 			</div>
 		</div>

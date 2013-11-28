@@ -56,8 +56,17 @@
 					<h3>Crear Grupos, Subgrupos, Cuentas o Subcuentas</h3>
 				</div>
 
-				<!-- Crear Grupo -->
+				
 				<div class="row">
+					<div class="col-lg-12 well">
+					    <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Dar de alta nuevas cuentas</h2>
+					    <p align="justify" class="text-info">
+					        Aquí podrá dar de alta nuevas cuentas que se necesiten registrar dentro del sistema. Ubíquese en el formulario deseado y llene los campos, luego pulse el botón correspondiente para dar de alta al objeto. El sistema le indicará si todo se realizó correctamente.
+					    </p>
+					</div>
+					<hr>
+
+					<!-- Crear Grupo -->
 					<div class="col-lg-12 well">
 						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear_grupo_frm" enctype="application/x-www-form-urlencoded">
 							<fieldset>
@@ -107,7 +116,7 @@
 						</form>
 					</div>
 				</div>
-				
+				<hr>
 				<!-- Crear Subgrupo -->
 				<div class="row">
 					<div class="col-lg-12 well">
@@ -156,7 +165,7 @@
 						</form>
 					</div>
 				</div>
-
+				<hr>
 				<!-- Crear Cuenta -->
 				<div class="row">
 					<div class="col-lg-12 well">
@@ -213,7 +222,7 @@
 						</form>
 					</div>
 				</div>
-
+				<hr>
 				<!-- Crear Subcuenta -->
 				<div class="row">
 					<div class="col-lg-12 well">
@@ -262,7 +271,7 @@
 						</form>
 					</div>
 				</div>
-
+				<hr>
 			</div><!--/span-->
 
 			<!-- Barra lateral o sidebar -->

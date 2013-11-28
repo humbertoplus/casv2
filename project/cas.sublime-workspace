@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ti",
+				"tipoasiento"
+			],
+			[
+				"codigo",
+				"codigo_cuenta"
+			],
+			[
 				"descripcion_S",
 				"descripcion_subgrupo"
 			],
@@ -70,10 +78,6 @@
 			[
 				"saldo",
 				"saldo_debe"
-			],
-			[
-				"codigo",
-				"codigo_subgrupo"
 			],
 			[
 				"clas",
@@ -513,6 +517,121 @@
 			]
 		]
 	},
+	"buffers":
+	[
+		{
+			"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+			"settings":
+			{
+				"buffer_size": 9547,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/asiento-general.php",
+			"settings":
+			{
+				"buffer_size": 9671,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/agregar-cuentas.php",
+			"settings":
+			{
+				"buffer_size": 6170,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/diario.php",
+			"settings":
+			{
+				"buffer_size": 5865,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/funciones.php",
+			"settings":
+			{
+				"buffer_size": 5338,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/mayor.php",
+			"settings":
+			{
+				"buffer_size": 4797,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/sidebar.php",
+			"settings":
+			{
+				"buffer_size": 5360,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/actualizar.php",
+			"settings":
+			{
+				"buffer_size": 3787,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/actualiza.php",
+			"settings":
+			{
+				"buffer_size": 806,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/nav.php",
+			"settings":
+			{
+				"buffer_size": 4803,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/alta-asientosimple.php",
+			"settings":
+			{
+				"buffer_size": 5671,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/ver-asiento.php",
+			"settings":
+			{
+				"buffer_size": 7401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/borrar-apunte.php",
+			"settings":
+			{
+				"buffer_size": 143,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/casv1/php/borrar-asiento.php",
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Windows"
+			}
+		}
+	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -827,6 +946,403 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/wamp/www/casv1/php/asiento-simple.php",
+					"settings":
+					{
+						"buffer_size": 9547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3849,
+								3849
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 908.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp/www/casv1/php/asiento-general.php",
+					"settings":
+					{
+						"buffer_size": 9671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4658,
+								4658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1106.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/wamp/www/casv1/php/agregar-cuentas.php",
+					"settings":
+					{
+						"buffer_size": 6170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3398,
+								3398
+							],
+							[
+								4191,
+								4191
+							],
+							[
+								5062,
+								5062
+							],
+							[
+								5930,
+								5930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 897.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp/www/casv1/php/diario.php",
+					"settings":
+					{
+						"buffer_size": 5865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3125,
+								3125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp/www/casv1/php/funciones.php",
+					"settings":
+					{
+						"buffer_size": 5338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/wamp/www/casv1/php/mayor.php",
+					"settings":
+					{
+						"buffer_size": 4797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/wamp/www/casv1/php/sidebar.php",
+					"settings":
+					{
+						"buffer_size": 5360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3955,
+								3955
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/wamp/www/casv1/php/actualizar.php",
+					"settings":
+					{
+						"buffer_size": 3787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3390,
+								3390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/wamp/www/casv1/php/actualiza.php",
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								292,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/wamp/www/casv1/php/nav.php",
+					"settings":
+					{
+						"buffer_size": 4803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2852,
+								2852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/wamp/www/casv1/php/alta-asientosimple.php",
+					"settings":
+					{
+						"buffer_size": 5671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1302.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/wamp/www/casv1/php/ver-asiento.php",
+					"settings":
+					{
+						"buffer_size": 7401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6913,
+								6913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1680.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/wamp/www/casv1/php/borrar-apunte.php",
+					"settings":
+					{
+						"buffer_size": 143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								140,
+								140
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/wamp/www/casv1/php/borrar-asiento.php",
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								335,
+								335
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 0.0

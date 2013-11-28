@@ -53,6 +53,12 @@
 					<h3>Asiento simple</h3>
 				</div>
 				<div class="row">
+					<div class="col-lg-12 well">
+						<h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Asiento simple </h2>
+						<p align="justify" class="text-info">
+							Un asiento simple se realiza cuando una transacción afecta a dos cuentas. En un asiento simple no debe preocuparse por generar otro asiento para cumplir con partida doble, pues el sistema registrará esta transacción en este tipo de asiento.
+						</p>
+					</div>
 					<?php
 					error_reporting(E_ALL ^ E_NOTICE);
 					if(!isset($conexion)){ include("conexion.php");}
@@ -166,11 +172,15 @@
 									</div>
 									<br>
 									<div class="row">
-										<div class="col-lg-3 input-group">
-											<span class="input-group-addon">$</span>
-											<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe" title="Escriba el importe del asiento" onblur="validaDinero()" required/>
+										<div class="col-lg-3">
+											<label for="importe" class="control-label">Importe</label>
+											<div class="input-group">
+												<span class="input-group-addon">$</span>
+												<input type="text" id="importe" name="importe_txt" class="form-control" placeholder="Importe" title="Escriba el importe del asiento" onblur="validaDinero()" required/>
+											</div>
 										</div>
 									</div>
+									<br>
 									<div class="row">
 										<div class="col-lg-12">
 											<label for="justificante" class="control-label">Justificante</label>
