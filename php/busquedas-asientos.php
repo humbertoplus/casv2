@@ -55,8 +55,15 @@
         			if(!isset($conexion)){ include("conexion.php");}
         			include("funciones.php");
         			$transaccion = $_GET["buscar"];
-        			asientos($conexion, $transaccion);
+        			$res = asientos($conexion, $transaccion);
+        			if($res==0){
+        				echo "<div class='alert alert-warning alert-dismissable'>";
+        				echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+        				echo "No hay asientos registrados con el número ".$transaccion.".";
+        				echo "</div>";
+        			}
         			?>
+        			<a href="javascript:history.go(-1)" class="btn btn-warning"><span class="glyphicon glyphicon-circle-arrow-left"></span>&nbsp;&nbsp;Volver</a>
         		</div>
         	</div><!--/span-->
 

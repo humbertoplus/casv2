@@ -64,7 +64,7 @@
             				<br><br>
             				<div class="row">
             					<div class="col-lg-6">
-            						<input type="number" id="busqueda" name="buscar" class="form-control" placeholder="Ingrese el número de asiento a buscar" required/>
+            						<input type="number" min="1" id="busqueda" name="buscar" class="form-control" placeholder="Ingrese el número de asiento a buscar" required/>
             					</div>
             					<div class="col-lg-6">
             						<button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search"></span>&nbsp; Buscar</button>

@@ -64,11 +64,23 @@
 											</p>
 
 											<p align="center">
-												<?php
-												date_default_timezone_set("America/El_Salvador");
-												echo date(DATE_RSS);
-												 //echo strftime("%A %d de %B del %Y");
-												?>
+												<script>
+													var month=new Array();
+													month[0]="Enero";
+													month[1]="Febrero";
+													month[2]="Marzo";
+													month[3]="Abril";
+													month[4]="Mayo";
+													month[5]="Junio";
+													month[6]="Julio";
+													month[7]="Agosto";
+													month[8]="Septiembre";
+													month[9]="Octubre";
+													month[10]="Noviembre";
+													month[11]="Diciembre";
+													var fecha = new Date();
+													document.write("Al " + fecha.getDate() + " de " + month[fecha.getMonth()] + " de " + fecha.getFullYear());
+											</script>
 											</p>
 										</th>
 									</tr>

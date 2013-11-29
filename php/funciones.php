@@ -4,7 +4,7 @@ function asientos($conexion, $transaccion) {
 	$sql = "SELECT id, DATE_FORMAT(fecha,'%d-%m-%Y')as fecha, cuenta, concepto, debe, haber FROM registro WHERE transaccion = $transaccion ORDER BY fecha ASC" ;
 	$ex_query = $conexion->query($sql);
 	if($ex_query->num_rows==0){
-		return;
+		return 0;
 	}
 
 	echo "<div>";
@@ -61,6 +61,7 @@ function asientos($conexion, $transaccion) {
 		echo "</table>";
 		echo "</div>";
 		echo "</div>";	
+		return 1;
 	}
 
 	function actualizarCuentas($conexion, $cuenta){
