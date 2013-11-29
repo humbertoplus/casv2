@@ -34,7 +34,8 @@ Características del sistema
 * Formularios validados.
 * Catálogo de cuentas.
 * Diario general.
-* Libro Mayor (en desarrollo).
-* Balance General (pendiente).
+* Libro Mayor.
+* Balance de Comprobación.
+* Balance General.
 * Creación de nuevas cuentas.
 * Detalles de cada cuenta registrada.
