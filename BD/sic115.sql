@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-11-2013 a las 04:24:04
+-- Tiempo de generación: 29-11-2013 a las 07:04:58
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.16
 
@@ -356,7 +356,6 @@ CREATE TABLE IF NOT EXISTS `empleados` (
   `isss_patrono` double DEFAULT NULL,
   `afp_trabajador` double DEFAULT NULL,
   `afp_patrono` double DEFAULT NULL,
-  `renta` double DEFAULT NULL,
   `salario_diario` double DEFAULT NULL,
   `vacaciones` double DEFAULT NULL,
   `aguinaldo` double DEFAULT NULL,
@@ -365,20 +364,24 @@ CREATE TABLE IF NOT EXISTS `empleados` (
   `pago_salario_patrono` double DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `codigo_empleado` (`codigo_empleado`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`id`, `codigo_empleado`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `cargo`, `salario_mensual_contratado`, `isss_trabajador`, `isss_patrono`, `afp_trabajador`, `afp_patrono`, `renta`, `salario_diario`, `vacaciones`, `aguinaldo`, `salario_mensual`, `aportaciones_mensuales_patrono`, `pago_salario_patrono`) VALUES
-(1, 'GG000001', 'Juan', 'José', 'Pérez', 'Martínez', 'Gerente General', 500, 15, 37.5, 31.25, 22.5, 33.81, 16.67, 27.08, 13.89, 460.91, 60, 520.91),
-(2, 'CR000001', 'Carlos', 'Alberto', 'Rivas', 'Rodríguez', 'Contador', 400, 12, 30, 25, 18, 23.81, 13.33, 21.67, 11.11, 371.97, 48, 419.97),
-(3, 'EC000001', 'María', 'Sandra', 'Romero', 'López', 'Encargado de Comercialización', 300, 9, 22.5, 18.75, 13.5, 13.81, 10, 16.25, 8.33, 283.02, 36, 319.02),
-(4, 'EP000001', 'Carmen', 'Alejandra', 'Villalobos', 'Hernández', 'Encargado de Producción', 300, 9, 22.5, 18.75, 13.5, 13.81, 10, 16.25, 8.33, 283.02, 36, 319.02),
-(5, 'RR000001', 'Susana', 'Carolina', 'Martínez', 'Romero', 'Recepcionista', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
-(6, 'MM000001', 'Pedro', 'Antonio', 'Monterrosa', 'Vanegas', 'Motorista', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
-(7, 'AX000001', 'Stephanie', 'Emperatriz', 'Cerna', 'Espinosa', 'Auxiliar', 207.78, 6.23, 15.58, 12.99, 9.35, NULL, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52);
+INSERT INTO `empleados` (`id`, `codigo_empleado`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `cargo`, `salario_mensual_contratado`, `isss_trabajador`, `isss_patrono`, `afp_trabajador`, `afp_patrono`, `salario_diario`, `vacaciones`, `aguinaldo`, `salario_mensual`, `aportaciones_mensuales_patrono`, `pago_salario_patrono`) VALUES
+(1, 'GG000001', 'Juan', 'José', 'Pérez', 'Martínez', 'Gerente General', 500, 15, 37.5, 31.25, 22.5, 16.67, 27.08, 13.89, 460.91, 60, 520.91),
+(2, 'CR000001', 'Carlos', 'Alberto', 'Rivas', 'Rodríguez', 'Contador', 400, 12, 30, 25, 18, 13.33, 21.67, 11.11, 371.97, 48, 419.97),
+(3, 'EC000001', 'María', 'Sandra', 'Romero', 'López', 'Encargado de Comercialización', 300, 9, 22.5, 18.75, 13.5, 10, 16.25, 8.33, 283.02, 36, 319.02),
+(4, 'EP000001', 'Carmen', 'Alejandra', 'Villalobos', 'Hernández', 'Encargado de Producción', 300, 9, 22.5, 18.75, 13.5, 10, 16.25, 8.33, 283.02, 36, 319.02),
+(5, 'RR000001', 'Susana', 'Carolina', 'Martínez', 'Romero', 'Recepcionista', 207.78, 6.23, 15.58, 12.99, 9.35, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
+(6, 'MM000001', 'Pedro', 'Antonio', 'Monterrosa', 'Vanegas', 'Motorista', 207.78, 6.23, 15.58, 12.99, 9.35, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
+(7, 'AX000001', 'Stephanie', 'Emperatriz', 'Cerna', 'Espinosa', 'Auxiliar', 207.78, 6.23, 15.58, 12.99, 9.35, 6.93, 11.25, 5.77, 205.59, 24.93, 230.52),
+(10, 'CC000002', 'Juan', 'Alberto', 'Martínez', 'Arriaza', 'Contador', 400, 12, 30, 25, 27, 13.333333333333, 52, 11.111111111111, 500.11111111111, 27, 527.11111111111),
+(11, 'CC000003', 'Luis', 'Armando', 'García', 'López', 'Contador', 400, 12, 30, 25, 27, 13.333333333333, 52, 11.111111111111, 500.11111111111, 27, 527.11111111111),
+(12, 'MM000002', 'Hector', 'Francisco', 'Soriano', 'Recinos', 'Motorista', 207.78, 6.2334, 15.5835, 12.98625, 14.02515, 6.926, 27.0114, 5.7716666666667, 259.78271666667, 14.02515, 273.80786666667),
+(13, 'AX000003', 'María', 'Mercedes', 'Pleitez', 'González', 'Auxiliar', 207.78, 6.2334, 15.5835, 12.98625, 14.02515, 6.926, 27.0114, 5.7716666666667, 259.78271666667, 14.02515, 273.80786666667);
 
 -- --------------------------------------------------------
 
@@ -532,14 +535,7 @@ CREATE TABLE IF NOT EXISTS `security_log` (
   `user` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `ip` varchar(20) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id_evento`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `security_log`
---
-
-INSERT INTO `security_log` (`id_evento`, `fecha`, `evento`, `user`, `ip`) VALUES
-(1, '2013-11-28 22:06:53', 'Se insertó un nuevo registro en la tabla cuentas. El valor es: 1.1.1.1', 'root@localhost', 'root@localhost');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -644,7 +640,10 @@ INSERT INTO `subgrupos` (`codigo_subgrupo`, `nombre_subgrupo`, `descripcion`, `g
 ('4.1.2', 'Gastos de Administración', NULL, '4.1'),
 ('4.1.3', 'Costos Indirectos', NULL, '4.1'),
 ('4.1.4', 'Depreciación', NULL, '4.1'),
-('4.2.1', 'Ingresos por Venta', NULL, '4.2');
+('4.1.5', 'Gastos de venta', 'Cuenta para registrar los gastos de las ventas.', '4.1'),
+('4.1.6', 'Gastos financieros', 'Cuentas para los gastos financieros.', '4.1'),
+('4.2.1', 'Ingresos por Venta', NULL, '4.2'),
+('4.2.2', 'Otros ingresos', 'Apartado para registrar otros ingresos para la Sociedad.', '4.2');
 
 -- --------------------------------------------------------
 
