@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo plantilla-maestra.php
+/*~ Archivo planilla-empleados.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -36,7 +36,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | </title>
+	<title>C.A.S | Planilla de Empleados</title>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Título de la página</h3>
+        			<h3>Planilla de empleados</h3>
         		</div>
         		<div class="row">
         			<div class="col-lg-12">

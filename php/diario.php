@@ -106,6 +106,8 @@
                                 echo "</div>";
                             }
         				} else {
+                            $sql = "CALL reiniciar_saldos()";
+                            $ejecutar_consulta = $conexion->query($sql);
         					echo "<div class='alert alert-info'>";
         					echo "No hay asientos.";
         					echo "</div>";

@@ -10,7 +10,7 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | SIC115</title>
+	<title>C.A.S | Planilla de Empleados</title>
 </head>
 <body style='background:#C2E7F5'>
 	<?php 

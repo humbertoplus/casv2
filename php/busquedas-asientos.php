@@ -1,5 +1,5 @@
 <?php
-/*~ Archivo mayor.php
+/*~ Archivo plantilla-maestra.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
 |     Versión: 1.0                                                          |
@@ -36,64 +36,27 @@
 	<script>
 	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | Libro Mayor</title>
+	<title>C.A.S | Búsquedas de asientos</title>
 </head>
 
 <body>
 	<!-- Barra de navegación -->
 	<?php include("nav.php"); ?>
-	<?php include("funciones.php"); ?>
-    <?php 
-    if(!isset($conexion)){ include("conexion.php");}
-    $sql = "SELECT * FROM cuentas";
-    $ejecutar_consulta = $conexion->query($sql);
-    while($regs = $ejecutar_consulta->fetch_assoc()){
-        actualizarCuentas($conexion, $regs["codigo_cuenta"]);
-        saldosCuentas($conexion, $regs["codigo_cuenta"]);
-    }
-    ?>
 
 	<!-- Contenido de la página -->
 	<div class="container" id="contenido">
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Libro Mayor</h3>
+        			<h3>Resultado de la búsqueda</h3>
         		</div>
-        		<div class="row">
-
-        			<div class="col-lg-12">
-        				<table class="table table-condensed table-bordered table-striped">
-        					<thead>
-        						<tr>
-        							<th>Cuenta</th>
-        							<th width="100">Debe</th>
-        							<th width="100">Haber</th>
-        						</tr>
-        					</thead>
-        					<tbody>
-        						<?php 
-        						if(!isset($conexion)){
-        							include("conexion.php");
-        						}
-        						$sql = "SELECT DISTINCTROW(cuenta) cuentas FROM registro";
-        						$ejecutar_consulta = $conexion->query($sql);
-        						while($registro = $ejecutar_consulta->fetch_assoc()){
-        							actualizarCuentas($conexion, $registro["cuentas"]);
-        						}
-        						$sql = "SELECT * FROM cuentas";
-        						$ejecutar_consulta = $conexion->query($sql);
-        						while($regs = $ejecutar_consulta->fetch_assoc()){
-        							echo "<tr>";
-        							echo "<td>".$regs["codigo_cuenta"]." - ".utf8_encode($regs["nombre_cuenta"])."</td>";
-        							echo "<td align='right'>".number_format($regs["saldo_debe"],2)."</td>";
-        							echo "<td align='right'>".number_format($regs["saldo_haber"],2)."</td>";
-        							echo "</tr>";
-        						}
-        						?>
-        					</tbody>
-        				</table>
-        			</div>
+        		<div class="row">       			
+        			<?php  
+        			if(!isset($conexion)){ include("conexion.php");}
+        			include("funciones.php");
+        			$transaccion = $_GET["buscar"];
+        			asientos($conexion, $transaccion);
+        			?>
         		</div>
         	</div><!--/span-->
 

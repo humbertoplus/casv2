@@ -63,7 +63,7 @@
 					<a href="asiento-general.php" class="list-group-item">&#0171; Generales</a>
 					<a href="asiento-simple.php" class="list-group-item">&#0171; Simples</a>
 					<a href="diario.php" class="list-group-item">&#0171; Diario</a>
-					<a href="#" class="list-group-item">&#0171; Buscar/Editar</a>
+					<a href="buscar-asiento.php" class="list-group-item">&#0171; Buscar/Editar</a>
 				</div>
 			</div>
 		</div>
@@ -90,13 +90,26 @@
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
+				<h3 class="panel-title text-center">Estados Financieros</h3>
+			</div>
+
+			<div class="panel-body" id="sb">
+				<div class="list-group text-right">
+					<a href="balance-comprobacion.php" class="list-group-item">&#0171; Balance de Comprobación</a>
+					<a href="estado-resultados.php" class="list-group-item">&#0171; Estado de Resultados</a>
+					<a href="balance-general.php" class="list-group-item">&#0171; Balance General</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
 				<h3 class="panel-title text-center">Otros</h3>
 			</div>
 
 			<div class="panel-body" id="sb">
 				<div class="list-group text-right">
 					<a href="mayor.php" class="list-group-item">&#0171; Libro Mayor</a>
-					<a href="#" class="list-group-item">&#0171; Balances</a>
 					<a href="#" class="list-group-item">&#0171; Búsquedas</a>
 					<a href="#" class="list-group-item">&#0171; Listados</a>
 				</div>

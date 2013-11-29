@@ -34,9 +34,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 	<script>
-	    !window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
+		!window.jQuery && document.write("<script src='../js/jquery.min.js'><\/script>");
 	</script>
-	<title>C.A.S | </title>
+	<title>C.A.S | Balance General</title>
 </head>
 
 <body>
@@ -48,85 +48,131 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div class="col-xs-12 col-sm-9">
 				<div class="page-header">
-        			<h3>Título de la página</h3>
-        		</div>
-        		<div class="row">
-        			<div class="col-lg-12">
-        				<table class="table table-bordered">
-        					<thead>
-        						<tr >
-        							<th colspan="4">
-        								<h2 class="text-center">Vinos Nonualcos y Cia. S.A</h2>
-        								<p align="center">
-        									<strong>Balance General al Inicio de Operaciones</strong>
-        								</p>
-        								<p align="center">
-        									1 de Enero de 2013
-        								</p>
-        							</th>
-        						</tr>
-        					</thead>
-        					<tbody>
-        						<tr>
-        							<th colspan="2">ACTIVOS</th>
-        							<th colspan="2">PASIVOS</th>
-        						</tr>
-        						<tr>
-        							<?php 
-        							include("funciones.php");
-        							include("conexion.php");
-        							generarMayor($conexion);
-        							$sql = "SELECT * FROM mayor";
-        							$ejecutar_consulta = $conexion->query($sql);
-        							if($ejecutar_consulta->num_rows > 0){
-        								while ($regs = $ejecutar_consulta->fetch_assoc()) {
-        									$cuenta = $regs["cuenta"];
-        									$nombre = $regs["nombre"];
-        									$debe = $regs["debe"];
-        									$haber = $regs["haber"];
-        									if(substr($cuenta, 0,1)=="1"){
-        										// Es activo
-        										echo "<tr colspan='2'>";
-        										echo "<td>".$cuenta." ".$nombre."</td>";
-        										echo "<td>".number_format($debe-$haber,2)."</td>";
-        										echo "</tr>";
-        									}
-        									if(substr($cuenta, 0,1)=="2"){
-        										// Es Pasivo
-        										
-        										echo "<td>".$cuenta." ".$nombre."</td>";
-        										
-        									}
-        									if(substr($cuenta, 0,1)=="3"){
-        										// Es Pasivo
-        										echo "<tr>";
-        										echo "<td>".$cuenta." ".$nombre."</td>";
-        										echo "</tr>";
-        									}
-        									if(substr($cuenta, 0,1)=="4"){
-        										// Es Pasivo
-        										echo "<tr>";
-        										echo "<td>".$cuenta." ".$nombre."</td>";
-        										echo "</tr>";
-        									}
-        								}
-        							}
-        							?>
-        						</tr>
-        						
-        					</tbody>
-        						
-        					
-        				</table>
-        			</div>
-        		</div>
-        	</div><!--/span-->
+					<h3>Balance General</h3>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+
+							<table class="table ">
+								<thead>
+									<tr>
+										<th colspan="4">
+											<h2 class="text-center">Vinos Nonualcos y Cia. S.A</h2>
+											<p align="center">
+												<strong>Balance General</strong>
+											</p>
+
+											<p align="center">
+												<?php
+												date_default_timezone_set("America/El_Salvador");
+												echo date(DATE_RSS);
+												 //echo strftime("%A %d de %B del %Y");
+												?>
+											</p>
+										</th>
+									</tr>
+								</thead>
+							</table>
+
+						</div>
+
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-6">
+									<div>
+										<div class="row">
+											<div class="col-lg-12">
+
+												<table class="table table-condensed table-hover ">
+													<tr>
+														<th colspan="2">Activos</th>
+													</tr>
+													<?php
+													include_once("conexion.php");
+													$sql = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '1%'";
+													$ejecutar = $conexion->query($sql);
+													while($acts = $ejecutar->fetch_assoc()){
+														echo "<tr colspan='2'>";
+														echo "<td >".$acts["codigo_cuenta"].". ".utf8_encode($acts["nombre_cuenta"])."</td>";
+														echo "<td class='text-right'>".number_format($acts["saldo_debe"]-$acts["saldo_haber"],2)."</td>";
+														echo "</tr>";
+													}
+													$consulta = "SELECT SUM((saldo_debe-saldo_haber)) total FROM cuentas WHERE codigo_cuenta LIKE '1%'";
+													$ejecutar_consulta = $conexion->query($consulta);
+													if($ejecutar_consulta->num_rows > 0){
+														while ($regs = $ejecutar_consulta->fetch_assoc()) {
+															echo "<tr>";
+															echo "<td class='text-right'><strong>Total Activos:</strong></td>";
+															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "</tr>";
+														}
+													}
+													?>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div>
+										<div class="row">
+											<div class="col-lg-12">
+
+												<table class="table ">
+													<tr>
+														<th>Pasivos</th>
+													</tr>	
+
+													<?php
+													if(!isset($conexion)){include("conexion.php");}
+													$sql = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '2%'";
+													$ejecutar = $conexion->query($sql);
+													while($acts = $ejecutar->fetch_assoc()){
+														echo "<tr>";
+														echo "<td>".$acts["codigo_cuenta"].". ".utf8_encode($acts["nombre_cuenta"])."</td>";
+														echo "</tr>";
+													}
+													?>
+												</table>
+
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12">
+												<table class="table">
+													<tr>
+														<th>Capital</th>
+													</tr>
+
+													<?php
+													if(!isset($conexion)){include("conexion.php");}
+													$sql = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '3%'";
+													$ejecutar = $conexion->query($sql);
+													while($acts = $ejecutar->fetch_assoc()){
+														echo "<tr>";
+														echo "<td>".$acts["codigo_cuenta"].". ".utf8_encode($acts["nombre_cuenta"])."</td>";
+														echo "</tr>";
+													}
+													?>
+												</table>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div><!--/span-->
 
 			<!-- Barra lateral o sidebar -->
-        	<?php include("sidebar.php"); ?>
-        	
-        </div>
-    </div>
+			<?php include("sidebar.php"); ?>
+			
+		</div>
+	</div>
 
 	<!-- Pie de página o Footer -->
 	<?php include("footer.php"); ?>

@@ -138,7 +138,7 @@
 												Editar
 											</a>
 											&nbsp;&nbsp;&nbsp;
-											<a href="borrar-asiento.php?id=<?php echo $transaccion;?>" class="btn btn-danger">
+											<a href="borrar-apunte.php?id=<?php echo $transaccion;?>" class="btn btn-danger">
 												<span class="glyphicon glyphicon-trash"></span>
 												Borrar
 											</a>

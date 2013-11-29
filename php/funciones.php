@@ -139,4 +139,21 @@ function asientos($conexion, $transaccion) {
 
 		}
 	}
+
+	function saldosCuentas($conexion, $cuentas){
+		$sql = "SELECT IFNULL((SELECT SUM(saldo_debe) FROM subcuentas WHERE cuenta = '$cuentas'),0) sumadebe, IFNULL((SELECT SUM(saldo_haber) FROM subcuentas WHERE cuenta='$cuentas'),0) sumahaber;";
+		$ejecutar_consulta = $conexion->query($sql);
+		if($ejecutar_consulta->num_rows > 0 ){
+			while ($regs = $ejecutar_consulta->fetch_assoc()) {
+				$saldo_debe = $regs["sumadebe"];
+				$saldo_haber = $regs["sumahaber"];
+				//$cuenta = $regs["cuenta"];
+				$consulta = "UPDATE cuentas SET saldo_debe=$saldo_debe, saldo_haber=$saldo_haber WHERE codigo_cuenta='$cuentas'";
+				$ejecutar = $conexion->query($consulta);
+				if($ejecutar_consulta){
+					//echo "OK. <br>";
+				}
+			}
+		}
+	}
 ?>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-11-2013 a las 03:41:35
+-- Tiempo de generación: 28-11-2013 a las 16:30:17
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.16
 
@@ -282,7 +282,7 @@ CREATE TABLE IF NOT EXISTS `cuentas` (
 --
 
 INSERT INTO `cuentas` (`codigo_cuenta`, `subgrupo`, `nombre_cuenta`, `tiene_subcuenta`, `descripcion_cuenta`, `saldo_debe`, `saldo_haber`) VALUES
-('1.2.1.1', '1.2.1', 'Materiales Directos', 'Si', NULL, 0, 0),
+('1.2.1.1', '1.2.1', 'Materiales Directos', 'Si', NULL, 1600, 0),
 ('1.2.1.2', '1.2.1', 'Materiales Indirectos', 'Si', NULL, 0, 0),
 ('1.2.2.1', '1.2.2', 'Botellas de Vino de Naranja', 'No', NULL, 0, 0),
 ('1.2.2.2', '1.2.2', 'Botellas de Vino de Mandarina', 'No', NULL, 0, 0),
@@ -292,7 +292,7 @@ INSERT INTO `cuentas` (`codigo_cuenta`, `subgrupo`, `nombre_cuenta`, `tiene_subc
 ('1.2.2.6', '1.2.2', 'Botellas de Vino de Rosa de Jamaica', 'No', NULL, 0, 0),
 ('1.3.5.1', '1.3.5', 'Inversión en Mobiliario y Equipo de Oficina', 'No', 'En este rubro se incluye todo el mobiliario y equipo para la totalidad de las áreas administrativas a considerar para la empresa Vinos Nonualcos y Cia. De C.V.', 0, 0),
 ('1.3.6.1', '1.3.6', 'Inversión en Obra Civil', 'No', 'Cuenta para registrar las inversiones relacionadas con el trabajo de Obra Civil.', 0, 0),
-('4.1.1.1', '4.1.1', 'Mano de Obra Directa', 'No', NULL, 0, 0),
+('4.1.1.1', '4.1.1', 'Mano de Obra Directa', 'No', NULL, 0, 1500),
 ('4.1.1.2', '4.1.1', 'Costo de Materias Primas', 'No', NULL, 0, 0),
 ('4.1.2.1', '4.1.2', 'Sueldos y Salarios', 'No', NULL, 0, 0),
 ('4.1.2.2', '4.1.2', 'Prestaciones Laborales', 'Si', NULL, 0, 0),
@@ -410,14 +410,7 @@ CREATE TABLE IF NOT EXISTS `mayor` (
   `haber` double NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cuenta` (`cuenta`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `mayor`
---
-
-INSERT INTO `mayor` (`id`, `cuenta`, `nombre`, `debe`, `haber`) VALUES
-(1, '1.2.1.1.2', 'Mandarina', 455, 555);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -441,7 +434,16 @@ CREATE TABLE IF NOT EXISTS `registro` (
   `usuario_modif` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `ip` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=14 ;
+
+--
+-- Volcado de datos para la tabla `registro`
+--
+
+INSERT INTO `registro` (`id`, `fecha`, `transaccion`, `tipo`, `cuenta`, `concepto`, `debe`, `haber`, `descripcion`, `partida_doble`, `fecha_modificacion`, `usuario_creacion`, `usuario_modif`, `ip`) VALUES
+(11, '2013-11-28', 1, '', '1.2.1.1.1', 'test', '100.00', '0.00', 'eetert', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
+(12, '2013-11-28', 1, 'simple', '1.2.1.1.1', 'test', '1500.00', '0.00', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1'),
+(13, '2013-11-28', 1, 'simple', '4.1.1.1', 'test', '0.00', '1500.00', 'test', NULL, NULL, 'administrador', NULL, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -489,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `subcuentas` (
 --
 
 INSERT INTO `subcuentas` (`codigo_subcuenta`, `cuenta`, `nombre_subcuenta`, `descripcion`, `saldo_debe`, `saldo_haber`) VALUES
-('1.2.1.1.1', '1.2.1.1', 'Naranja', 'Cuenta para registrar los movimientos del activo "Naranja"', 0, 0),
+('1.2.1.1.1', '1.2.1.1', 'Naranja', 'Cuenta para registrar los movimientos del activo "Naranja"', 1600, 0),
 ('1.2.1.1.2', '1.2.1.1', 'Mandarina', 'Cuenta para registrar los movimientos del activo "Mandarina"', 0, 0),
 ('1.2.1.1.3', '1.2.1.1', 'Piña', 'Cuenta para registrar los movimientos del activo "Piña"', 0, 0),
 ('1.2.1.1.4', '1.2.1.1', 'Marañón', 'Cuenta para registrar los movimientos del activo "Marañón"', 0, 0),

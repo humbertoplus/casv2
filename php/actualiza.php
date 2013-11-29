@@ -17,6 +17,7 @@ if($q=="subcuentas"){
 	$ejecutar_consulta = $conexion->query($sql);
 	while($regs = $ejecutar_consulta->fetch_assoc()){
 		actualizarCuentas($conexion, $regs["codigo_cuenta"]);
+		saldosCuentas($conexion, $regs["codigo_cuenta"]);
 	}
 	$mensaje="Se actualizaron los saldos de todas las cuentas.";
 	header("Location: actualizar.php?mensaje=$mensaje");
