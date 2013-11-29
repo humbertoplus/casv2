@@ -63,6 +63,7 @@
 					<a href="asiento-general.php" class="list-group-item">&#0171; Generales</a>
 					<a href="asiento-simple.php" class="list-group-item">&#0171; Simples</a>
 					<a href="diario.php" class="list-group-item">&#0171; Diario</a>
+					<a href="mayor.php" class="list-group-item">&#0171; Libro Mayor</a>
 					<a href="buscar-asiento.php" class="list-group-item">&#0171; Buscar/Editar</a>
 				</div>
 			</div>
@@ -81,9 +82,7 @@
 					<a href="listar-subcuentas.php" class="list-group-item">&#0171; Listado de Subcuentas</a>
 					<a href="listar-cuentas.php" class="list-group-item">&#0171; Listado de Cuentas</a>
 					<a href="listar-subgrupos.php" class="list-group-item">&#0171; Listado de Subgrupos</a>
-					<a href="actualizar.php" class="list-group-item">&#0171; Actualizaciones</a>
-					<a href="#" class="list-group-item">&#0171; Editar</a>
-					<a href="#" class="list-group-item">&#0171; Borrar cuenta</a>				            
+					<a href="actualizar.php" class="list-group-item">&#0171; Actualizaciones</a>				            
 				</div>
 			</div>
 		</div>
@@ -98,20 +97,6 @@
 					<a href="balance-comprobacion.php" class="list-group-item">&#0171; Balance de Comprobación</a>
 					<a href="estado-resultados.php" class="list-group-item">&#0171; Estado de Resultados</a>
 					<a href="balance-general.php" class="list-group-item">&#0171; Balance General</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title text-center">Otros</h3>
-			</div>
-
-			<div class="panel-body" id="sb">
-				<div class="list-group text-right">
-					<a href="mayor.php" class="list-group-item">&#0171; Libro Mayor</a>
-					<a href="#" class="list-group-item">&#0171; Búsquedas</a>
-					<a href="#" class="list-group-item">&#0171; Listados</a>
 				</div>
 			</div>
 		</div>

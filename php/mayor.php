@@ -61,6 +61,13 @@
         			<h3>Libro Mayor</h3>
         		</div>
         		<div class="row">
+                    <div class="col-lg-12 well">
+                        <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Libro Mayor General</h2>
+                        <p align="justify" class="text-info">
+                            Aquí se muestran los saldos de todas las cuentas registradas en el sistema. No aparecen las subcuentas puesto que sus montos totales se ven reflejados en las cuentas a las que pertenecen.
+                        </p>
+                    </div>
+                    <hr>
 
         			<div class="col-lg-12">
         				<table class="table table-condensed table-bordered table-striped">

@@ -113,11 +113,17 @@
 									}
 									$sql = "SELECT SUM(saldo_debe) sumadebe, SUM(saldo_haber) sumahaber FROM cuentas";
 									$ejecutar = $conexion->query($sql);
-									echo "<tr class='success'>";
+									echo "<tr>";
 									while($reg = $ejecutar->fetch_assoc()){
-										echo "<td><strong>Totales:</strong> </td>";
-										echo "<td class='text-right'><strong>".number_format($reg["sumadebe"],2)."</strong></td>";
-										echo "<td class='text-right'><strong>".number_format($reg["sumahaber"],2)."</strong></td>";
+										if($reg["sumadebe"]!=$reg["sumahaber"]){
+											echo "<td class='danger'><strong>Totales:</strong> </td>";
+											echo "<td class='text-right danger'><strong>".number_format($reg["sumadebe"],2)."</strong></td>";
+											echo "<td class='text-right danger'><strong>".number_format($reg["sumahaber"],2)."</strong></td>";
+										} else {
+											echo "<td><strong>Totales:</strong> </td>";
+											echo "<td class='text-right'><strong>".number_format($reg["sumadebe"],2)."</strong></td>";
+											echo "<td class='text-right'><strong>".number_format($reg["sumahaber"],2)."</strong></td>";
+										}
 									}
 									echo "</tr>";
 								}

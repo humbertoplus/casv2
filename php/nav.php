@@ -37,8 +37,11 @@
 					<ul class="dropdown-menu">
 						<li><a href="asiento-general.php"> ● &nbsp;Generales</a></li>
 						<li><a href="asiento-simple.php"> ● &nbsp;Simples </a></li>
-						<li><a href="diario.php"> ● &nbsp;Diario </a></li>
-						<li><a href="#"> ● &nbsp;Buscar / Editar </a></li>
+						<li class="divider"></li>
+						<li><a href="diario.php"> ● &nbsp;Diario General</a></li>
+						<li><a href="mayor.php"> ● &nbsp;Mayor General</a></li>
+						<li class="divider"></li>
+						<li><a href="buscar-asiento.php"> ● &nbsp;Buscar/Editar</a></li>
 					</ul>
 				</li>
 
@@ -55,17 +58,15 @@
 						<li><a href="listar-subcuentas.php">● &nbsp;Listado de Subcuentas</a></li>
 						<li><a href="listar-cuentas.php">● &nbsp;Listado de Cuentas</a></li>
 						<li><a href="listar-subgrupos.php"> ● &nbsp;Listado de Subgrupos</a></li>
-						<li><a href="#"> ● &nbsp;Editar</a></li>
-						<li><a href="#"> ● &nbsp;Borrar cuenta</a></li>
 					</ul>
 				</li>
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Estados Financieros <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"> ● &nbsp;Balances</a></li>
-						<li><a href="#"> ● &nbsp;Búsquedas</a></li>
-						<li><a href="#"> ● &nbsp;Listados</a></li>
+						<li><a href="balance-comprobacion.php"> ● &nbsp;Balance de Comprobación</a></li>
+						<li><a href="estado-resultados.php"> ● &nbsp;Estado de Resultados</a></li>
+						<li><a href="balance-general.php"> ● &nbsp;Balance General</a></li>
 
 					</ul>
 				</li>
