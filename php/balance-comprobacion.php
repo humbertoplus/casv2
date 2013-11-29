@@ -93,7 +93,7 @@
 								error_reporting(E_ALL ^ E_NOTICE);
 								if(!isset($conexion)){
 									include("conexion.php");
-									$sql = "SELECT * FROM cuentas WHERE codigo_cuenta LIKE '1%'";
+									$sql = "SELECT * FROM cuentas";
 									$ejecutar = $conexion->query($sql);
 									while($regs = $ejecutar->fetch_assoc()){
 										echo "<tr>";

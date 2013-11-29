@@ -145,6 +145,17 @@
 														echo "<td>".$acts["codigo_cuenta"].". ".utf8_encode($acts["nombre_cuenta"])."</td>";
 														echo "</tr>";
 													}
+													$consulta = "SELECT SUM((saldo_debe-saldo_haber)) total FROM cuentas WHERE codigo_cuenta LIKE '2%'";
+													$ejecutar_consulta = $conexion->query($consulta);
+													if($ejecutar_consulta->num_rows > 0){
+														while ($regs = $ejecutar_consulta->fetch_assoc()) {
+															$total_pasivos = $regs["total"];
+															echo "<tr>";
+															echo "<td class='text-right'><strong>Total Pasivos:</strong></td>";
+															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "</tr>";
+														}
+													}
 													?>
 												</table>
 
@@ -166,6 +177,32 @@
 														echo "<td>".$acts["codigo_cuenta"].". ".utf8_encode($acts["nombre_cuenta"])."</td>";
 														echo "</tr>";
 													}
+													$consulta = "SELECT SUM((saldo_debe-saldo_haber)) total FROM cuentas WHERE codigo_cuenta LIKE '3%'";
+													$ejecutar_consulta = $conexion->query($consulta);
+													if($ejecutar_consulta->num_rows > 0){
+														while ($regs = $ejecutar_consulta->fetch_assoc()) {
+															$total_capital = $regs["total"];
+															echo "<tr>";
+															echo "<td class='text-right'><strong>Total Capital:</strong></td>";
+															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "</tr>";
+														}
+													}
+													?>
+												</table>
+
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12">
+												<table class="table">
+													<?php
+
+															echo "<tr>";
+															echo "<td class='text-right'><strong>Total Pasivos + Capital:</strong></td>";
+															echo "<td>".number_format($total_pasivos+$total_capital,2)."</td>";
+															echo "</tr>";
+																										
 													?>
 												</table>
 
