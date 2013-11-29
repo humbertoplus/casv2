@@ -65,7 +65,24 @@
 					    </p>
 					</div>
 					<hr>
+					<?php 
+					error_reporting(E_ALL ^ E_NOTICE);
+					$error=$_GET["error"];
+					$mensaje = $_GET["mensaje"];
 
+					switch ($error) {
+						case 'si':
+							echo "<div class='alert alert-danger'>";
+							echo $mensaje;
+							echo "</div>";
+							break;
+						case 'no':
+							echo "<div class='alert alert-success alert-dismissable'>";
+							echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+							echo $mensaje;
+							echo "</div>";
+					}
+					?>
 					<!-- Crear Grupo -->
 					<div class="col-lg-12 well">
 						<form action="agregar-cuentas.php" class="form-horizontal" method="post" name="crear_grupo_frm" enctype="application/x-www-form-urlencoded">

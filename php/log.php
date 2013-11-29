@@ -54,7 +54,35 @@
         			<h3>Log de Operaciones</h3>
         		</div>
         		<div class="row">
-        			Contenido de la página
+        			<div class="container">
+        				<table class="table table-hover table-condensed table-striped table-bordered">
+        					<thead>
+        						<tr>
+        							<th>ID</th>
+        							<th>FECHA</th>
+        							<th>EVENTO</th>
+        							<th>USUARIO</th>
+        							<th>IP</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+        						<?php
+        						if(!isset($conexion)){ include("conexion.php");}
+        						$sql = "SELECT * FROM security_log";
+        						$ejecutar = $conexion->query($sql);
+        						while($reg = $ejecutar->fetch_assoc()){
+        							echo "<tr>";
+        							echo "<td>".$reg["id_evento"]."</td>";
+        							echo "<td>".$reg["fecha"]."</td>";
+        							echo "<td>".utf8_encode($reg["evento"])."</td>";
+        							echo "<td>".utf8_encode($reg["user"])."</td>";
+        							echo "<td>".$reg["ip"]."</td>";
+        							echo "</tr>";
+        						}
+        						?>
+        					</tbody>
+        				</table>
+        			</div>
         		</div>
         	</div><!--/span-->
 
