@@ -61,7 +61,6 @@
 						<th class="text-center">ISSS</th>
 						<th class="text-center">AFP*</th>
 						<th class="text-center">AFP</th>
-						<th class="text-center">ISR</th>
 						<th class="text-center">SD</th>
 						<th class="text-center">VC</th>
 						<th class="text-center">AG</th>
@@ -86,7 +85,6 @@
 								echo "<td>".number_format($reg["isss_patrono"],2)."</td>";
 								echo "<td>".number_format($reg["afp_trabajador"],2)."</td>";
 								echo "<td>".number_format($reg["afp_patrono"],2)."</td>";
-								echo "<td>".number_format($reg["renta"],2)."</td>";
 								echo "<td>".number_format($reg["salario_diario"],2)."</td>";
 								echo "<td>".number_format($reg["vacaciones"],2)."</td>";
 								echo "<td>".number_format($reg["aguinaldo"],2)."</td>";
@@ -103,7 +101,7 @@
 						$total = $ejecutar_consulta->fetch_assoc();
 						?>
 						<tr>
-							<td colspan="13" class="text-right"><strong>Total salarios:</strong></td>
+							<td colspan="12" class="text-right"><strong>Total salarios:</strong></td>
 							<td class="text-right"><?php echo number_format($total["total"],2); ?></td>
 						</tr>
 				</tbody>
@@ -118,7 +116,6 @@
 					<p><strong>ISSS: </strong>ISSS Patrono</p>
 					<p><strong>AFP*: </strong>AFP empleado</p>
 					<p><strong>AFP: </strong>AFP Patrono</p>
-					<p><strong>ISR: </strong>Renta</p>
 				</div>
 				<div class="col-lg-6 pull-left">
 					<p><strong>SD: </strong>Salario Diario</p>

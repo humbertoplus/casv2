@@ -51,6 +51,21 @@
         			<h3>Registrar a un empleado</h3>
         		</div>
         		<div class="row">
+           <?php 
+           error_reporting(0);
+           $error = $_GET["error"];
+           if($error=="no"){
+            echo "<div class='alert alert-success alert-dismissable'>";
+            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+            echo "Se agregó al empleado correctamente.";
+            echo "</div>";
+           } else if($error == "si"){
+              echo "<div class='alert alert-danger alert-dismissable'>";
+              echo "<button type='button' class='close' data-dismiss='alert'>";
+              echo "Ocurrió un error al guardar al empleado.";
+              echo "</div>";
+           }
+           ?>
         			<div class="col-lg-12 well">
         				<form action="agregar-empleado.php" id="nuevo_empleado" name="nuevo_empleado_frm" method="post" class="form-horizontal" enctype="application/x-www-form-urlencoded" onSubmit="return validarEmpleado()">
         					<fieldset>

@@ -116,7 +116,7 @@
 														while ($regs = $ejecutar_consulta->fetch_assoc()) {
 															echo "<tr>";
 															echo "<td class='text-right'><strong>Total Activos:</strong></td>";
-															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "<td align='right'>".number_format($regs["total"],2)."</td>";
 															echo "</tr>";
 														}
 													}
@@ -152,7 +152,7 @@
 															$total_pasivos = $regs["total"];
 															echo "<tr>";
 															echo "<td class='text-right'><strong>Total Pasivos:</strong></td>";
-															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "<td align='right'>".number_format($regs["total"],2)."</td>";
 															echo "</tr>";
 														}
 													}
@@ -184,7 +184,7 @@
 															$total_capital = $regs["total"];
 															echo "<tr>";
 															echo "<td class='text-right'><strong>Total Capital:</strong></td>";
-															echo "<td>".number_format($regs["total"],2)."</td>";
+															echo "<td align='right'>".number_format($regs["total"],2)."</td>";
 															echo "</tr>";
 														}
 													}
@@ -200,7 +200,7 @@
 
 															echo "<tr>";
 															echo "<td class='text-right'><strong>Total Pasivos + Capital:</strong></td>";
-															echo "<td>".number_format($total_pasivos+$total_capital,2)."</td>";
+															echo "<td align='right'>".number_format($total_pasivos+$total_capital,2)."</td>";
 															echo "</tr>";
 																										
 													?>

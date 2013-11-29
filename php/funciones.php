@@ -179,4 +179,54 @@ function asientos($conexion, $transaccion) {
 			}
 		}
 	}
+
+	function calculaPlanilla($conexion, $datos){
+		$codigo = $datos["codigo_empleado_txt"];
+		$primer_nombre = $datos["primernombre_txt"];
+		$segundo_nombre = $datos["segundonombre_txt"];
+		$primer_apellido = $datos["primerapellido_txt"];
+		$segundo_apellido = $datos["segundoapellido_txt"];
+		$cargo = $datos["cargos_slc"];
+		$anios = $datos["aniostrabajados_txt"];
+		$salario = $datos["salario_txt"];
+		$isss_t = $salario*0.03;
+		$isss_p = $salario*0.075;
+		$afp_t = $salario*0.0625;
+		$afp = $salario*0.0675;
+		$sd = $salario/30;
+		
+		if($anios>=1){
+			$dias=15;
+		} else {
+			$dias=0;
+		}
+		
+		if($anios>=1 && anios<3){ 
+			$aguinaldo = 10;
+			} 
+			elseif ($anios>=3&&$anios<10) {
+				$aguinaldo = 15;
+			} elseif ($anios >=10) {
+				$aguinaldo = 18;
+			}
+		$vc = (($sd*$dias*1.3)+($sd*$dias*1.3)*1.4)/12;
+		$ag = ($sd*$aguinaldo)/12;
+		$salario_mensual = $salario+$isss_t+$afp_t+$vc+$ag;
+		$amp = $isss+$afp;
+		$psp = $salario_mensual+$amp;
+
+		$sql = "INSERT INTO `sic115`.`empleados` 
+		(`codigo_empleado`, `primer_nombre`, `segundo_nombre`, `primer_apellido`, `segundo_apellido`, `cargo`,
+		 `salario_mensual_contratado`, `isss_trabajador`, `isss_patrono`, `afp_trabajador`, `afp_patrono`, `salario_diario`, 
+		 `vacaciones`, `aguinaldo`, `salario_mensual`, `aportaciones_mensuales_patrono`, `pago_salario_patrono`) 
+		VALUES ('$codigo', '$primer_nombre', '$segundo_nombre', '$primer_apellido', '$segundo_apellido', '$cargo', '$salario', 
+			'$isss_t', '$isss_p', '$afp_t', '$afp', '$sd', '$vc', '$ag', '$salario_mensual', '$amp', '$psp')";
+		$ejecutar_consulta = $conexion->query(utf8_decode($sql));
+		if($ejecutar_consulta){
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
 ?>
