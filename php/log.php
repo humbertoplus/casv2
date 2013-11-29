@@ -54,6 +54,13 @@
         			<h3>Log de Operaciones</h3>
         		</div>
         		<div class="row">
+        			<div class="col-lg-12 well">
+        			    <h2 class="text-primary"><span class="glyphicon glyphicon-info-sign"></span> Log (registro) de Operaciones</h2>
+        			    <p align="justify" class="text-info">
+        			        Este es el sitio donde se irán registrando los cambios a las tablas críticas de la base de datos. Se muestra la información más relevante sobre los movimientos más importantes en la base de datos, como las inserciones, actualizaciones o eliminaciones de datos.
+        			    </p>
+        			</div>
+        			<hr>
         			<div class="container">
         				<table class="table table-hover table-condensed table-striped table-bordered">
         					<thead>
