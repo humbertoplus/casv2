@@ -85,8 +85,6 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="ayuda.php"><span class="glyphicon glyphicon-question-sign"></span> &nbsp;Ayuda</a></li>
-						<li class="divider"></li>
 						<li><a href="cambio-pw.php"><span class="glyphicon glyphicon-lock"></span> &nbsp;Cambiar Contraseña</a></li>
 						<li><a href="#logout" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span> &nbsp;Cerrar sesión</a></li>
 					</ul>

@@ -133,11 +133,6 @@
 												Regresar
 											</a>
 											&nbsp;&nbsp;&nbsp;
-											<a href="editar-asiento.php?id=<?php echo $transaccion;?>" class="btn btn-primary">
-												<span class="glyphicon glyphicon-edit"></span>
-												Editar
-											</a>
-											&nbsp;&nbsp;&nbsp;
 											<a href="borrar-apunte.php?id=<?php echo $transaccion;?>" class="btn btn-danger">
 												<span class="glyphicon glyphicon-trash"></span>
 												Borrar
