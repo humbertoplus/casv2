@@ -2,26 +2,19 @@
 /*~ Archivo index.php
 .---------------------------------------------------------------------------.
 |    Software: CAS - Computerized Accountancy System                        |
-|     Versión: 1.0                                                          |
+|     Versión: 2.0                                                          |
 |   Lenguajes: PHP, HTML, CSS3 y Javascript                                 |
 | ------------------------------------------------------------------------- |
-|   Autores: Ricardo Vigil (alexcontreras@outlook.com)                      |
-|          : Vanessa Campos                                                 |
-|          : Ingrid Aguilar                                                 |
-|          : Jhosseline Rodriguez                                           |
+|   Autor: Ricardo Vigil (alexcontreras@outlook.com)                        |
 | Copyright (C) 2013, FIA-UES. Todos los derechos reservados.               |
-| ------------------------------------------------------------------------- |
-|                                                                           |
-| Este archivo es parte del sistema de contabilidad C.A.S para la cátedra   |
-| de Sistemas Contables de la Facultad de Ingeniería y Arquitectura de la   |
-| Universidad de El Salvador.                                               |
-|                                                                           |
 '---------------------------------------------------------------------------'
 */
 ?>
 <?php 
 	error_reporting(E_ALL ^ E_NOTICE);
-	if($_COOKIE["sesion"]){
+
+	if($_COOKIE["sesion"])
+	{
 	    header("Location: php/home.php");
 	}
 ?>
@@ -31,25 +24,32 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content="Este es un sistema de contabilidad basado en la web, para administrar los procesos contables de la Propuesta para el desarrollo de la actividad vinícola en la microregión de los nonualcos a través de la gestión de la cadena de suministro."/>
+
+	<!-- Estilos del sitio -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/estilos.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
 	<script>
 	    !window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
 	</script>
+
 	<script>
 		var nav = navigator.appName;
 		if(nav=="Microsoft Internet Explorer"){
 			alert("Está usando "+nav+". Puede que el sistema no funcione correctamente.");
 		};
 	</script>
+
 	<title>C.A.S | SIC115</title>
 </head>
+
 <body>
 	<div class="container">
 		<br>
 		<?php
 			error_reporting(E_ALL ^ E_NOTICE);
+			
 			if ($_GET["error"]=="si")
 			{
 				echo "<div class='alert alert-danger alert-dismissable'>";
