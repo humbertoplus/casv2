@@ -1,4 +1,4 @@
-casv1
+CAS version 2.0
 =====
 
 Proyecto de Sistemas Contables
