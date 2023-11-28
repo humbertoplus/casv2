@@ -39,3 +39,7 @@ Características del sistema
 * Balance General.
 * Creación de nuevas cuentas.
 * Detalles de cada cuenta registrada.
+
+Ejeución del sistema
+
+El repositorio cuenta con un archivo `devcontainer.json` que permite generar un entorno de desarrollo con el stack de tecnologías necesario para ejecutar el sistema de manera rápida, sencilla y gratuita. Puedes investigar sobre el uso de los `Codespaces` en GitHub [aquí](https://github.com/features/codespaces).
