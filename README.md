@@ -14,7 +14,7 @@ Requerimientos del sistema:
 * MySQL 4.0.4 o superior.
 
 
-Compatibilidad con Navagadores
+Compatibilidad con Navegadores
 
 * Google Chrome (recomendado)
 * Mozilla Firefox
