@@ -1,7 +1,7 @@
 CAS version 2.0
 =====
 
-## Proyecto de Sistemas Contables
+Proyecto de Sistemas Contables
 
 Este es el proyecto de Sistemas Contables denominado C.A.S (Computerized Accountancy System), que consiste en un sistema
 contable computarizado, escrito en PHP para su uso en la Web.
@@ -42,4 +42,4 @@ contable computarizado, escrito en PHP para su uso en la Web.
 
 ### Ejecución del sistema:
 
-El repositorio cuenta con un archivo `devcontainer.json` que permite generar un entorno de desarrollo con el stack de tecnologías necesario para ejecutar el sistema de manera rápida, sencilla y gratuita. Puedes investigar sobre el uso de los `Codespaces` en GitHub [aquí](https://github.com/features/codespaces).
+El repositorio cuenta con un archivo `devcontainer.json` que permite generar un entorno de desarrollo con el stack de tecnologías necesarias para ejecutar el sistema de manera rápida, sencilla y gratuita. Puedes investigar sobre el uso de los `Codespaces` en GitHub [aquí](https://github.com/features/codespaces).
