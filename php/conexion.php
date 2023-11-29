@@ -22,11 +22,12 @@
 <?php
 	function conectarse()
 	{
-		$servidor 	=	 "localhost";
-		$usuario 	=	 "root";
-		$password 	=	 "root";
-		$bd 		=	 "sic115";
+		$servidor 	=	 getenv("DB_SERVER");
+		$usuario 	  =	 getenv("DB_USER");
+		$password 	=	 getenv("DB_PASSWORD");
+		$bd 		    =	 getenv("DB_NAME");
 
+		// Recuerda activar la extension mysqli dentro del archivo php.init en tu entorno de trabajo
 		$conectar = new mysqli($servidor, $usuario, $password, $bd);
 		    return $conectar;
 	}

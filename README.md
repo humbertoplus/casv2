@@ -7,14 +7,14 @@ Este es el proyecto de Sistemas Contables denominado C.A.S (Computerized Account
 contable computarizado, escrito en PHP para su uso en la Web.
 
 
-Requerimientos del sistema:
+### Requerimientos del sistema:
 
 * PHP versión 5 o superior.
 * Apache/2.4.4 o superior.
 * MySQL 4.0.4 o superior.
 
 
-Compatibilidad con Navagadores
+### Compatibilidad con Navegadores:
 
 * Google Chrome (recomendado)
 * Mozilla Firefox
@@ -26,7 +26,7 @@ Compatibilidad con Navagadores
 (En Internet Explorer, el sistema presenta fallas).
 
 
-Características del sistema
+### Características del sistema:
 
 * Manejo de inicio/cierre de sesión de usuarios.
 * Seguridad: Contraseñas encriptadas, accesos restringidos de acuerdo al tipo de usuario, imposibilidad de ver 
@@ -39,3 +39,7 @@ Características del sistema
 * Balance General.
 * Creación de nuevas cuentas.
 * Detalles de cada cuenta registrada.
+
+### Ejecución del sistema:
+
+El repositorio cuenta con un archivo `devcontainer.json` que permite generar un entorno de desarrollo con el stack de tecnologías necesarias para ejecutar el sistema de manera rápida, sencilla y gratuita. Puedes investigar sobre el uso de los `Codespaces` en GitHub [aquí](https://github.com/features/codespaces).
