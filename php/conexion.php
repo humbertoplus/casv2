@@ -27,6 +27,7 @@
 		$password 	=	 getenv("DB_PASSWORD");
 		$bd 		    =	 getenv("DB_NAME");
 
+		// Recuerda activar la extension mysqli dentro del archivo php.init en tu entorno de trabajo
 		$conectar = new mysqli($servidor, $usuario, $password, $bd);
 		    return $conectar;
 	}
